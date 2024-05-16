@@ -74,9 +74,9 @@ let controles = new PointerLockControls(camera, renderer.domElement);
 
 let xdir = 0, zdir = 0
 
-// document.onclick = ()=> {
-//     controles.lock();
-// }
+document.onclick = ()=> {
+    controles.lock();
+}
 
 document.addEventListener('keydown', (e)=>{
     switch (e.keyCode) {
