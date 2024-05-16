@@ -19,6 +19,11 @@ loader.load("assets/img/istockphoto-1303973122-170667a.jpg", function (texture) 
     scene.background = texture;
 });
 
+scene.background = new THREE.Color("black");
+scene.add(lights);
+scene.add(gridHelper)
+
+
 // implementar los cambios a la hora dell redimensionamiento de la pantalla 
 // Asegúrate de que el raycaster se actualice cuando se redimensiona la ventana
 window.addEventListener('resize', () => {
@@ -26,15 +31,6 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
-
-
-
-scene.background = new THREE.Color("black");
-scene.add(lights);
-scene.add(gridHelper);
-camera.position.set(5,5,5);
-camera.lookAt(0,0,0);
-
 
 // Controles para hacer zoom, girar el objeto y moverlo con la camara
 let controls = new OrbitControls(camera, renderer.domElement);
@@ -131,7 +127,7 @@ let delta, tiempoI, tiempoF, vel
 
 tiempoI = Date.now();
 
-vel = 20;
+vel = 10;
 
 yi = 5
 vi = 15
@@ -141,12 +137,12 @@ function animate() {
 
     requestAnimationFrame( animate );
     
-
+    
     if(controles.isLocked === true){
         tiempoF = Date.now()
-
+        
         delta = (tiempoF - tiempoI)/1000
-
+        
         let xDis = xdir * vel * delta
         let zDis = zdir * vel * delta
 
@@ -159,7 +155,7 @@ function animate() {
 
         controles.moveRight(xDis)
         controles.moveForward(zDis)
-
+        
         tiempoI = tiempoF
     }
 
