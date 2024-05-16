@@ -19,12 +19,21 @@ loader.load("assets/img/istockphoto-1303973122-170667a.jpg", function (texture) 
     scene.background = texture;
 });
 
+// implementar los cambios a la hora dell redimensionamiento de la pantalla 
+// Asegúrate de que el raycaster se actualice cuando se redimensiona la ventana
+window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
 
 
 scene.background = new THREE.Color("black");
 scene.add(lights);
-scene.add(gridHelper)
+scene.add(gridHelper);
 camera.position.set(5,5,5);
+camera.lookAt(0,0,0);
 
 
 // Controles para hacer zoom, girar el objeto y moverlo con la camara
@@ -73,6 +82,7 @@ renderer.outputEncoding = THREE.sRGBEncodig;
 let controles = new PointerLockControls(camera, renderer.domElement);
 
 let xdir = 0, zdir = 0
+let salto = false, vi, yi, t, ti
 
 document.onclick = ()=> {
     controles.lock();
@@ -91,6 +101,10 @@ document.addEventListener('keydown', (e)=>{
             break;
         case 40:
             zdir = -1
+            break;
+        case 83:
+            if (!salto)ti = Date.now();
+            salto = true;
             break;
     }
 })
@@ -119,6 +133,9 @@ tiempoI = Date.now();
 
 vel = 20;
 
+yi = 5
+vi = 15
+
 
 function animate() {
 
@@ -132,6 +149,13 @@ function animate() {
 
         let xDis = xdir * vel * delta
         let zDis = zdir * vel * delta
+
+        if (salto){
+            t = ((Date.now() - ti) / 1000) * 3;
+            let yDis = yi + (vi * t) - (0.5 * 9.8 * Math.pow(t, 2));
+            if(yDis <= yi) jump = false;
+            camera.position.y = yDis;
+        }
 
         controles.moveRight(xDis)
         controles.moveForward(zDis)
