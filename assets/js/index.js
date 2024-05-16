@@ -99,7 +99,7 @@ document.addEventListener('keydown', (e)=>{
             zdir = -1
             break;
         case 83:
-            if (!salto)ti = Date.now();
+            if (!salto) ti = Date.now();
             salto = true;
             break;
     }
@@ -129,8 +129,8 @@ tiempoI = Date.now();
 
 vel = 10;
 
-yi = 5
-vi = 15
+yi = 1.8324140151651995;
+vi = 6;
 
 
 function animate() {
@@ -146,10 +146,10 @@ function animate() {
         let xDis = xdir * vel * delta
         let zDis = zdir * vel * delta
 
-        if (salto){
-            t = ((Date.now() - ti) / 1000) * 3;
+        if (salto) {
+            t = ((Date.now() - ti) / 1000) * 2;
             let yDis = yi + (vi * t) - (0.5 * 9.8 * Math.pow(t, 2));
-            if(yDis <= yi) jump = false;
+            if(yDis <= yi) salto = false;
             camera.position.y = yDis;
         }
 
