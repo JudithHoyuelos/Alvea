@@ -1,0 +1,21 @@
+/* #modal {
+    height: 100vh;
+    width: 50%;
+    position: absolute;
+    float: right;
+    background-color: aqua;
+} */
+
+#modal {
+    height: 100vh; /* Toma el 100% de la altura de la ventana*/
+    width: 50%; /*Toma el 50% del ancho de la ventana*/
+    position: fixed; /*Fija la posición del div*/
+    top: 0; /*Coloca el div en la parte superior de la ventana*/
+    right: 0; /*Coloca el div en el lado derecho de la ventana*/
+    background-color: rgba(0, 255, 255, 0.8); /* Color semi-transparente (aqua) */
+} 
+
+/* body {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+} */
