@@ -33,9 +33,9 @@ window.addEventListener('resize', () => {
 });
 
 // Controles para hacer zoom, girar el objeto y moverlo con la camara
-let controls = new OrbitControls(camera, renderer.domElement);
-controls.minDistance = 3;
-controls.maxDistance = 20;
+// let controls = new OrbitControls(camera, renderer.domElement);
+// controls.minDistance = 3;
+// controls.maxDistance = 20;
 
 
 // PRUEBA CARGAR MODELO 3D
