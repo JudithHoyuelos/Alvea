@@ -99,7 +99,7 @@ document.addEventListener('keydown', (e)=>{
         case 40:
             zdir = -1
             break;
-        case 83:
+        case 32:
             if (!salto) ti = Date.now();
             salto = true;
             break;
