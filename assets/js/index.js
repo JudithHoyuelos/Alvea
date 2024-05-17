@@ -98,7 +98,7 @@ document.addEventListener('keydown', (e)=>{
         case 40:
             zdir = -1
             break;
-        case 83:
+        case 32:
             if (!salto) ti = Date.now();
             salto = true;
             break;
@@ -145,6 +145,7 @@ function animate() {
         
         let xDis = xdir * vel * delta
         let zDis = zdir * vel * delta
+        console.log(camera.position)
 
         if (salto) {
             t = ((Date.now() - ti) / 1000) * 2;
