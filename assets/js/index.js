@@ -19,9 +19,11 @@ loader.load("assets/img/istockphoto-1303973122-170667a.jpg", function (texture) 
     scene.background = texture;
 });
 
+
+
 scene.background = new THREE.Color("black");
 scene.add(lights);
-scene.add(gridHelper)
+scene.add(gridHelper);
 
 
 // implementar los cambios a la hora dell redimensionamiento de la pantalla 
@@ -33,9 +35,16 @@ window.addEventListener('resize', () => {
 });
 
 // Controles para hacer zoom, girar el objeto y moverlo con la camara
-// let controls = new OrbitControls(camera, renderer.domElement);
-// controls.minDistance = 3;
-// controls.maxDistance = 20;
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.minDistance = 3;
+controls.maxDistance = 20;
+// controls.enableDamping=true;
+// controls.enablePan = false;
+// controls.minPolarAngle = 0.5;
+// controls.maxPolarAngle = 1.5;
+// controls.autoRotate = false;
+controls.target.set(2, 1, 0);
+controls.update();
 
 
 // PRUEBA CARGAR MODELO 3D
@@ -137,7 +146,7 @@ function animate() {
 
     requestAnimationFrame( animate );
     
-    
+
     if(controles.isLocked === true){
         tiempoF = Date.now()
         
@@ -145,7 +154,6 @@ function animate() {
         
         let xDis = xdir * vel * delta
         let zDis = zdir * vel * delta
-        console.log(camera.position)
 
         if (salto) {
             t = ((Date.now() - ti) / 1000) * 2;
