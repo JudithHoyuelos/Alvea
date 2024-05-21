@@ -15,7 +15,8 @@
     background-color: rgba(0, 255, 255, 0.8); /* Color semi-transparente (aqua) */
 } 
 
-/* body {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-} */
+body {
+    /* display: grid;
+    grid-template-columns: repeat(1, 1fr); */
+    overflow: hidden;
+}
