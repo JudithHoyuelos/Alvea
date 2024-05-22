@@ -21,3 +21,13 @@ body {
     overflow: hidden;
     margin: 0;
 }
+
+#root {
+    background-color: red;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20rem;
+    height: 10rem;
+    display: "";
+}
