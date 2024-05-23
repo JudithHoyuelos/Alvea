@@ -17,6 +17,26 @@ function informacion(nombre, estado, localizacion) {
   const localizacionElement = document.createElement('p');
   localizacionElement.textContent = `Localización: ${localizacion}`;
 
+  const moneda = document.createElement('img');
+  moneda.src = "assets/img/monedas-oro-1-oz-maple-leaf-1.png"
+  moneda.alt = "moneda"
+
+  const espada = document.createElement('img');
+  espada.src = "assets/img/espadita.png"
+  espada.alt = "espada"
+
+  const cubo = document.createElement('img');
+  cubo.src = "assets/img/cubo.png"
+  cubo.alt = "cubo"
+
+  if (nombre == "Rick Sanchez") {
+    modal.appendChild(moneda);
+  } else if (nombre == "Morty Smith") {
+    modal.appendChild(espada);
+  } else if (nombre == "Summer Smith") {
+    modal.appendChild(cubo);
+  }
+
   // Añade los elementos al modal
   modal.appendChild(nombreElement);
   modal.appendChild(estadoElement);
