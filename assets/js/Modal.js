@@ -1,10 +1,26 @@
+import axios from 'axios';
 import bbdd from './Conexion';
 
 const modal = document.getElementById("root");
 
-function informacion(resultado) {
-  console.log(resultado)
-  modal.textContent = resultado;
+function informacion(nombre, estado, localizacion) {
+  console.log(nombre);
+  console.log(estado);
+  console.log(localizacion);
+  // Crea nuevos elementos para cada pieza de información
+  const nombreElement = document.createElement('h1');
+  nombreElement.textContent = `Nombre: ${nombre}`;
+
+  const estadoElement = document.createElement('p');
+  estadoElement.textContent = `Estado: ${estado}`;
+
+  const localizacionElement = document.createElement('p');
+  localizacionElement.textContent = `Localización: ${localizacion}`;
+
+  // Añade los elementos al modal
+  modal.appendChild(nombreElement);
+  modal.appendChild(estadoElement);
+  modal.appendChild(localizacionElement);
   return modal;
 }
 
@@ -14,68 +30,61 @@ const buscarPersonaje = (nombre) => {
   const url = `${bbdd}/character/?name=${nombre}`;
   console.log('URL:', url); // Verifica que la URL se construye correctamente
 
-  fetch(url)
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('La solicitud no pudo ser completada.');
-          }
-          return response.json();
-      })
-      .then(data => {
-          console.log('Resultados de la búsqueda:', data.results);
-          const resultado = data.results.map(personaje => personaje.name).join(', ');
-          informacion(resultado);
-      })
-      .catch(error => {
-          console.error('Error al realizar la búsqueda:', error);
-          informacion('No se encontraron resultados.');
-      });
+  axios.get(url)
+    .then(response => {
+      const data = response.data;
+      if (data.results.length > 0) {
+        // const nombre = data.results.map(personaje => personaje.name).join(', ');
+        // const estado = data.results.map(personaje => personaje.status).join(', ');
+        // const localizacion = data.results.map(personaje => personaje.location.name).join(', ');
+        // informacion(nombre, estado, localizacion);
+        const primerPersonaje = data.results[0];
+        const nombre = primerPersonaje.name;
+        const estado = primerPersonaje.status;
+        const localizacion = primerPersonaje.location.name;
+        informacion(nombre, estado, localizacion);
+      } else {
+        informacion('No se encontraron resultados.');
+      }
+    })
+    .catch(error => {
+      console.error('Error al realizar la búsqueda:', error);
+      informacion('Error al realizar la búsqueda.');
+    });
 };
 
 // Espera a que el DOM esté completamente cargado
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   console.log('DOM fully loaded and parsed');
 
   const formulario = document.getElementById('formulario');
   console.log(formulario);
 
   if (formulario) {
-      console.log('Formulario encontrado');
-      formulario.addEventListener('submit', function(event) {
-          event.preventDefault();
-          var nombre = document.getElementById('name').value;
-          console.log('Nombre:', nombre); // Verifica que el nombre se está recogiendo
-          // Guardar el nombre en localStorage
-          localStorage.setItem('nombrePersonaje', nombre);
+    console.log('Formulario encontrado');
+    formulario.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var nombre = document.getElementById('name').value;
+      console.log('Nombre:', nombre); // Verifica que el nombre se está recogiendo
+      // Guardar el nombre en localStorage
+      localStorage.setItem('nombrePersonaje', nombre);
 
-          // Redirigir a alvea.html
-          window.location.href = 'alvea.html';
-          // buscarPersonaje(nombre);
-      });
+      // Redirigir a alvea.html
+      window.location.href = 'alvea.html';
+      // buscarPersonaje(nombre);
+    });
   } else {
-      console.log('Formulario no encontrado');
+    console.log('Formulario no encontrado');
   }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const nombre = localStorage.getItem('nombrePersonaje');
   if (nombre) {
-      buscarPersonaje(nombre);
+    buscarPersonaje(nombre);
   } else {
-      informacion('No se proporcionó ningún nombre.');
+    informacion('No se proporcionó ningún nombre.');
   }
 });
-
-async function GET() {
-    const prueba = await fetch(`${bbdd}/character`)
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error fetching data:', error));
-    // console.log(prueba.data)
-}
-
-GET();
-// let nombre = 'Rick Sanchez';
-// buscarPersonaje(nombre);
 
 export default informacion;
