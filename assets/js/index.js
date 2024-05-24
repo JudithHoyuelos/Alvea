@@ -9,6 +9,7 @@ import renderer from './Render';
 import scene from './Screen';
 import lights from './Luzambiental';
 import gridHelper from './Plane';
+import informacion from './Modal';
 
 // Fondo con imagen 
 var loader = new THREE.TextureLoader();
@@ -20,7 +21,7 @@ loader.load("assets/img/istockphoto-1303973122-170667a.jpg", function (texture) 
 });
 
 
-
+informacion;
 scene.background = new THREE.Color("black");
 scene.add(lights);
 scene.add(gridHelper);
