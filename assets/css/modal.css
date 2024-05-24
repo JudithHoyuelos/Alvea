@@ -23,11 +23,20 @@ body {
 }
 
 #root {
-    background-color: red;
+    background-color: rgba(255, 255, 255, 0.9); /* Color semi-transparente (aqua) */
     position: fixed;
     top: 0;
     right: 0;
     width: 20rem;
-    height: 10rem;
+    height: 13rem;
     display: "";
+    padding: 2rem;
+}
+
+p {
+    font-size: large;
+}
+
+img {
+    width: 4rem;
 }

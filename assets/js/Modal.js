@@ -1,65 +1,110 @@
+import axios from 'axios';
 import bbdd from './Conexion';
 
 const modal = document.getElementById("root");
 
-function informacion(resultado) {
-    console.log(resultado)
-    modal.textContent = resultado;
-    return modal;
+function informacion(nombre, estado, localizacion) {
+  console.log(nombre);
+  console.log(estado);
+  console.log(localizacion);
+  // Crea nuevos elementos para cada pieza de información
+  const nombreElement = document.createElement('h1');
+  nombreElement.textContent = `Nombre: ${nombre}`;
+
+  const estadoElement = document.createElement('p');
+  estadoElement.textContent = `Estado: ${estado}`;
+
+  const localizacionElement = document.createElement('p');
+  localizacionElement.textContent = `Localización: ${localizacion}`;
+
+  const moneda = document.createElement('img');
+  moneda.src = "assets/img/monedas-oro-1-oz-maple-leaf-1.png"
+  moneda.alt = "moneda"
+
+  const espada = document.createElement('img');
+  espada.src = "assets/img/espadita.png"
+  espada.alt = "espada"
+
+  const cubo = document.createElement('img');
+  cubo.src = "assets/img/cubo.png"
+  cubo.alt = "cubo"
+
+  if (nombre == "Rick Sanchez") {
+    modal.appendChild(moneda);
+  } else if (nombre == "Morty Smith") {
+    modal.appendChild(espada);
+  } else if (nombre == "Summer Smith") {
+    modal.appendChild(cubo);
+  }
+
+  // Añade los elementos al modal
+  modal.appendChild(nombreElement);
+  modal.appendChild(estadoElement);
+  modal.appendChild(localizacionElement);
+  return modal;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Captura el formulario
-    const formulario = document.getElementById('formulario');
-  
-    // Verifica si el formulario existe antes de agregar el controlador de eventos
-    if (formulario) {
-      formulario.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const nombre = document.getElementById('nombre').value;
-        buscarPersonaje(nombre);
-        // return nombre
-      });
-    }
-});
-
-async function GET() {
-    const prueba = await fetch(`${bbdd}/character`)
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error fetching data:', error));
-    // console.log(prueba.data)
-}
-
+// Función para buscar un personaje por nombre
 const buscarPersonaje = (nombre) => {
-    // Construir la URL de búsqueda
-    const url = `https://rickandmortyapi.com/api/character/?name=${nombre}`;
-  
-    // Realizar la solicitud HTTP
-    fetch(url)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('La solicitud no pudo ser completada.');
-        }
-        return response.json();
-      })
-      .then(data => {
-        // Procesar los datos de la respuesta
-        console.log('Resultados de la búsqueda:', data.results);
-        // Aquí podrías mostrar los resultados en la interfaz de usuario
-        const resultado = data.results
-        const datos = resultado.map(personaje => personaje.name);
-        informacion(datos)
-      })
-      .catch(error => {
-        console.error('Error al realizar la búsqueda:', error);
-        // Aquí podrías manejar el error en la interfaz de usuario
-      });
+  console.log('Buscando personaje:', nombre); // Verifica que la función se llama con el nombre correcto
+  const url = `${bbdd}/character/?name=${nombre}`;
+  console.log('URL:', url); // Verifica que la URL se construye correctamente
 
+  axios.get(url)
+    .then(response => {
+      const data = response.data;
+      if (data.results.length > 0) {
+        // const nombre = data.results.map(personaje => personaje.name).join(', ');
+        // const estado = data.results.map(personaje => personaje.status).join(', ');
+        // const localizacion = data.results.map(personaje => personaje.location.name).join(', ');
+        // informacion(nombre, estado, localizacion);
+        const primerPersonaje = data.results[0];
+        const nombre = primerPersonaje.name;
+        const estado = primerPersonaje.status;
+        const localizacion = primerPersonaje.location.name;
+        informacion(nombre, estado, localizacion);
+      } else {
+        informacion('No se encontraron resultados.');
+      }
+    })
+    .catch(error => {
+      console.error('Error al realizar la búsqueda:', error);
+      informacion('Error al realizar la búsqueda.');
+    });
 };
 
-GET();
-// let nombre = 'Rick Sanchez';
-// buscarPersonaje(nombre);
+// Espera a que el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('DOM fully loaded and parsed');
 
-export default informacion();
+  const formulario = document.getElementById('formulario');
+  console.log(formulario);
+
+  if (formulario) {
+    console.log('Formulario encontrado');
+    formulario.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var nombre = document.getElementById('name').value;
+      console.log('Nombre:', nombre); // Verifica que el nombre se está recogiendo
+      // Guardar el nombre en localStorage
+      localStorage.setItem('nombrePersonaje', nombre);
+
+      // Redirigir a alvea.html
+      window.location.href = 'alvea.html';
+      // buscarPersonaje(nombre);
+    });
+  } else {
+    console.log('Formulario no encontrado');
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const nombre = localStorage.getItem('nombrePersonaje');
+  if (nombre) {
+    buscarPersonaje(nombre);
+  } else {
+    informacion('No se proporcionó ningún nombre.');
+  }
+});
+
+export default informacion;

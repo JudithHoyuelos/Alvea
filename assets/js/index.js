@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { PointerLockControls } from 'three/addons/controls/PointerLockControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader';
 import camera from './Camera';
 import renderer from './Render';
@@ -10,6 +11,7 @@ import scene from './Screen';
 import lights from './Luzambiental';
 import gridHelper from './Plane';
 import informacion from './Modal';
+// import { Token } from './Moneda';
 
 // Fondo con imagen 
 var loader = new THREE.TextureLoader();
@@ -25,6 +27,8 @@ informacion;
 scene.background = new THREE.Color("black");
 scene.add(lights);
 scene.add(gridHelper);
+// scene.add(Token);
+// Token.position.set = (0, 3, 0);
 
 
 // implementar los cambios a la hora dell redimensionamiento de la pantalla 
@@ -57,6 +61,7 @@ modelo.load(
 	function ( gltf ) {
 
 		scene.add( gltf.scene );
+        console.log('Modelo cargado correctamente.');
 
 		gltf.animations; // Array<THREE.AnimationClip>
 		gltf.scene; // THREE.Group
@@ -78,6 +83,31 @@ modelo.load(
 
 	}
 );
+
+// Cargar DRACOLoader
+
+// let moneda = new GLTFLoader();
+// const dracoLoader = new DRACOLoader();
+// dracoLoader.setDecoderPath('/examples/jsm/libs/draco/'); // Asegúrate de tener los archivos de Draco en la ruta adecuada
+// dracoLoader.preload();
+// moneda.setDRACOLoader( dracoLoader );
+
+// // Cargar el modelo glTF
+// moneda.load(
+//     'assets/img/token.gltf',
+//     function (gltf) {
+//         scene.add(gltf.scene);
+//         console.log('Modelo cargado correctamente.');
+//     },
+//     function (xhr) {
+//         console.log((xhr.loaded / xhr.total * 100) + '% cargado');
+//     },
+//     function (error) {
+//         console.error('Ocurrió un error al cargar el modelo:', error);
+//     }
+// );
+
+
 
 
 // ajustes en el renderizador de la imagen para el fondo en 4k

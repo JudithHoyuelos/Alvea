@@ -2,6 +2,7 @@
   "dependencies": {
     "@react-three/drei": "^9.105.4",
     "@react-three/postprocessing": "^2.16.2",
+    "axios": "^1.7.2",
     "gsap": "^3.12.5",
     "stats.js": "^0.17.0",
     "three": "^0.163.0"
