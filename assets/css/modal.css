@@ -40,3 +40,41 @@ p {
 img {
     width: 4rem;
 }
+
+#menu-horizontal {
+    display: flex;
+    background-color: rgba(182, 35, 241, 0.6); /* Color semi-transparente (aqua) */
+    position: fixed;
+    bottom: 2rem;
+    left: 42%;
+    border-radius: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+}
+
+a:hover {
+    color: deeppink;
+}
+
+#punto1, #punto2, #punto3, #punto4 {
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    background-color: red; /* Cambiar color mas tarde */
+    border-radius: 100%;
+}
+
+#modales {
+    position: fixed;
+    background-color: rgba(0, 255, 255, 0.8);
+    height: 5rem;
+    width: 5rem;
+}
