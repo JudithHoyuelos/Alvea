@@ -206,6 +206,7 @@ function onClick(x, y, z, lookAtX, lookAtY, lookAtZ, points) {
 
         gsap.to(camera.position, {
             duration: 2,
+            //-12.611046376873789
             x: x,
             y: y,
             z: z,
@@ -271,15 +272,18 @@ function updateAnnotationPosition() {
     const position2 = updatePosition(new THREE.Vector3(2, 3, 3), '#punto2');
     const position3 = updatePosition(new THREE.Vector3(12, 0, 3), '#punto3');
     const position4 = updatePosition(new THREE.Vector3(-8, 0, 3), '#punto4');
+    const position9=updatePosition(new THREE.Vector3(13,1,3),'#punto9');
+
 
     // Array de posiciones para pasarlas a la función onClick
-    const positions = [position1, position2, position3, position4];
-
+    const positions = [position1, position2, position3, position4,position9];
+    
     // Add events to each annotation with their respective camera positions and lookAt positions
     addAnnotationEvents(position1, 39, -35, 2.3888577103551727, 1.8324140151651975, 2.704188278006996, -1, 1, 0, positions);
     addAnnotationEvents(position2, 39, -35, 2.1163238507698527, 1.8324140151651975, 3.349330773199133, 2, 1, 6, positions); // Actualiza estos valores según sea necesario
     addAnnotationEvents(position3, 39, -35, 7.238170413905775, 1.8324140151651975, -4.753328529998346, 10, 1, 0, positions); // Actualiza estos valores según sea necesario
     addAnnotationEvents(position4, 39, -35, -2.1208780253940085, 1.8324140151651953, -0.04582836480489122, -10, 1, 0, positions); // Actualiza estos valores según sea necesario
+    addAnnotationEvents(position9, 39, -35, -2.1208780253940085, 1.8324140151651953, -0.04582836480489122, -10, 1, 0, positions); // Actualiza estos valores según sea necesario
 }
 
 // Llama a la función para asegurarte de que los elementos DOM existen antes de actualizar

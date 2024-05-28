@@ -64,7 +64,7 @@ a:hover {
     color: deeppink;
 }
 
-#punto1, #punto2, #punto3, #punto4 {
+#punto1, #punto2, #punto3, #punto4 ,#punto10{
     width: 2rem;
     height: 2rem;
     position: fixed;
