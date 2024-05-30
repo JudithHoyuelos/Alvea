@@ -68,11 +68,18 @@ function onClickExitModal(e) {
     menu.style.display = '';
 }
 
+function onClickUseCase(e) {
+    console.log('se ha hecho click en el use case');
+    const div = document.querySelector(".useCase");
+    div.style.display = '';
+}
+
 // PRUEBA CARGAR MODELO 3D
 let modelo = new GLTFLoader();
 modelo.load(
     // resource URL
-    'assets/GLTF/AlveaPruebaGLTF.gltf',
+    'assets/mitadAlvea/AlveaSinMatIlu.glb',
+    // 'assets/GLTF/AlveaPruebaGLTF.gltf',
     // called when the resource is loaded
     function (gltf) {
 
@@ -154,9 +161,11 @@ function onClickLogo(x, y, z, lookAtX, lookAtY, lookAtZ, initialPoints) {
     return function(event) {
         const arriba = document.querySelector("#useCase");
         const logo = document.querySelector('#inicio');
+        const useCase = document.querySelector(".useCase");
 
         if (currentPoints[0] == arriba) {
             arriba.style.display = 'none';
+            useCase.style.display = 'none';
         } else {
             // Ocultar los puntos antiguos antes de mover la cámara
             currentPoints.forEach(point => {
@@ -229,9 +238,10 @@ function onClick(x, y, z, lookAtX, lookAtY, lookAtZ, newPoints) {
                     arriba.style.display = '';
                     currentPoints = [arriba];
                     console.log(currentPoints)
+                    arriba.addEventListener('click', onClickUseCase);
                     if (logo) {
                         logo.style.display = '';
-                        logo.addEventListener('click', onClickLogo(1.5620123612353716, 1.8324140151651975, -12.611046376873789, 2, 1, 0, initialPoints));
+                        logo.addEventListener('click', onClickLogo(-0.23324931851256903, 1.8324140151651975, 0.2862530684020239, 0, 1, -11, initialPoints));
                     }
                 } else {
                     newPoints.forEach(point => {
@@ -246,7 +256,7 @@ function onClick(x, y, z, lookAtX, lookAtY, lookAtZ, newPoints) {
                     currentPoints = newPoints;
                     if (logo) {
                         logo.style.display = '';
-                        logo.addEventListener('click', onClickLogo(1.5620123612353716, 1.8324140151651975, -12.611046376873789, 2, 1, 0, initialPoints));
+                        logo.addEventListener('click', onClickLogo(-0.23324931851256903, 1.8324140151651975, 0.2862530684020239, 0, 1, -11, initialPoints));
                     }
                 }
             }
@@ -297,45 +307,45 @@ function updateAnnotationPosition() {
         }
     }
 
-    const position1 = updatePosition(new THREE.Vector3(2, -3, 3), '#punto1');
-    const position2 = updatePosition(new THREE.Vector3(2, 3, 3), '#punto2');
-    const position3 = updatePosition(new THREE.Vector3(12, 0, 3), '#punto3');
-    const position4 = updatePosition(new THREE.Vector3(-8, 0, 3), '#punto4');
+    const position1 = updatePosition(new THREE.Vector3(0, -1, -11), '#punto1');
+    const position2 = updatePosition(new THREE.Vector3(0, 3, -11), '#punto2');
+    const position3 = updatePosition(new THREE.Vector3(-7, 1, -11), '#punto3');
+    const position4 = updatePosition(new THREE.Vector3(7, 1, -11), '#punto4');
 
-    const position5 = updatePosition(new THREE.Vector3(3, 4, 3), '#punto5');
-    const position6 = updatePosition(new THREE.Vector3(8, 2, 3), '#punto6');
-    const position7 = updatePosition(new THREE.Vector3(0, 0, 3), '#punto7');
+    const position5 = updatePosition(new THREE.Vector3(0, 4, -11), '#punto5');
+    const position6 = updatePosition(new THREE.Vector3(-5, 2, -11), '#punto6');
+    const position7 = updatePosition(new THREE.Vector3(2.5, 0.5, -11), '#punto7');
 
-    const position8 = updatePosition(new THREE.Vector3(13, 4, 3), '#punto8');
-    const position9 = updatePosition(new THREE.Vector3(2, 5, 3), '#punto9');
-    const position10 = updatePosition(new THREE.Vector3(1, -1.5, 3), '#punto10');
+    const position8 = updatePosition(new THREE.Vector3(0, 3, -11), '#punto8');
+    const position9 = updatePosition(new THREE.Vector3(2, -3, -11), '#punto9');
+    const position10 = updatePosition(new THREE.Vector3(6.5, 4, -11), '#punto10');
 
-    const position11 = updatePosition(new THREE.Vector3(-4, -1.5, 3), '#punto11');
-    const position12 = updatePosition(new THREE.Vector3(-7, -1.5, 3), '#punto12');
-    const position13 = updatePosition(new THREE.Vector3(-15, -6, 3), '#punto13');
+    const position11 = updatePosition(new THREE.Vector3(3.5, -2, -11), '#punto11');
+    const position12 = updatePosition(new THREE.Vector3(6, -1.5, -11), '#punto12');
+    const position13 = updatePosition(new THREE.Vector3(9, -3.5, -11), '#punto13');
 
     // Array de posiciones para pasarlas a la función onClick
     initialPoints = [position1, position2, position3, position4]; // Guardar los puntos iniciales
-    const newPositionsDerecha = [position5, position6, position7];
-    const newPositionsIzquierda = [position8, position9, position10];
+    const newPositionsDerecha = [position8, position9, position10];
+    const newPositionsIzquierda = [position5, position6, position7];
     const newPositionsAbajo = [position11, position12, position13];
     const arriba = document.querySelector("#useCase");
     
     // Add events to each annotation with their respective camera positions and lookAt positions
-    addAnnotationEvents(position1, 39, -35, 2.3888577103551727, 1.8324140151651975, 2.704188278006996, -1, 1, 0, newPositionsAbajo);
-    addAnnotationEvents(position2, 39, -35, 2.1163238507698527, 1.8324140151651975, 3.349330773199133, 2, 1, 6, arriba); // Actualiza estos valores según sea necesario
-    addAnnotationEvents(position3, 39, -35, 7.238170413905775, 1.8324140151651975, -4.753328529998346, 10, 1, 0, newPositionsIzquierda); // Actualiza estos valores según sea necesario
-    addAnnotationEvents(position4, 39, -35, -2.1208780253940085, 1.8324140151651953, -0.04582836480489122, -10, 1, 0, newPositionsDerecha); // Actualiza estos valores según sea necesario
+    addAnnotationEvents(position1, 39, -35, 0.6201922849652849, 1.8324140151651975, 2.5258305164814105, -6, 1, -4, newPositionsAbajo);
+    addAnnotationEvents(position2, 39, -35, -0.06712472858464706, 1.8324140151651975, -7.752030493442582, 0, 1, -11, arriba); // Actualiza estos valores según sea necesario
+    addAnnotationEvents(position3, 39, -35, -4.737092106867862, 1.8324140151651975, 0.07007195162038703, -9, 1, 0, newPositionsIzquierda); // Actualiza estos valores según sea necesario
+    addAnnotationEvents(position4, 39, -35, 4.547513663373049, 1.8324140151651975, 3.9819783918301144, 10, 1, -1, newPositionsDerecha); // Actualiza estos valores según sea necesario
 
     //menu 
     const sobre = document.querySelector("#sobre");
     const soluciones = document.querySelector("#soluciones");
     const tecnologias = document.querySelector("#tecnologias");
     const experiencias = document.querySelector("#experiencias");
-    sobre.addEventListener('click', onClick(7.238170413905775, 1.8324140151651975, -4.753328529998346, 10, 1, 0, newPositionsIzquierda));
-    soluciones.addEventListener('click', onClick(2.1163238507698527, 1.8324140151651975, 3.349330773199133, 2, 1, 6, arriba));
-    tecnologias.addEventListener('click', onClick(2.3888577103551727, 1.8324140151651975, 2.704188278006996, -1, 1, 0, newPositionsAbajo));
-    experiencias.addEventListener('click', onClick(-2.1208780253940085, 1.8324140151651953, -0.04582836480489122, -10, 1, 0, newPositionsDerecha));
+    sobre.addEventListener('click', onClick(-4.737092106867862, 1.8324140151651975, 0.07007195162038703, -9, 1, 0, newPositionsIzquierda));
+    soluciones.addEventListener('click', onClick(-0.06712472858464706, 1.8324140151651975, -7.752030493442582, 0, 1, -11, arriba));
+    tecnologias.addEventListener('click', onClick(0.6201922849652849, 1.8324140151651975, 2.5258305164814105, -6, 1, -4, newPositionsAbajo));
+    experiencias.addEventListener('click', onClick(4.547513663373049, 1.8324140151651975, 3.9819783918301144, 10, 1, -1, newPositionsDerecha));
 
     currentPoints = initialPoints;
 }

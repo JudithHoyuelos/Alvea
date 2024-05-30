@@ -124,6 +124,9 @@ a:hover {
     width: 10rem;
 }
 
+
+/* uso de casos  */
+
 #useCase {
     position: fixed;
     background-color: rgba(0, 255, 255, 0.8);
@@ -131,6 +134,92 @@ a:hover {
     width: 10rem;
     top: 15rem;
     left: 46%;
+}
+
+.useCase {
+    position: fixed;
+    background-color: rgba(245, 255, 255, 0.6);
+    height: 20rem;
+    width: 50rem;
+    top: 12rem;
+    left: 25%;
+}
+
+.useCase-comercio {
+    position: fixed;
+    background-color: rgba(154, 37, 249, 0.6);
+    height: 5rem;
+    width: 10rem;
+    top: 15rem;
+    left: 46%;
+}
+
+.useCase-turismo {
+    position: fixed;
+    background-color: rgba(252, 145, 23, 0.6);
+    height: 5rem;
+    width: 10rem;
+    top: 15rem;
+    left: 46%;
+}
+
+.useCase-entrenimiento {
+    position: fixed;
+    background-color: rgba(206, 0, 0, 0.6);
+    height: 5rem;
+    width: 10rem;
+    top: 15rem;
+    left: 46%;
+}
+
+.useCase-socializacion {
+    position: fixed;
+    background-color: rgba(249, 245, 37, 0.6);
+    height: 5rem;
+    width: 10rem;
+    top: 15rem;
+    left: 46%;
+}
+
+/* road map carrusel */
+
+.roadmap-cards {
+    position: fixed;
+    background-color: rgba(238, 236, 110, 0.6);
+    height: 30rem;
+    width: 40rem;
+}
+
+.roadmap-card {
+    position: fixed;
+    background-color: rgba(196, 193, 60, 0.6);
+    height: 20rem;
+    width: 40rem;
+    top: 20%;
+}
+
+.roadmap-info {
+    position: fixed;
+    background-color: rgba(238, 59, 28, 0.6);
+    height: 5rem;
+    width: 40rem;
+    top: 66%;
+}
+
+.roadmap-img {
+    position: fixed;
+    background-color: rgba(46, 87, 223, 0.6);
+    height: 15rem;
+    width: 40rem;
+    top: 20%;
+}
+
+.roadmap-flechas {
+    position: fixed;
+    background-color: rgba(105, 249, 73, 0.6);
+    height: 5rem;
+    width: 40rem;
+    bottom: 1rem;
 }
 
 /* modales de los hotpoints del hover de los 4 primeros */
