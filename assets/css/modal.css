@@ -189,48 +189,23 @@ h2 {
 
 /*------------------- Road Map -------------------*/
 
-.roadmap-cards {
-    margin: 1rem 1rem;
-    position: fixed;
-    height: 30rem;
-    width: 40rem;
+.global-info .roadmap-cards {
+    display: flex;
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
-.roadmap-card {
-    position: fixed;
-    height: 20rem;
-    width: 40rem;
-    top: 20%;
+.global-info .roadmap-cards .roadmap-card .roadmap-img {
+    min-width: 30%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 }
 
-.roadmap-info {
-    position: fixed;
-    height: 5rem;
-    width: 40rem;
-    top: 66%;
-}
-
-.roadmap-img {
-    position: fixed;
-    height: 15rem;
-    width: 40rem;
-    top: 20%;
-}
-
-.roadmap-img img {
-    margin: auto 3rem;
-    width: 22rem;
-}
-
-.roadmap-flechas {
-    position: fixed;
-    height: 5rem;
-    width: 40rem;
-    bottom: 1rem;
-}
-
-.roadmap-card .roadmap-info p {
-    font-size: 30px;
+.global-info .roadmap-cards .roadmap-card .roadmap-img img {
+    width: 95%;
+    vertical-align: top;
 }
 
 /*------------ Flechas y rayas ------------  */
@@ -241,7 +216,13 @@ h2 {
     font-size: 1.5rem;
 }
 
+.roadmap-flechas {
+    display: flex;
+    justify-content: space-between;
+}
+
 .roadmap-flechas .roadmap-rayas {
+    display: flex;
     background: #000;
     height: 3px;
     width: 10px;
@@ -251,12 +232,8 @@ h2 {
     margin-top: 0.5rem;
 }
 
-/* .roadmap-flechas .roadmap-rayas button {
-    
-} */
-
-.contenedor-titulo-controles .indicadores button:hover,
-.contenedor-titulo-controles .indicadores button.activo {
+.roadmap-flechas .roadmap-rayas button:hover,
+.roadmap-flechas .roadmap-rayas button.activo {
     background: #fa1717;
 }
 
