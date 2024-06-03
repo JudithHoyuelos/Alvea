@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/modal.css">
     <script src="assets/js/indexAlvearium.js" type="module"></script>
 </head>
+
 <body>
     <div id="punto1" style="display:''"></div>
     <div id="punto2" style="display:''"></div>
@@ -93,42 +95,28 @@
             </div>
         </div>
         <div id="info8" style="display:none">
-            <div class="global-info">
+            <div class="peliculas-recomendadas">
                 <h2>RoadMap</h2>
-                <div class="roadmap-cards">
-                    <div class="roadmap-card">
-                        <div class="roadmap-img">
-                            <img src="./assets/img/imagen.jpg" alt="">
-                        </div>
-                        <div class="roadmap-info">
-                            <p>Maria Suerte La mia</p>
-                        </div>
-                    </div>
-                    <div class="roadmap-card">
-                        <div class="roadmap-img">
-                            <img src="./assets/img/imagen2.jpg" alt="">
-                        </div>
-                        <div class="roadmap-info">
-                            <p>Berta Limpia Ordenadores</p>
-                        </div>
-                    </div>
-                    <div class="roadmap-card">
-                        <div class="roadmap-img">
-                            <img src="./assets/img/imagen.jpg" alt="">
-                        </div>
-                        <div class="roadmap-info">
-                            <p>Maria Suerte La mia</p>
+                <div class="contenedor-principal">
+                    <div class="contenedor-carrusel">
+                        <div class="carrusel">
+                            <div class="pelicula">
+                                <a href="javascript:abrir1()"><img src="./assets/img/imagen.jpg"
+                                        alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="javascript:abrir2()"><img src="./assets/img/imagen2.jpg"
+                                        alt="l"></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="javascript:abrir3()"><img src="./assets/img/imagen.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="javascript:abrir4()"><img src="./assets/img/imagen2.jpg"
+                                        alt=""></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="roadmap-card">
-                        <div class="roadmap-img">
-                            <img src="./assets/img/imagen.jpg" alt="">
-                        </div>
-                        <div class="roadmap-info">
-                            <p>Maria Suerte La mia</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="roadmap-flechas">
                     <div class="roadmap-flechitas">
                         <button><i class="fa-regular fa-circle-left" id="flecha-izquierda"></i></button>
@@ -138,7 +126,9 @@
                 </div>
             </div>
         </div>
-        <div class="global-info" id="info9" style="display:none"><h2>Historia</h2></div>
+        <div class="global-info" id="info9" style="display:none">
+            <h2>Historia</h2>
+        </div>
         <div class="global-info" id="info10" style="display:none">
             <h2>Equipo</h2>
             <div class="equipo-cards">
@@ -262,4 +252,5 @@
     <script src="https://kit.fontawesome.com/b8970cc01f.js" crossorigin="anonymous"></script>
     <script src="assets/js/FuncionCss.js"></script>
 </body>
+
 </html>

@@ -189,52 +189,75 @@ h2 {
 
 /*------------------- Road Map -------------------*/
 
-.global-info .roadmap-cards {
-    display: flex;
+/*------- contenedor principal y flechas --------*/
+.peliculas-recomendadas {
+    margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, .3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: aliceblue;
+    cursor: pointer;
+    z-index: 1;
+    transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+    left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+    right: 0;
+}
+
+/*------------ carrusel ---------- */
+.contenedor-principal {
+    display: grid;
+    height: 100%;
+}
+.peliculas-recomendadas .contenedor-carrusel {
     width: 100%;
     padding: 20px 0;
     overflow: hidden;
     scroll-behavior: smooth;
 }
 
-.global-info .roadmap-cards .roadmap-card .roadmap-img {
-    min-width: 30%;
+.peliculas-recomendadas .contenedor-carrusel .carrusel {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carrusel .carrusel .pelicula {
+    min-width: 100%;
     transition: .3s ease all;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
 }
 
-.global-info .roadmap-cards .roadmap-card .roadmap-img img {
-    width: 95%;
+.peliculas-recomendadas .contenedor-carrusel .carrusel .pelicula.hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carrusel .carrusel .pelicula img {
+    width: 90%;
     vertical-align: top;
-}
-
-/*------------ Flechas y rayas ------------  */
-
-.fa-regular {
-    font-weight: 400;
-    color: #000;
-    font-size: 1.5rem;
+    margin-top: 5rem;
 }
 
 .roadmap-flechas {
-    display: flex;
-    justify-content: space-between;
-}
 
-.roadmap-flechas .roadmap-rayas {
-    display: flex;
-    background: #000;
-    height: 3px;
-    width: 10px;
-    cursor: pointer;
-    border: none;
-    margin-left: 1rem;
-    margin-top: 0.5rem;
-}
-
-.roadmap-flechas .roadmap-rayas button:hover,
-.roadmap-flechas .roadmap-rayas button.activo {
-    background: #fa1717;
 }
 
 /* modales de los hotpoints del hover de los 4 primeros */
