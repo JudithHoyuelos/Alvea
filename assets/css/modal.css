@@ -72,7 +72,7 @@ a:hover {
     position: fixed; /*Fija la posición del div*/
     top: 0; /*Coloca el div en la parte superior de la ventana*/
     right: 0; /*Coloca el div en el lado derecho de la ventana*/
-    background-color: rgba(0, 255, 255, 0.8); /* Color semi-transparente (aqua) */
+    background-color: rgba(246, 249, 249, 0.8); /* Color semi-transparente (aqua) */
     border-radius: 3rem;
 }
 
@@ -102,6 +102,12 @@ a:hover {
     margin: 2rem;
 }
 
+/* ------------ Globales ----------- */
+
+h2 {
+    font-size: 50px;
+    margin-left: 1rem;
+}
 
 /* hotpoints */
 
@@ -181,18 +187,17 @@ a:hover {
     left: 46%;
 }
 
-/* road map carrusel */
+/*------------------- Road Map -------------------*/
 
 .roadmap-cards {
+    margin: 1rem 1rem;
     position: fixed;
-    background-color: rgba(238, 236, 110, 0.6);
     height: 30rem;
     width: 40rem;
 }
 
 .roadmap-card {
     position: fixed;
-    background-color: rgba(196, 193, 60, 0.6);
     height: 20rem;
     width: 40rem;
     top: 20%;
@@ -200,7 +205,6 @@ a:hover {
 
 .roadmap-info {
     position: fixed;
-    background-color: rgba(238, 59, 28, 0.6);
     height: 5rem;
     width: 40rem;
     top: 66%;
@@ -208,24 +212,52 @@ a:hover {
 
 .roadmap-img {
     position: fixed;
-    background-color: rgba(46, 87, 223, 0.6);
     height: 15rem;
     width: 40rem;
     top: 20%;
 }
 
+.roadmap-img img {
+    margin: auto 3rem;
+    width: 22rem;
+}
+
 .roadmap-flechas {
     position: fixed;
-    background-color: rgba(105, 249, 73, 0.6);
     height: 5rem;
     width: 40rem;
     bottom: 1rem;
 }
 
-/* flechas  */
+.roadmap-card .roadmap-info p {
+    font-size: 30px;
+}
 
-#flecha-derecha, #flecha-izquierda {
-    width: 4rem;
+/*------------ Flechas y rayas ------------  */
+
+.fa-regular {
+    font-weight: 400;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.roadmap-flechas .roadmap-rayas {
+    background: #000;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* .roadmap-flechas .roadmap-rayas button {
+    
+} */
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+    background: #fa1717;
 }
 
 /* modales de los hotpoints del hover de los 4 primeros */
@@ -245,6 +277,6 @@ a:hover {
     position: fixed; /*Fija la posición del div*/
     top: 0; /*Coloca el div en la parte superior de la ventana*/
     right: 0; /*Coloca el div en el lado derecho de la ventana*/
-    background-color: rgba(0, 255, 255, 0.8); /* Color semi-transparente (aqua) */
+    background-color: rgba(255, 255, 255, 0.845); /* Color semi-transparente (aqua) */
     border-radius: 2rem;
 } 
