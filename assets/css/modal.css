@@ -222,6 +222,12 @@ a:hover {
     bottom: 1rem;
 }
 
+/* flechas  */
+
+#flecha-derecha, #flecha-izquierda {
+    width: 4rem;
+}
+
 /* modales de los hotpoints del hover de los 4 primeros */
 
 #modales {
