@@ -133,7 +133,7 @@ function onClickHotpoint(element) {
         info13: document.querySelector("#info13"),
     };
 
-    const menu = document.querySelector("#menu");
+    const menu = document.querySelector("#menu-lateral");
     const modal = document.querySelector("#modal");
     const exit = document.querySelector("#exitModal"); // Asegúrate de que este selector es correcto
 
