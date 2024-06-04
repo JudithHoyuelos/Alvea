@@ -10,6 +10,9 @@
 </head>
 
 <body>
+
+    <!------------ HOTPOINTS ---------------->
+
     <div id="punto1" style="display:''"></div>
     <div id="punto2" style="display:''"></div>
     <div id="punto3" style="display:''"></div>
@@ -25,91 +28,45 @@
     <div id="punto13" style="display:none"></div>
     <div id="modal" style="display:none">
         <img id="exitModal" src="assets/img/exitModal.png" alt="exit">
-        <div class="global-info" id="info5" style="display:none">
-            <h2>Realidad Virtual</h2>
-            <div class="rv-videos">
-                <div class="rv-video">
-                    <video src=""></video>
-                </div>
-                <div class="rv-video-miniatura">
-                    <div>
-                        <img src="" alt="">
-                    </div>
-                    <div>
-                        <img src="" alt="">
-                    </div>
-                    <div>
-                        <img src="" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="rv-flechas">
-                <div class="rv-flechitas"></div>
-                <div class="rv-rayas"></div>
+        
+        <!---------------- REALIDAD VIRTUAL ---------------->
+        
+        <div id="info5" style="display:none">
+            <div class="global-info">
+                <h2>Realidad Virtual</h2>
             </div>
         </div>
-        <div class="global-info" id="info6" style="display:none">
+
+        <!---------------- REALIDAD AUMENTADA ---------------->
+
+        <div id="info6" style="display:none">
             <h2>Realidad Aumentada</h2>
-            <div class="ra-videos">
-                <div class="ra-video">
-                    <video src=""></video>
-                </div>
-                <div class="ra-video-miniatura">
-                    <div>
-                        <img src="" alt="">
-                    </div>
-                    <div>
-                        <img src="" alt="">
-                    </div>
-                    <div>
-                        <img src="" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="ra-flechas">
-                <div class="ra-flechitas"></div>
-                <div class="ra-rayas"></div>
-            </div>
         </div>
-        <div class="global-info" id="info7" style="display:none">
+
+        <!---------------- REALIDAD MIXTA ---------------->
+
+        <div id="info7" style="display:none">
             <h2>Realidad Mixta</h2>
-            <div class="rm-videos">
-                <div class="rm-video">
-                    <video src=""></video>
-                </div>
-                <div class="rm-video-miniatura">
-                    <div>
-                        <img src="" alt="">
-                    </div>
-                    <div>
-                        <img src="" alt="">
-                    </div>
-                    <div>
-                        <img src="" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="rm-flechas">
-                <div class="rm-flechitas"></div>
-                <div class="rm-rayas"></div>
-            </div>
         </div>
+
+        <!----------- ROAD MAP ------------->
+
         <div id="info8" style="display:none">
-            <div class="peliculas-recomendadas">
+            <div class="global-info">
                 <h2>RoadMap</h2>
-                <div class="contenedor-principal">
-                    <div class="contenedor-carrusel">
-                        <div class="carrusel">
-                            <div class="pelicula">
-                                <a href="javascript:abrir1()"><img src="./assets/img/imagen.jpg" alt=""></a>
+                <div class="roadmap-contenedor-principal">
+                    <div class="roadmap-contenedor-carrusel">
+                        <div class="roadmap-carrusel">
+                            <div class="roadmap-img">
+                                <img src="./assets/img/imagen.jpg" alt="">
                             </div>
-                            <div class="pelicula">
+                            <div class="roadmap-img">
                                 <a href="javascript:abrir2()"><img src="./assets/img/imagen2.jpg" alt=""></a>
                             </div>
-                            <div class="pelicula">
+                            <div class="roadmap-img">
                                 <a href="javascript:abrir3()"><img src="./assets/img/imagen.jpg" alt=""></a>
                             </div>
-                            <div class="pelicula">
+                            <div class="roadmap-img">
                                 <a href="javascript:abrir4()"><img src="./assets/img/imagen2.jpg" alt=""></a>
                             </div>
                         </div>
@@ -124,66 +81,36 @@
                 </div>
             </div>
         </div>
-        <div class="global-info" id="info9" style="display:none">
+
+        <!---------------- HISTORIA ---------------->
+
+        <div id="info9" style="display:none">
             <h2>Historia</h2>
         </div>
-        <div class="global-info" id="info10" style="display:none">
+
+        <!---------------- EQUIPO ---------------->
+
+        <div id="info10" style="display:none">
             <h2>Equipo</h2>
-            <div class="equipo-cards">
-                <div class="equipo-card">
-                    <div class="equipo-img"></div>
-                    <div class="equipo-info"></div>
-                </div>
-                <div class="equipo-card">
-                    <div class="equipo-img"></div>
-                    <div class="equipo-info"></div>
-                </div>
-                <div class="equipo-card">
-                    <div class="equipo-img"></div>
-                    <div class="equipo-info"></div>
-                </div>
-                <div class="equipo-card">
-                    <div class="equipo-img"></div>
-                    <div class="equipo-info"></div>
-                </div>
-                <div class="equipo-card">
-                    <div class="equipo-img"></div>
-                    <div class="equipo-info"></div>
-                </div>
-                <div class="equipo-card">
-                    <div class="equipo-img"></div>
-                    <div class="equipo-info"></div>
-                </div>
-                <div class="equipo-card">
-                    <div class="equipo-img"></div>
-                    <div class="equipo-info"></div>
-                </div>
-                <div class="equipo-card">
-                    <div class="equipo-img"></div>
-                    <div class="equipo-info"></div>
-                </div>
-            </div>
-            <div class="equipo-flechas">
-                <div class="equipo-flechitas"></div>
-            </div>
         </div>
-        <div class="global-info" id="info11" style="display:none">
+
+        <!---------------- REALIDAD EXTENDIDA ---------------->
+
+        <div id="info11" style="display:none">
             <h2>Realidad Extendida</h2>
-            <div class="rx-cards">
-                <div class="rx-card">
-                    <img src="" alt="">
-                </div>
-                <div class="rx-card">
-                    <img src="" alt="">
-                </div>
-            </div>
         </div>
+
+        <!---------------- INTELIGENCIA ARTIFICIAL ---------------->
+
         <div class="global-info" id="info12" style="display:none">
             <h2>Inteligencia Artificial</h2>
             <div>
                 <img src="" alt="">
             </div>
         </div>
+
+        <!---------------- BLOCKCHAIN ---------------->
+
         <div class="global-info" id="info13" style="display:none">
             <h2>Blockchain</h2>
             <div>
@@ -192,41 +119,52 @@
         </div>
     </div>
 
+        <!--------------- MENU LATERAL ---------------->
+
     <div id="menu-lateral">
-        <img id="menu" src="assets/img/menu.png" alt="menu">
+        <img id="icono-menu-lateral" src="assets/img/menu.png" alt="menu">
     </div>
-    <div id="desplegable" style="display:none">
+    <div id="desplegable" class="glass-effect" style="display:none">
         <img id="exit" src="assets/img/exit.png" alt="exit">
-        <div class="contenido-menuprincipal">
+        <div class="contenido-menu-principal">
             <div class="menu-principal">
-                <p>01</p>
-                <h3 id="sobre">Sobre Nosotros</h3>
-                <p>Road Map, Equipo, Historia</p>
+                <p class="menu-lateral-etiqueta">01</p>
+                <h3 class="titulo-menu-lateral" id="sobre">Sobre Nosotros</h3>
+                <p class="menu-lateral-parrafo">Road Map, Equipo, Historia</p>
             </div>
             <div class="menu-principal">
-                <p>02</p>
-                <h3 id="soluciones">Soluciones</h3>
-                <p>Use Cases: Comercio, Turismo, Entretenimiento, Socialización</p>
+                <p class="menu-lateral-etiqueta">02</p>
+                <h3 class="titulo-menu-lateral" id="soluciones">Soluciones</h3>
+                <p class="menu-lateral-parrafo">Use Cases: Comercio, Turismo, Entretenimiento, Socialización</p>
             </div>
             <div class="menu-principal">
-                <p>03</p>
-                <h3 id="tecnologias">Tecnologías</h3>
-                <p>Realidad Extendida, Inteligencia Artificial, Blockchain</p>
+                <p class="menu-lateral-etiqueta">03</p>
+                <h3 class="titulo-menu-lateral" id="tecnologias">Tecnologías</h3>
+                <p class="menu-lateral-parrafo">Realidad Extendida, Inteligencia Artificial, Blockchain</p>
             </div>
             <div class="menu-principal">
-                <p>04</p>
-                <h3 id="experiencias">Experiencias</h3>
-                <p>Realidad Virtual, Realidad aumentada, Realidad mixta</p>
+                <p class="menu-lateral-etiqueta">04</p>
+                <h3 class="titulo-menu-lateral" id="experiencias">Experiencias</h3>
+                <p class="menu-lateral-parrafo">Realidad Virtual, Realidad aumentada, Realidad mixta</p>
             </div>
         </div>
     </div>
+
+    <!---------------- MENU HORIZONTAL INFERIOR ---------------->
+
     <div id="menu-horizontal" style="display: none;">
         <a href="blog.html">Blog</a>
         <a href=""><img src="assets/img/logoimpro.png" alt="logo"></a>
         <a href="contacto.html">Contacto</a>
     </div>
     <div id="modales" style="display:none"></div>
-    <div id="inicio" style="display:none"><a href="#"><img id="logo" src="assets/img/logo (1).png" alt="logo"></a></div>
+    <div id="inicio" style="display:none">
+        <a href="#">
+            <img id="logo-blanco" src="assets/img/Logos/Alv_PositivoPNG.png" alt="logo">
+        </a>
+    </div>
+
+    <!---------------- SOLUCIONES/USE CASE ---------------->
 
     <div id="useCase" style="display:none">
         <div class="useCase" style="display:none">

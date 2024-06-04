@@ -1,7 +1,7 @@
 // ----------- movimiento del carrusel y flechas
 
-const fila = document.querySelector('.contenedor-carrusel');
-const peliculas = document.querySelectorAll('.pelicula');
+const fila = document.querySelector('.roadmap-contenedor-carrusel');
+const peliculas = document.querySelectorAll('.roadmap-img');
 
 const flechaIzquierda = document.getElementById('flecha-izquierda');
 const flechaDerecha = document.getElementById('flecha-derecha');

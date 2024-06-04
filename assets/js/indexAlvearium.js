@@ -45,7 +45,7 @@ window.addEventListener('resize', () => {
 // controls.target.set(2, 1, 0);
 // controls.update();
 
-const menu = document.querySelector("#menu");
+const menu = document.querySelector("#icono-menu-lateral");
 menu.addEventListener('click', onClickMenu);
 const exit = document.querySelector("#exit");
 exit.addEventListener('click', onClickExit);
