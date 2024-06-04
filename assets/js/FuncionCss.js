@@ -30,6 +30,7 @@ flechaIzquierda.addEventListener('click', () => {
 const numeroPaginas = Math.ceil(peliculas.length / 1);
 for (let i = 0; i < numeroPaginas; i++) {
     const indicador = document.createElement('button');
+    indicador.className = "botones-rayas";
     if (i === 0) {
         indicador.classList.add('activo');
     }
