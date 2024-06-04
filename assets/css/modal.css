@@ -177,6 +177,32 @@ img {
     background-color: var(--dark-orchid);
 }
 
+/* ------------- etiquetas ------------- */
+
+.roadmap-contenedor-info {
+    margin-right: 0 3rem;
+}
+
+.roadmap-info-titulo{
+    font-size: 30px;
+}
+
+.roadmap-etiquetas {
+    margin: 1rem 0;
+}
+
+.roadmap-etiqueta {
+    display: flex;
+    margin-left: 1rem;
+}
+
+.etiqueta-roadmap {
+    background-color: var(--lavander);
+    font-size: 18px;
+    border-radius: 30%;
+    gap: 2rem;
+}
+
 /*------------ roadmap-carrusel ---------- */
 
 .global-info .roadmap-contenedor-carrusel {
