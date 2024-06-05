@@ -82,7 +82,6 @@ function onClickExitModal(e) {
     const divMenu = document.querySelector("#menu-lateral");
     div.style.display = 'none';
     divMenu.style.display = '';
-    console.log(menu)
 }
 
 function onClickUseCase(e) {

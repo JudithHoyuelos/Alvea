@@ -228,7 +228,7 @@ img {
 .global-info .roadmap-contenedor-carrusel .roadmap-img img {
     width: 60%;
     vertical-align: top;
-    margin-top: 5rem;
+    margin-top: 3rem; /* cambio provisional para que pueda manejar la funcionalidad */
 }
 
 /* ------------ HISTORIA ----------- */
