@@ -45,7 +45,7 @@ window.addEventListener('resize', () => {
 // controls.target.set(2, 1, 0);
 // controls.update();
 
-const menu = document.querySelector("#menu");
+const menu = document.querySelector("#icono-menu-lateral");
 menu.addEventListener('click', onClickMenu);
 const exit = document.querySelector("#exit");
 exit.addEventListener('click', onClickExit);
@@ -62,11 +62,24 @@ function onClickExit(e) {
     menu.style.display = '';
 }
 
+function onClickExitModal(e) {
+    const div = document.querySelector("#modal");
+    div.style.display = 'none';
+    menu.style.display = '';
+}
+
+function onClickUseCase(e) {
+    console.log('se ha hecho click en el use case');
+    const div = document.querySelector(".useCase");
+    div.style.display = '';
+}
+
 // PRUEBA CARGAR MODELO 3D
 let modelo = new GLTFLoader();
 modelo.load(
     // resource URL
-    'assets/GLTF/AlveaPruebaGLTF.gltf',
+    'assets/mitadAlvea/AlveaSinMatIlu.glb',
+    // 'assets/GLTF/AlveaPruebaGLTF.gltf',
     // called when the resource is loaded
     function (gltf) {
 
@@ -94,22 +107,73 @@ modelo.load(
     }
 );
 
+function onClickHotpoint(element) {
+    // Obtén todas las referencias a los elementos de puntos y modales
+    const points = {
+        punto5: document.querySelector("#punto5"),
+        punto6: document.querySelector("#punto6"),
+        punto7: document.querySelector("#punto7"),
+        punto8: document.querySelector("#punto8"),
+        punto9: document.querySelector("#punto9"),
+        punto10: document.querySelector("#punto10"),
+        punto11: document.querySelector("#punto11"),
+        punto12: document.querySelector("#punto12"),
+        punto13: document.querySelector("#punto13"),
+    };
+
+    const modals = {
+        info5: document.querySelector("#info5"),
+        info6: document.querySelector("#info6"),
+        info7: document.querySelector("#info7"),
+        info8: document.querySelector("#info8"),
+        info9: document.querySelector("#info9"),
+        info10: document.querySelector("#info10"),
+        info11: document.querySelector("#info11"),
+        info12: document.querySelector("#info12"),
+        info13: document.querySelector("#info13"),
+    };
+
+    const menu = document.querySelector("#menu-lateral");
+    const modal = document.querySelector("#modal");
+    const exit = document.querySelector("#exitModal"); // Asegúrate de que este selector es correcto
+
+    // Oculta el menú y muestra el modal contenedor
+    menu.style.display = 'none';
+    modal.style.display = '';
+
+    // Oculta todos los modales
+    Object.values(modals).forEach(m => m.style.display = 'none');
+
+    // Muestra el modal correspondiente al punto clicado
+    Object.entries(points).forEach(([pointId, pointElement]) => {
+        if (element === pointElement) {
+            const modalId = `info${pointId.replace('punto', '')}`;
+            modals[modalId].style.display = '';
+        }
+    });
+
+    // Añade evento para cerrar el modal
+    exit.addEventListener('click', onClickExitModal);
+}
+
 // Función para mover la cámara al inicio y que aparezcan los puntos del inicio
-function onClickLogo(x, y, z, lookAtX, lookAtY, lookAtZ, oldPoints, newPoints) {
+function onClickLogo(x, y, z, lookAtX, lookAtY, lookAtZ, initialPoints) {
     return function(event) {
         const arriba = document.querySelector("#useCase");
-        if (newPoints == arriba) {
+        const logo = document.querySelector('#inicio');
+        const useCase = document.querySelector(".useCase");
+
+        if (currentPoints[0] == arriba) {
             arriba.style.display = 'none';
+            useCase.style.display = 'none';
         } else {
             // Ocultar los puntos antiguos antes de mover la cámara
-            newPoints.forEach(point => {
+            currentPoints.forEach(point => {
                 if (point.element) {
                     point.element.style.display = 'none';
                 }
             });
         }
-
-        const logo = document.querySelector('#inicio');
 
         gsap.to(camera.position, {
             duration: 2,
@@ -121,32 +185,44 @@ function onClickLogo(x, y, z, lookAtX, lookAtY, lookAtZ, oldPoints, newPoints) {
             },
             onComplete: function() {
                 // Mostrar los nuevos puntos después de que la cámara haya terminado de moverse
-                oldPoints.forEach(point => {
+                initialPoints.forEach(point => {
                     if (point.element) {
                         point.element.style.display = '';
                     }
-                    if (logo) {
-                        logo.style.display = 'none';
-                    }
                 });
+                currentPoints = initialPoints; // Establecer los puntos iniciales como los puntos actuales
             }
         });
+        if (logo) {
+            logo.style.display = 'none';
+        }
     }
 }
 
 
-// Función para mover la cámara a una posición específica y ocultar los puntos
-function onClick(x, y, z, lookAtX, lookAtY, lookAtZ, oldPoints, newPoints) {
-    return function(event) {
-        // Ocultar los puntos antiguos antes de mover la cámara
-        oldPoints.forEach(point => {
-            if (point.element) {
-                point.element.style.display = 'none';
-            }
-        });
+// Registro global de los puntos actuales
+let currentPoints = [];
+let initialPoints = []; // Para mantener los puntos iniciales visibles
 
+// Función para mover la cámara a una posición específica y ocultar los puntos
+function onClick(x, y, z, lookAtX, lookAtY, lookAtZ, newPoints) {
+    return function(event) {
         const logo = document.querySelector('#inicio');
         const arriba = document.querySelector("#useCase");
+        
+        // Ocultar los puntos actuales antes de mover la cámara
+        if (currentPoints[0] == arriba) {
+            console.log('modal desaparece');
+            arriba.style.display = 'none';
+        } else {
+            // Ocultar los puntos antiguos antes de mover la cámara
+            currentPoints.forEach(point => {
+                if (point.element) {
+                    point.element.style.display = 'none';
+                }
+            });
+        }
+
 
         gsap.to(camera.position, {
             duration: 2,
@@ -159,26 +235,34 @@ function onClick(x, y, z, lookAtX, lookAtY, lookAtZ, oldPoints, newPoints) {
             },
             onComplete: function() {
                 // Mostrar los nuevos puntos después de que la cámara haya terminado de moverse
-                if (newPoints == arriba) {
+                if (newPoints === arriba) {
                     arriba.style.display = '';
+                    currentPoints = [arriba];
+                    console.log(currentPoints)
+                    arriba.addEventListener('click', onClickUseCase);
                     if (logo) {
                         logo.style.display = '';
-                        logo.addEventListener('click', onClickLogo(1.5620123612353716, 1.8324140151651975, -12.611046376873789, 2, 1, 0, oldPoints, newPoints))
+                        logo.addEventListener('click', onClickLogo(-0.23324931851256903, 1.8324140151651975, 0.2862530684020239, 0, 1, -11, initialPoints));
                     }
                 } else {
                     newPoints.forEach(point => {
                         if (point.element) {
                             point.element.style.display = '';
-                        }
-                        if (logo) {
-                            logo.style.display = '';
-                            logo.addEventListener('click', onClickLogo(1.5620123612353716, 1.8324140151651975, -12.611046376873789, 2, 1, 0, oldPoints, newPoints))
+                            // Añadir evento de click para mostrar el modal
+                            point.element.addEventListener('click', (e) => {
+                                onClickHotpoint(point.element, point.info);
+                            });
                         }
                     });
+                    currentPoints = newPoints;
+                    if (logo) {
+                        logo.style.display = '';
+                        logo.addEventListener('click', onClickLogo(-0.23324931851256903, 1.8324140151651975, 0.2862530684020239, 0, 1, -11, initialPoints));
+                    }
                 }
             }
         });
-    }
+    };
 }
 
 function updateAnnotationPosition() {
@@ -224,35 +308,47 @@ function updateAnnotationPosition() {
         }
     }
 
-    const position1 = updatePosition(new THREE.Vector3(2, -3, 3), '#punto1');
-    const position2 = updatePosition(new THREE.Vector3(2, 3, 3), '#punto2');
-    const position3 = updatePosition(new THREE.Vector3(12, 0, 3), '#punto3');
-    const position4 = updatePosition(new THREE.Vector3(-8, 0, 3), '#punto4');
+    const position1 = updatePosition(new THREE.Vector3(0, -1, -11), '#punto1');
+    const position2 = updatePosition(new THREE.Vector3(0, 3, -11), '#punto2');
+    const position3 = updatePosition(new THREE.Vector3(-7, 1, -11), '#punto3');
+    const position4 = updatePosition(new THREE.Vector3(7, 1, -11), '#punto4');
 
-    const position5 = updatePosition(new THREE.Vector3(3, 4, 3), '#punto5');
-    const position6 = updatePosition(new THREE.Vector3(8, 2, 3), '#punto6');
-    const position7 = updatePosition(new THREE.Vector3(0, 0, 3), '#punto7');
+    const position5 = updatePosition(new THREE.Vector3(0, 4, -11), '#punto5');
+    const position6 = updatePosition(new THREE.Vector3(-5, 2, -11), '#punto6');
+    const position7 = updatePosition(new THREE.Vector3(2.5, 0.5, -11), '#punto7');
 
-    const position8 = updatePosition(new THREE.Vector3(13, 4, 3), '#punto8');
-    const position9 = updatePosition(new THREE.Vector3(2, 5, 3), '#punto9');
-    const position10 = updatePosition(new THREE.Vector3(1, -1.5, 3), '#punto10');
+    const position8 = updatePosition(new THREE.Vector3(0, 3, -11), '#punto8');
+    const position9 = updatePosition(new THREE.Vector3(2, -3, -11), '#punto9');
+    const position10 = updatePosition(new THREE.Vector3(6.5, 4, -11), '#punto10');
 
-    const position11 = updatePosition(new THREE.Vector3(-4, -1.5, 3), '#punto11');
-    const position12 = updatePosition(new THREE.Vector3(-7, -1.5, 3), '#punto12');
-    const position13 = updatePosition(new THREE.Vector3(-15, -6, 3), '#punto13');
+    const position11 = updatePosition(new THREE.Vector3(3.5, -2, -11), '#punto11');
+    const position12 = updatePosition(new THREE.Vector3(6, -1.5, -11), '#punto12');
+    const position13 = updatePosition(new THREE.Vector3(9, -3.5, -11), '#punto13');
 
     // Array de posiciones para pasarlas a la función onClick
-    const oldPositions = [position1, position2, position3, position4];
-    const newPositionsDerecha = [position5, position6, position7];
-    const newPositionsIzquierda = [position8, position9, position10];
+    initialPoints = [position1, position2, position3, position4]; // Guardar los puntos iniciales
+    const newPositionsDerecha = [position8, position9, position10];
+    const newPositionsIzquierda = [position5, position6, position7];
     const newPositionsAbajo = [position11, position12, position13];
     const arriba = document.querySelector("#useCase");
-
+    
     // Add events to each annotation with their respective camera positions and lookAt positions
-    addAnnotationEvents(position1, 39, -35, 2.3888577103551727, 1.8324140151651975, 2.704188278006996, -1, 1, 0, oldPositions, newPositionsAbajo);
-    addAnnotationEvents(position2, 39, -35, 2.1163238507698527, 1.8324140151651975, 3.349330773199133, 2, 1, 6, oldPositions, arriba); // Actualiza estos valores según sea necesario
-    addAnnotationEvents(position3, 39, -35, 7.238170413905775, 1.8324140151651975, -4.753328529998346, 10, 1, 0, oldPositions, newPositionsIzquierda); // Actualiza estos valores según sea necesario
-    addAnnotationEvents(position4, 39, -35, -2.1208780253940085, 1.8324140151651953, -0.04582836480489122, -10, 1, 0, oldPositions, newPositionsDerecha); // Actualiza estos valores según sea necesario
+    addAnnotationEvents(position1, 39, -35, 0.6201922849652849, 1.8324140151651975, 2.5258305164814105, -6, 1, -4, newPositionsAbajo);
+    addAnnotationEvents(position2, 39, -35, -0.06712472858464706, 1.8324140151651975, -7.752030493442582, 0, 1, -11, arriba); // Actualiza estos valores según sea necesario
+    addAnnotationEvents(position3, 39, -35, -4.737092106867862, 1.8324140151651975, 0.07007195162038703, -9, 1, 0, newPositionsIzquierda); // Actualiza estos valores según sea necesario
+    addAnnotationEvents(position4, 39, -35, 4.547513663373049, 1.8324140151651975, 3.9819783918301144, 10, 1, -1, newPositionsDerecha); // Actualiza estos valores según sea necesario
+
+    //menu 
+    const sobre = document.querySelector("#sobre");
+    const soluciones = document.querySelector("#soluciones");
+    const tecnologias = document.querySelector("#tecnologias");
+    const experiencias = document.querySelector("#experiencias");
+    sobre.addEventListener('click', onClick(-4.737092106867862, 1.8324140151651975, 0.07007195162038703, -9, 1, 0, newPositionsIzquierda));
+    soluciones.addEventListener('click', onClick(-0.06712472858464706, 1.8324140151651975, -7.752030493442582, 0, 1, -11, arriba));
+    tecnologias.addEventListener('click', onClick(0.6201922849652849, 1.8324140151651975, 2.5258305164814105, -6, 1, -4, newPositionsAbajo));
+    experiencias.addEventListener('click', onClick(4.547513663373049, 1.8324140151651975, 3.9819783918301144, 10, 1, -1, newPositionsDerecha));
+
+    currentPoints = initialPoints;
 }
 
 // Llama a la función para asegurarte de que los elementos DOM existen antes de actualizar

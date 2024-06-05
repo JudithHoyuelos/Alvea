@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,11 @@
     <link rel="stylesheet" href="./assets/css/modal.css">
     <script src="assets/js/indexAlvearium.js" type="module"></script>
 </head>
+
 <body>
+
+    <!------------ HOTPOINTS ---------------->
+
     <div id="punto1" style="display:''"></div>
     <div id="punto2" style="display:''"></div>
     <div id="punto3" style="display:''"></div>
@@ -21,19 +26,199 @@
     <div id="punto11" style="display:none"></div>
     <div id="punto12" style="display:none"></div>
     <div id="punto13" style="display:none"></div>
+    <div id="modal" style="display:none">
+        <img id="exitModal" src="assets/img/exitModal.png" alt="exit">
+        
+        <!---------------- REALIDAD VIRTUAL ---------------->
+        
+        <div id="info5" style="display:none">
+            <div class="global-info">
+                <h2>Realidad Virtual</h2>
+            </div>
+        </div>
+
+        <!---------------- REALIDAD AUMENTADA ---------------->
+
+        <div id="info6" style="display:none">
+            <h2>Realidad Aumentada</h2>
+        </div>
+
+        <!---------------- REALIDAD MIXTA ---------------->
+
+        <div id="info7" style="display:none">
+            <h2>Realidad Mixta</h2>
+        </div>
+
+        <!----------- ROAD MAP ------------->
+
+        <div id="info8" style="display:none">
+            <div class="global-info">
+                <h2>RoadMap</h2>
+                <div class="roadmap-contenedor-principal">
+                    <div class="roadmap-contenedor-carrusel">
+                        <div class="roadmap-carrusel">
+                            <div class="roadmap-img">
+                                <img src="./assets/img/imagen.jpg" alt="">
+                            </div>
+                            <div class="roadmap-img">
+                                <img src="./assets/img/imagen2.jpg" alt="">
+                            </div>
+                            <div class="roadmap-img">
+                                <img src="./assets/img/imagen.jpg" alt="">
+                            </div>
+                            <div class="roadmap-img">
+                                <img src="./assets/img/imagen2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="roadmap-contenedor-info">
+                        <div>
+                            <h4 class="roadmap-info-titulo"> Nombre Tecnología</h4>
+                        </div>
+                        <div class="roadmap-etiquetas">
+                            <div class="roadmap-etiqueta" id="roadmap-etiqueta-1">
+                                <p class="etiqueta-roadmap">Ejemplo ejempl ejempleoeek 1</p>
+                                <p class="etiqueta-roadmap">Ejemplo 1</p>
+                                <p class="etiqueta-roadmap">Ejemplo 1</p>
+                                <p class="etiqueta-roadmap">Ejemplo 1</p>
+                                <p class="etiqueta-roadmap">Ejemplo 1</p>
+                                <p class="etiqueta-roadmap">Ejemplo 1</p>
+                                <p class="etiqueta-roadmap">Ejemplo 1</p>
+                            </div>
+                            <div class="roadmap-etiqueta" id="roadmap-etiqueta-2" style="display: none;">
+                                <p class="etiqueta-roadmap">Ejemplo 2</p>
+                                <p class="etiqueta-roadmap">Ejemplo 2</p>
+                                <p class="etiqueta-roadmap">Ejemplo 2</p>
+                                <p class="etiqueta-roadmap">Ejemplo 2</p>
+                            </div>
+                            <div class="roadmap-etiqueta" id="roadmap-etiqueta-3" style="display: none;">
+                                <p class="etiqueta-roadmap">Ejemplo 3</p>
+                                <p class="etiqueta-roadmap">Ejemplo 3</p>
+                                <p class="etiqueta-roadmap">Ejemplo 3</p>
+                            </div>
+                            <div class="roadmap-etiqueta" id="roadmap-etiqueta-4" style="display: none;">
+                                <p class="etiqueta-roadmap">Ejemplo 4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="roadmap-flechas">
+                    <div class="roadmap-rayas"></div>
+                    <div class="roadmap-flechitas">
+                        <i class="fa-regular fa-circle-left" id="flecha-izquierda"></i>
+                        <i class="fa-regular fa-circle-right" id="flecha-derecha"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---------------- HISTORIA ---------------->
+
+        <div id="info9" style="display:none">
+            <h2>Historia</h2>
+        </div>
+
+        <!---------------- EQUIPO ---------------->
+
+        <div id="info10" style="display:none">
+            <h2>Equipo</h2>
+        </div>
+
+        <!---------------- REALIDAD EXTENDIDA ---------------->
+
+        <div id="info11" style="display:none">
+            <h2>Realidad Extendida</h2>
+        </div>
+
+        <!---------------- INTELIGENCIA ARTIFICIAL ---------------->
+
+        <div class="global-info" id="info12" style="display:none">
+            <h2>Inteligencia Artificial</h2>
+            <div>
+                <img src="" alt="">
+            </div>
+        </div>
+
+        <!---------------- BLOCKCHAIN ---------------->
+
+        <div class="global-info" id="info13" style="display:none">
+            <h2>Blockchain</h2>
+            <div>
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+
+        <!--------------- MENU LATERAL ---------------->
+
     <div id="menu-lateral">
-        <img id="menu" src="assets/img/menu.png" alt="menu">
+        <img id="icono-menu-lateral" src="assets/img/menu.png" alt="menu">
     </div>
-    <div id="desplegable" style="display:none">
+    <div id="desplegable" class="glass-effect" style="display:none">
         <img id="exit" src="assets/img/exit.png" alt="exit">
+        <div class="contenido-menu-principal">
+            <div class="menu-principal">
+                <p class="menu-lateral-etiqueta">01</p>
+                <h3 class="titulo-menu-lateral" id="sobre">Sobre Nosotros</h3>
+                <p class="menu-lateral-parrafo">Road Map, Equipo, Historia</p>
+            </div>
+            <div class="menu-principal">
+                <p class="menu-lateral-etiqueta">02</p>
+                <h3 class="titulo-menu-lateral" id="soluciones">Soluciones</h3>
+                <p class="menu-lateral-parrafo">Use Cases: Comercio, Turismo, Entretenimiento, Socialización</p>
+            </div>
+            <div class="menu-principal">
+                <p class="menu-lateral-etiqueta">03</p>
+                <h3 class="titulo-menu-lateral" id="tecnologias">Tecnologías</h3>
+                <p class="menu-lateral-parrafo">Realidad Extendida, Inteligencia Artificial, Blockchain</p>
+            </div>
+            <div class="menu-principal">
+                <p class="menu-lateral-etiqueta">04</p>
+                <h3 class="titulo-menu-lateral" id="experiencias">Experiencias</h3>
+                <p class="menu-lateral-parrafo">Realidad Virtual, Realidad aumentada, Realidad mixta</p>
+            </div>
+        </div>
     </div>
-    <div id="menu-horizontal">
+
+    <!---------------- MENU HORIZONTAL INFERIOR ---------------->
+
+    <div id="menu-horizontal" style="display: none;">
         <a href="blog.html">Blog</a>
         <a href=""><img src="assets/img/logoimpro.png" alt="logo"></a>
         <a href="contacto.html">Contacto</a>
     </div>
     <div id="modales" style="display:none"></div>
-    <div id="inicio" style="display:none"><a href="#"><img id="logo" src="assets/img/logo (1).png" alt="logo"></a></div>
-    <div id="useCase" style="display:none"></div>
+    <div id="inicio" style="display:none">
+        <a href="#">
+            <img id="logo-blanco" src="assets/img/Logos/Alv_PositivoPNG.png" alt="logo">
+        </a>
+    </div>
+
+    <!---------------- SOLUCIONES/USE CASE ---------------->
+
+    <div id="useCase" style="display:none">
+        <div class="useCase" style="display:none">
+            <div class="useCase-comercio" style="display:''">
+                <div class="useCase-info"></div>
+                <div class="useCase-img"></div>
+            </div>
+            <div class="useCase-turismo" style="display:none">
+                <div class="useCase-info"></div>
+                <div class="useCase-img"></div>
+            </div>
+            <div class="useCase-entretenimiento" style="display:none">
+                <div class="useCase-info"></div>
+                <div class="useCase-img"></div>
+            </div>
+            <div class="useCase-socializacion" style="display:none">
+                <div class="useCase-info"></div>
+                <div class="useCase-img"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/b8970cc01f.js" crossorigin="anonymous"></script>
+    <script src="assets/js/FuncionCss.js"></script>
 </body>
+
 </html>
