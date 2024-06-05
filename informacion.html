@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>Alvearium.js</title>
     <link rel="stylesheet" href="./assets/css/modal.css">
     <script src="assets/js/indexAlvearium.js" type="module"></script>
@@ -28,9 +32,9 @@
     <div id="punto13" style="display:none"></div>
     <div id="modal" style="display:none">
         <img id="exitModal" src="assets/img/exitModal.png" alt="exit">
-        
+
         <!---------------- REALIDAD VIRTUAL ---------------->
-        
+
         <div id="info5" style="display:none">
             <div class="global-info">
                 <h2>Realidad Virtual</h2>
@@ -72,11 +76,22 @@
                         </div>
                     </div>
                     <div class="roadmap-contenedor-info">
-                        <div>
-                            <h4 class="roadmap-info-titulo"> Nombre Tecnología</h4>
+                        <div class="roadmap-titulos">
+                            <div class="roadmap-titulo" id="roadmap-titulo-1" style="display: '';">
+                                <h4 class="roadmap-info-titulo"> Nombre Tecnología 1</h4>
+                            </div>
+                            <div class="roadmap-titulo" id="roadmap-titulo-2" style="display: none;">
+                                <h4 class="roadmap-info-titulo"> Nombre Tecnología 2</h4>
+                            </div>
+                            <div class="roadmap-titulo" id="roadmap-titulo-3" style="display: none;">
+                                <h4 class="roadmap-info-titulo"> Nombre Tecnología 3</h4>
+                            </div>
+                            <div class="roadmap-titulo" id="roadmap-titulo-4" style="display: none;">
+                                <h4 class="roadmap-info-titulo"> Nombre Tecnología 4</h4>
+                            </div>
                         </div>
                         <div class="roadmap-etiquetas">
-                            <div class="roadmap-etiqueta" id="roadmap-etiqueta-1">
+                            <div class="roadmap-etiqueta" id="roadmap-etiqueta-1" style="display: '';">
                                 <p class="etiqueta-roadmap">Ejemplo ejempl ejempleoeek 1</p>
                                 <p class="etiqueta-roadmap">Ejemplo 1</p>
                                 <p class="etiqueta-roadmap">Ejemplo 1</p>
@@ -121,7 +136,60 @@
         <!---------------- EQUIPO ---------------->
 
         <div id="info10" style="display:none">
-            <h2>Equipo</h2>
+            <div class="global-info">
+                <h2>Equipo</h2>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="produc-content">
+                        <h3 id="product-txt">Nombre Apellido</h3>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-regular fa-circle-left"></i>
+                        <i class="fa-regular fa-circle-right"></i>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!---------------- REALIDAD EXTENDIDA ---------------->
@@ -149,7 +217,7 @@
         </div>
     </div>
 
-        <!--------------- MENU LATERAL ---------------->
+    <!--------------- MENU LATERAL ---------------->
 
     <div id="menu-lateral">
         <img id="icono-menu-lateral" src="assets/img/menu.png" alt="menu">
@@ -219,6 +287,23 @@
 
     <script src="https://kit.fontawesome.com/b8970cc01f.js" crossorigin="anonymous"></script>
     <script src="assets/js/FuncionCss.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            loop: true,
+            coverflowEffect: {
+                depth: 500,
+                modifer: 1,
+                slidesShadows: true,
+                rotate: 0,
+                stretch: 0
+            }
+        })
+    </script>
 </body>
 
 </html>
