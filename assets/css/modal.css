@@ -263,7 +263,7 @@ img {
 
 #desplegable {
     height: 100vh; /* Toma el 100% de la altura de la ventana*/
-    width: 25%; /*Toma el 50% del ancho de la ventana*/
+    width: 30%; /*Toma el 50% del ancho de la ventana*/
     position: fixed; /*Fija la posición del div*/
     top: 0; /*Coloca el div en la parte superior de la ventana*/
     right: 0; /*Coloca el div en el lado derecho de la ventana*/
@@ -287,13 +287,13 @@ img {
 }
 
 .contenido-menu-principal {
-    margin: 0 5rem;
+    margin: 0 3rem;
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    top: 10%;
+    top: 5%;
 }
 
 .menu-principal {
