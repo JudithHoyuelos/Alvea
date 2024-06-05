@@ -57,6 +57,7 @@ let modelo = new GLTFLoader();
 modelo.load(
 	// resource URL
 	'assets/GLTF/AlveaPruebaGLTF.gltf',
+    //'assets/GLTF/Alvea.gltf',
 	// called when the resource is loaded
 	function ( gltf ) {
 
