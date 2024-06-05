@@ -1,0 +1,100 @@
+.formularios{
+    /* display:flex;
+    flex-direction:column; */
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    border-radius:10px;
+    
+    /* flex-wrap:wrap; */
+}
+.formularios-item{
+    flex:1 1 300px;
+    margin:10px;
+}
+.nombre{
+    margin:10px;
+    flex:1 1 70px;
+    width:170px;
+    height:30px;
+    border-radius:10px;
+}
+.correo{
+    margin:10px;
+    flex:1 1 70px;
+    width:170px;
+    height:30px;
+    border-radius:10px;
+}
+.telefono{
+    margin:10px;
+    flex:1 1 70px;
+    width:170px;
+    height:30px;
+    border-radius:10px;
+}
+.pais{
+    margin:10px;
+    flex:1 1 70px;
+    width:170px;
+    height:30px;
+    border-radius:10px;
+
+}
+.nombreempresa{
+    margin:10px;
+    flex:1 1 70px;
+    width:170px;
+    height:30px;
+    border-radius:10px;
+}
+.apellido{
+    margin:10px;
+    flex:1 1 70px;
+    width:170px;
+    height:30px;
+    border-radius:10px;
+}
+.profesión{
+    margin:10px;
+    flex:1 1 70px;
+    width:170px;
+    height:30px;
+    border-radius:10px;
+}
+.permiso{
+    /* margin:10px; */
+    flex:1 1 70px;
+    /* width:150px; */
+    grid-column:span 2;
+    border-radius:10px;
+
+}
+.logo{
+    width:300px;
+    height:100px;
+    /* display:flex;
+    justify-content:center; */
+    margin-left:40%;
+}
+body{
+    background-image:url(../img/Fondos/1.png);
+}
+.imagenlogo{
+    width:300px;
+    height:100px;
+}
+.contenido{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    margin-right:10%;
+    margin-left:10%;
+    margin-top:5%;
+}
+.botonenvio{
+    border-radius:10px;
+    width:100%;
+    height:50px;
+}
+.formulario{
+    width:600px;
+}
