@@ -11,7 +11,7 @@ flechaDerecha.addEventListener('click', () => {
     const indicadorActivo = document.querySelector('.roadmap-rayas .activo');
     if (indicadorActivo.nextSibling) {
         indicadorActivo.nextSibling.classList.add('activo');
-        indicadorActivo.classList.remove('activo');
+        // indicadorActivo.classList.remove('activo');
     }
 });
 

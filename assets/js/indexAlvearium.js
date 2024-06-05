@@ -46,26 +46,43 @@ window.addEventListener('resize', () => {
 // controls.update();
 
 const menu = document.querySelector("#icono-menu-lateral");
-menu.addEventListener('click', onClickMenu);
 const exit = document.querySelector("#exit");
+const div = document.querySelector("#desplegable");
+
+// Añadir evento al botón del menú
+menu.addEventListener('click', onClickMenu);
+
+// Añadir evento al botón de salida
 exit.addEventListener('click', onClickExit);
 
+// Evento para cerrar el menú al hacer clic en cualquier parte de la página
+document.addEventListener('click', (e) => {
+    if (div.style.display === '' && !div.contains(e.target) && e.target !== menu) {
+        div.style.display = 'none';
+        menu.style.display = '';
+    }
+});
+
+// Función para abrir el menú
 function onClickMenu(e) {
-    const div = document.querySelector("#desplegable");
+    // e.stopPropagation(); // Evitar que el evento se propague y cierre el menú inmediatamente
     div.style.display = '';
     menu.style.display = 'none';
 }
 
+// Función para cerrar el menú
 function onClickExit(e) {
-    const div = document.querySelector("#desplegable");
+    // e.stopPropagation(); // Evitar que el evento se propague y vuelva a abrir el menú
     div.style.display = 'none';
     menu.style.display = '';
 }
 
 function onClickExitModal(e) {
     const div = document.querySelector("#modal");
+    const divMenu = document.querySelector("#menu-lateral");
     div.style.display = 'none';
-    menu.style.display = '';
+    divMenu.style.display = '';
+    console.log(menu)
 }
 
 function onClickUseCase(e) {
@@ -343,10 +360,10 @@ function updateAnnotationPosition() {
     const soluciones = document.querySelector("#soluciones");
     const tecnologias = document.querySelector("#tecnologias");
     const experiencias = document.querySelector("#experiencias");
-    sobre.addEventListener('click', onClick(-4.737092106867862, 1.8324140151651975, 0.07007195162038703, -9, 1, 0, newPositionsIzquierda));
+    sobre.addEventListener('click', onClick(4.547513663373049, 1.8324140151651975, 3.9819783918301144, 10, 1, -1, newPositionsDerecha));
     soluciones.addEventListener('click', onClick(-0.06712472858464706, 1.8324140151651975, -7.752030493442582, 0, 1, -11, arriba));
     tecnologias.addEventListener('click', onClick(0.6201922849652849, 1.8324140151651975, 2.5258305164814105, -6, 1, -4, newPositionsAbajo));
-    experiencias.addEventListener('click', onClick(4.547513663373049, 1.8324140151651975, 3.9819783918301144, 10, 1, -1, newPositionsDerecha));
+    experiencias.addEventListener('click', onClick(-4.737092106867862, 1.8324140151651975, 0.07007195162038703, -9, 1, 0, newPositionsIzquierda));
 
     currentPoints = initialPoints;
 }
