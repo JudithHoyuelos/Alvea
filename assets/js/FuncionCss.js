@@ -69,3 +69,6 @@ for (let i = 0; i < numeroPaginas; i++) {
         e.target.classList.add('activo');
     })
 }
+
+
+

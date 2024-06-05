@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>Alvearium.js</title>
     <link rel="stylesheet" href="./assets/css/modal.css">
     <script src="assets/js/indexAlvearium.js" type="module"></script>
@@ -123,19 +127,56 @@
         <div id="info10" style="display:none">
             <div class="global-info">
                 <h2>Equipo</h2>
-                <div class="slide hi-slide">
-                    <div class="hi-prev"></div>
-                    <div class="hi-next"></div>
-                    <ul>
-                        <li><img src="./assets/img/H1-07.png" alt=""></li>
-                        <li><img src="./assets/img/H1-07.png" alt=""></li>
-                        <li><img src="./assets/img/H1-07.png" alt=""></li>
-                        <li><img src="./assets/img/H1-07.png" alt=""></li>
-                        <li><img src="./assets/img/H1-07.png" alt=""></li>
-                        <li><img src="./assets/img/H1-07.png" alt=""></li>
-                        <li><img src="./assets/img/H1-07.png" alt=""></li>
-                        <li><img src="./assets/img/H1-07.png" alt=""></li>
-                    </ul>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-img">
+                                <img src="./assets/img/H1-07.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="produc-content">
+                        <h3 id="product-txt">Nombre Apellido</h3>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-regular fa-circle-left"></i>
+                        <i class="fa-regular fa-circle-right"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -235,8 +276,23 @@
 
     <script src="https://kit.fontawesome.com/b8970cc01f.js" crossorigin="anonymous"></script>
     <script src="assets/js/FuncionCss.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="./assets/js/Slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            loop: true,
+            coverflowEffect: {
+                depth: 500,
+                modifer: 1,
+                slidesShadows: true,
+                rotate: 0,
+                stretch: 0
+            }
+        })
+    </script>
 </body>
 
 </html>
