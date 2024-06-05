@@ -36,6 +36,9 @@ h2, h3 {
     font-size: 50px;
 }
 
+.global-info {
+    margin: 2rem;
+}
 
 
 /* ---------------- LOGIN --------------- */
@@ -122,9 +125,6 @@ img {
 
 /*------- contenedor principal y flechas --------*/
 
-.global-info {
-    margin: 2rem;
-}
 
 .roadmap-contenedor-principal {
     display: grid;
@@ -236,6 +236,77 @@ img {
 
 /* ------------ EQUIPO ----------- */
 
+.hi-slide {
+    position: relative;
+    width: 28rem;
+    height: 28rem;
+    margin: 7rem 2rem;
+}
+
+.hi-slide .hi-next,
+.hi-slide .hi-prev {
+    position: absolute;
+    top: 50%;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50px;
+    margin: 2rem;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #C21AD6;
+    color: var(--white-letter);
+    transition: all 0.7s;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hi-slide .hi-next:hover,
+.hi-slide .hi-prev:hover {
+    opacity: 1;
+    background-color: #727DEF;
+}
+
+.hi-slide .hi-next {
+    left: 12rem;
+}
+
+.hi-slide .hi-next::before {
+    content: '>';
+}
+
+.hi-slide .hi-prev {
+    right: 13rem;
+}
+
+.hi-slide .hi-prev::before {
+    content: '<';
+}
+
+.hi-slide > ul {
+    position: relative;
+    width: 47rem;
+    height: 18rem;
+    margin: 0;
+    padding: 0;
+}
+
+.hi-slide > ul > li {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    left: 21rem;
+    top: 9rem;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: 3px solid var(--primary-color);
+    background-color: #925BC0;
+}
+
+.hi-slide > ul > li > img {
+    width: 100%;
+}
 
 /* ------------ REALIDAD EXTENDIDA ----------- */
 
