@@ -8,6 +8,12 @@ const etiquetas = [
     document.querySelector('#roadmap-etiqueta-3'),
     document.querySelector('#roadmap-etiqueta-4')
 ];
+const titulos = [
+    document.querySelector('#roadmap-titulo-1'),
+    document.querySelector('#roadmap-titulo-2'),
+    document.querySelector('#roadmap-titulo-3'),
+    document.querySelector('#roadmap-titulo-4')
+];
 
 const flechaIzquierda = document.getElementById('flecha-izquierda');
 const flechaDerecha = document.getElementById('flecha-derecha');
@@ -16,11 +22,10 @@ let currentIndex = 0;
 
 function updateLabels() {
     etiquetas.forEach((etiqueta, index) => {
-        if (index === currentIndex) {
-            etiqueta.style.display = '';
-        } else {
-            etiqueta.style.display = 'none';
-        }
+        etiqueta.style.display = (index === currentIndex) ? '' : 'none';
+    });
+    titulos.forEach((titulo, index) => {
+        titulo.style.display = (index === currentIndex) ? '' : 'none';
     });
 }
 
@@ -33,8 +38,18 @@ flechaDerecha.addEventListener('click', () => {
 
     const indicadorActivo = document.querySelector('.roadmap-rayas .activo');
     if (indicadorActivo && indicadorActivo.nextElementSibling) {
+        console.log('entra en el if')
+        console.log(indicadorActivo.nextElementSibling)
+        console.log(indicadorActivo)
         indicadorActivo.nextElementSibling.classList.add('activo');
+        // indicadorActivo = document.querySelector('.roadmap-rayas .botones-rayas');
+        // console.log(indicadorActivo)
         indicadorActivo.classList.remove('activo');
+        indicadorActivo.previousElementSibling.classList.add('activo');
+        // indicadorActivo.previousElementSibling.classList.add('activo');
+    } else {
+        console.log('paso al else')
+        indicadorActivo.nextElementSibling.classList.add('activo');
     }
 });
 
@@ -47,6 +62,7 @@ flechaIzquierda.addEventListener('click', () => {
 
     const indicadorActivo = document.querySelector('.roadmap-rayas .activo');
     if (indicadorActivo && indicadorActivo.previousElementSibling) {
+        console.log(indicadorActivo.previousElementSibling)
         indicadorActivo.previousElementSibling.classList.add('activo');
         indicadorActivo.classList.remove('activo');
     }
