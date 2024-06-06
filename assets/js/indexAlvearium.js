@@ -144,6 +144,7 @@ let modelo = new GLTFLoader();
 modelo.load(
     // resource URL
     'assets/mitadAlvea/AlveaSinMatIlu.glb',
+    // 'assets/mitadAlvea/Alvea.glb',
     // 'assets/GLTF/AlveaPruebaGLTF.gltf',
     // called when the resource is loaded
     function (gltf) {
