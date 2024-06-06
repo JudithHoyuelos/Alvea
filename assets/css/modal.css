@@ -251,7 +251,7 @@ img {
 
 .swiper-slide {
     width: 28rem;
-    height: 31rem;
+    height: 29rem;
     background-color: var(--lavander);
     padding: 2.5rem;
     margin-top: 2rem;
@@ -412,11 +412,15 @@ img {
     background-color: rgba(182, 35, 241, 0.6);
     position: fixed;
     bottom: 2rem;
-    left: 42%;
+    left: 40%;
     border-radius: 3rem;
     justify-content: center;
     align-items: center;
     padding-right: 2rem;
+}
+
+#logo-redondo {
+    height: 4rem;
 }
 
 a {

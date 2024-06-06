@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
+        loop: false,
         coverflowEffect: {
             depth: 500,
             modifier: 1,
@@ -102,6 +103,15 @@ document.addEventListener('DOMContentLoaded', function () {
             stretch: 0
         }
     });
+    const flechaIzquierdaEquipo = document.querySelector('.flecha-izquierda');
+    const flechaDerechaEquipo = document.querySelector('.flecha-derecha');
+    
+    flechaDerechaEquipo.addEventListener('click', () => {
+        swiper.slideNext();
+    });
+    
+    flechaIzquierdaEquipo.addEventListener('click', () => {
+        swiper.slidePrev();
+    });
 });
-
 
