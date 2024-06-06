@@ -45,7 +45,7 @@ flechaDerecha.addEventListener('click', () => {
         // indicadorActivo = document.querySelector('.roadmap-rayas .botones-rayas');
         // console.log(indicadorActivo)
         indicadorActivo.classList.remove('activo');
-        indicadorActivo.previousElementSibling.classList.add('activo');
+        // indicadorActivo.previousElementSibling.classList.add('activo');
         // indicadorActivo.previousElementSibling.classList.add('activo');
     } else {
         console.log('paso al else')
@@ -86,5 +86,22 @@ for (let i = 0; i < numeroPaginas; i++) {
     })
 }
 
+// slider
+
+document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.mySwiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            depth: 500,
+            modifier: 1,
+            slideShadows: true,
+            rotate: 0,
+            stretch: 0
+        }
+    });
+});
 
 

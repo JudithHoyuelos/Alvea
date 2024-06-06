@@ -194,13 +194,21 @@ img {
 .roadmap-etiqueta {
     display: flex;
     margin-left: 1rem;
+    flex-direction: column;
+}
+
+.etiqueta-parrafo {
+    display: flex;
+    flex-direction: row;
 }
 
 .etiqueta-roadmap {
+    display: flex;
     background-color: var(--lavander);
     font-size: 18px;
     border-radius: 30%;
     gap: 2rem;
+    margin: 0.2rem;
 }
 
 /*------------ roadmap-carrusel ---------- */
@@ -228,7 +236,7 @@ img {
 .global-info .roadmap-contenedor-carrusel .roadmap-img img {
     width: 60%;
     vertical-align: top;
-    margin-top: 3rem; /* cambio provisional para que pueda manejar la funcionalidad */
+    margin-top: 1rem; /* cambio provisional para que pueda manejar la funcionalidad */
 }
 
 /* ------------ HISTORIA ----------- */
@@ -251,9 +259,9 @@ img {
 }
 
 .product-img {
-display: flex;
-align-items: center;
-justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product-img img {
