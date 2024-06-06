@@ -48,6 +48,8 @@ window.addEventListener('resize', () => {
 const menu = document.querySelector("#icono-menu-lateral");
 const exit = document.querySelector("#exit");
 const div = document.querySelector("#desplegable");
+const logo = document.querySelector('#inicio');
+const menuHorizontal = document.querySelector('#menu-horizontal');
 
 // Añadir evento al botón del menú
 menu.addEventListener('click', onClickMenu);
@@ -82,6 +84,8 @@ function onClickExitModal(e) {
     const divMenu = document.querySelector("#menu-lateral");
     div.style.display = 'none';
     divMenu.style.display = '';
+    logo.style.left = '43%';
+    menuHorizontal.style.left = '40%';
 }
 
 function onClickUseCase(e) {
@@ -165,6 +169,8 @@ function onClickHotpoint(element) {
         if (element === pointElement) {
             const modalId = `info${pointId.replace('punto', '')}`;
             modals[modalId].style.display = '';
+            logo.style.left = '30%';
+            menuHorizontal.style.left = '30%';
         }
     });
 
