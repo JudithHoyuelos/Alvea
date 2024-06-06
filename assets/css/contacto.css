@@ -6,6 +6,7 @@
     border-radius:10px;
     
     /* flex-wrap:wrap; */
+    width:400px;
 }
 .formularios-item{
     flex:1 1 300px;
@@ -14,28 +15,28 @@
 .nombre{
     margin:10px;
     flex:1 1 70px;
-    width:170px;
+    width:210px;
     height:30px;
     border-radius:10px;
 }
 .correo{
     margin:10px;
     flex:1 1 70px;
-    width:170px;
+    width:210px;
     height:30px;
     border-radius:10px;
 }
 .telefono{
     margin:10px;
     flex:1 1 70px;
-    width:170px;
+    width:210px;
     height:30px;
     border-radius:10px;
 }
 .pais{
     margin:10px;
     flex:1 1 70px;
-    width:170px;
+    width:210px;
     height:30px;
     border-radius:10px;
 
@@ -43,21 +44,21 @@
 .nombreempresa{
     margin:10px;
     flex:1 1 70px;
-    width:170px;
+    width:210px;
     height:30px;
     border-radius:10px;
 }
 .apellido{
     margin:10px;
     flex:1 1 70px;
-    width:170px;
+    width:210px;
     height:30px;
     border-radius:10px;
 }
 .profesión{
     margin:10px;
     flex:1 1 70px;
-    width:170px;
+    width:210px;
     height:30px;
     border-radius:10px;
 }
@@ -67,6 +68,7 @@
     /* width:150px; */
     grid-column:span 2;
     border-radius:10px;
+    margin-bottom:5%;
 
 }
 .logo{
@@ -92,9 +94,12 @@ body{
 }
 .botonenvio{
     border-radius:10px;
-    width:100%;
+    width:78%;
     height:50px;
 }
 .formulario{
     width:600px;
+}
+.elementabajo{
+    margin-top:15%;
 }
