@@ -286,6 +286,26 @@ img {
 
 /* ------------ REALIDAD EXTENDIDA ----------- */
 
+.rextendida-contenedor {
+    position: relative;
+    margin: 3rem;
+}
+
+.rextendida-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+.rextendida-contenido .rextendida-img {
+    width: 35rem;
+    margin-bottom: 1rem;
+}
+
+.rextendida-contenido .rextendida-img img {
+    width: 100%;
+}
 
 /* ------------ INTELIGENCIA ARTIFICIAL ----------- */
 
