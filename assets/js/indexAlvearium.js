@@ -79,13 +79,58 @@ function onClickExit(e) {
     menu.style.display = '';
 }
 
+// Almacena las posiciones iniciales de los puntos
+const posicionesIniciales = {
+    punto5: {left: 768, top: 225},
+    punto6: {left: 565, top: 307},
+    punto7: {left: 867, top: 367},
+    punto8: {left: 768, top: 267},
+    punto9: {left: 846, top: 502},
+    punto10: {left: 1030, top: 226},
+    punto11: {left: 904, top: 464},
+    punto12: {left: 1002, top: 444},
+    punto13: {left: 1112, top: 519}
+};
+
+// Función para mover los puntos a la izquierda
+function moverPuntosALaIzquierda(puntos, distancia) {
+    Object.values(puntos).forEach(punto => {
+        punto.style.transform = `translateX(-${distancia}px)`;
+    });
+}
+
+// Función para restablecer los puntos a sus posiciones iniciales
+function restablecerPuntos(puntos) {
+    Object.entries(puntos).forEach(([idPunto, elementoPunto]) => {
+        const posicionInicial = posicionesIniciales[idPunto];
+        elementoPunto.style.transform = ''; // Resetea la transformación
+        elementoPunto.style.left = `${posicionInicial.left}px`;
+        elementoPunto.style.top = `${posicionInicial.top}px`;
+    });
+}
+
 function onClickExitModal(e) {
     const div = document.querySelector("#modal");
     const divMenu = document.querySelector("#menu-lateral");
+    const points = {
+        punto5: document.querySelector("#punto5"),
+        punto6: document.querySelector("#punto6"),
+        punto7: document.querySelector("#punto7"),
+        punto8: document.querySelector("#punto8"),
+        punto9: document.querySelector("#punto9"),
+        punto10: document.querySelector("#punto10"),
+        punto11: document.querySelector("#punto11"),
+        punto12: document.querySelector("#punto12"),
+        punto13: document.querySelector("#punto13"),
+    };
+
     div.style.display = 'none';
     divMenu.style.display = '';
     logo.style.left = '43%';
     menuHorizontal.style.left = '40%';
+
+    // Restablecer los puntos a sus posiciones iniciales
+    restablecerPuntos(points);
 }
 
 function onClickUseCase(e) {
@@ -153,9 +198,21 @@ function onClickHotpoint(element) {
         info13: document.querySelector("#info13"),
     };
 
+    
     const menu = document.querySelector("#menu-lateral");
     const modal = document.querySelector("#modal");
     const exit = document.querySelector("#exitModal"); // Asegúrate de que este selector es correcto
+    
+    // Almacena las posiciones iniciales de los puntos
+    // Object.entries(points).forEach(([pointId, pointElement]) => {
+    //     const rect = pointElement.getBoundingClientRect();
+    //     posicionesIniciales[pointId] = {
+    //         left: rect.left,
+    //         top: rect.top,
+    //     };
+    // });
+
+    console.log(posicionesIniciales)
 
     // Oculta el menú y muestra el modal contenedor
     menu.style.display = 'none';
@@ -169,8 +226,12 @@ function onClickHotpoint(element) {
         if (element === pointElement) {
             const modalId = `info${pointId.replace('punto', '')}`;
             modals[modalId].style.display = '';
-            logo.style.left = '30%';
-            menuHorizontal.style.left = '30%';
+            if (logo) logo.style.left = '30%';
+            if (menuHorizontal) menuHorizontal.style.left = '30%';
+            
+            // Mueve los puntos a la izquierda
+            const distanciaMovimiento = 300; // Ajusta esta distancia según sea necesario
+            moverPuntosALaIzquierda(points, distanciaMovimiento);
         }
     });
 
