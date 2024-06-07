@@ -25,7 +25,7 @@ scene.add(lights);
 scene.add(gridHelper);
 
 
-// implementar los cambios a la hora dell redimensionamiento de la pantalla 
+// implementar los cambios a la hora del redimensionamiento de la pantalla 
 // Asegúrate de que el raycaster se actualice cuando se redimensiona la ventana
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -81,21 +81,37 @@ function onClickExit(e) {
 
 // Almacena las posiciones iniciales de los puntos
 const posicionesIniciales = {
-    punto5: {left: 768, top: 225},
-    punto6: {left: 565, top: 307},
-    punto7: {left: 867, top: 367},
-    punto8: {left: 768, top: 267},
-    punto9: {left: 846, top: 502},
-    punto10: {left: 1030, top: 226},
-    punto11: {left: 904, top: 464},
-    punto12: {left: 1002, top: 444},
-    punto13: {left: 1112, top: 519}
+    // punto5: {left: 768, top: 225},
+    // punto6: {left: 565, top: 307},
+    // punto7: {left: 867, top: 367},
+    // punto8: {left: 768, top: 267},
+    // punto9: {left: 846, top: 502},
+    // punto10: {left: 1030, top: 226},
+    // punto11: {left: 904, top: 464},
+    // punto12: {left: 1002, top: 444},
+    // punto13: {left: 1112, top: 519}
 };
+
+// Función para almacenar las posiciones iniciales
+function almacenarPosicionesInicialesSiNecesario(puntos) {
+    Object.entries(puntos).forEach(([idPunto, elementoPunto]) => {
+        const rect = elementoPunto.getBoundingClientRect();
+        if (!posicionesIniciales[idPunto] && rect.left !== 0 && rect.top !== 0) {
+            posicionesIniciales[idPunto] = {
+                left: rect.left,
+                top: rect.top,
+            };
+        }
+    });
+}
 
 // Función para mover los puntos a la izquierda
 function moverPuntosALaIzquierda(puntos, distancia) {
-    Object.values(puntos).forEach(punto => {
-        punto.style.transform = `translateX(-${distancia}px)`;
+    Object.entries(puntos).forEach(([idPunto, elementoPunto]) => {
+        const posicionInicial = posicionesIniciales[idPunto];
+        if (posicionInicial) {
+            elementoPunto.style.transform = `translateX(-${distancia}px)`
+        }
     });
 }
 
@@ -103,9 +119,12 @@ function moverPuntosALaIzquierda(puntos, distancia) {
 function restablecerPuntos(puntos) {
     Object.entries(puntos).forEach(([idPunto, elementoPunto]) => {
         const posicionInicial = posicionesIniciales[idPunto];
-        elementoPunto.style.transform = ''; // Resetea la transformación
-        elementoPunto.style.left = `${posicionInicial.left}px`;
-        elementoPunto.style.top = `${posicionInicial.top}px`;
+        if (posicionInicial) {
+            elementoPunto.style.transform = ''; // Resetea la transformación
+            console.log(elementoPunto.style.transform = '')
+            elementoPunto.style.left = `${posicionInicial.left}px`;
+            elementoPunto.style.top = `${posicionInicial.top}px`;
+        }
     });
 }
 
@@ -121,7 +140,7 @@ function onClickExitModal(e) {
         punto10: document.querySelector("#punto10"),
         punto11: document.querySelector("#punto11"),
         punto12: document.querySelector("#punto12"),
-        punto13: document.querySelector("#punto13"),
+        punto13: document.querySelector("#punto13")
     };
 
     div.style.display = 'none';
@@ -130,6 +149,7 @@ function onClickExitModal(e) {
     menuHorizontal.style.left = '40%';
 
     // Restablecer los puntos a sus posiciones iniciales
+    console.log(points)
     restablecerPuntos(points);
 }
 
@@ -204,14 +224,8 @@ function onClickHotpoint(element) {
     const modal = document.querySelector("#modal");
     const exit = document.querySelector("#exitModal"); // Asegúrate de que este selector es correcto
     
-    // Almacena las posiciones iniciales de los puntos
-    // Object.entries(points).forEach(([pointId, pointElement]) => {
-    //     const rect = pointElement.getBoundingClientRect();
-    //     posicionesIniciales[pointId] = {
-    //         left: rect.left,
-    //         top: rect.top,
-    //     };
-    // });
+    
+    almacenarPosicionesInicialesSiNecesario(points);
 
     console.log(posicionesIniciales)
 
