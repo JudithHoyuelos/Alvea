@@ -1,0 +1,18 @@
+<svg width="637" height="637" viewBox="0 0 637 637" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="155" height="155" fill="#E2CCFF"/>
+<rect y="161" width="155" height="155" fill="#E2CCFF"/>
+<path d="M0 476C0 390.396 69.3959 321 155 321V476H0Z" fill="#7B1AD8"/>
+<rect y="482" width="155" height="155" fill="#E2CCFF"/>
+<path d="M161 0C246.604 0 316 69.3959 316 155H161V0Z" fill="#7B1AD8"/>
+<rect x="161" y="161" width="155" height="155" fill="#E2CCFF"/>
+<rect x="161" y="321" width="155" height="155" fill="#E2CCFF"/>
+<rect x="161" y="482" width="155" height="155" fill="#E2CCFF"/>
+<rect x="321" width="155" height="155" fill="#E2CCFF"/>
+<rect x="321" y="161" width="155" height="155" rx="77.5" fill="#7B1AD8"/>
+<rect x="321" y="321" width="155" height="155" fill="#E2CCFF"/>
+<path d="M321 482H476V637C390.396 637 321 567.604 321 482Z" fill="#7B1AD8"/>
+<path d="M482 0H637V155C551.396 155 482 85.6041 482 0Z" fill="#7B1AD8"/>
+<rect x="482" y="161" width="155" height="155" fill="#E2CCFF"/>
+<rect x="482" y="321" width="155" height="155" fill="#E2CCFF"/>
+<rect x="482" y="482" width="155" height="155" fill="#E2CCFF"/>
+</svg>

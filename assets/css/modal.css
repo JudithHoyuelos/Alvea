@@ -114,12 +114,135 @@ img {
 
 /* ------------ REALIDAD VIRTUAL ----------- */
 
+/*------- contenedor principal y flechas --------*/
+
+.rvirtual-contenedor {
+    height: 35rem;
+}
+
+/*------------ rvirtual-carrusel ---------- */
+
+/* .global-info .roadmap-contenedor-carrusel .rvirtual-carrusel {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 40rem;
+} */
+
+.rvirtual-contenido {
+    margin-bottom: 4rem;
+}
+
+.rvirtual-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+}
+
+#video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    width: 40rem;
+}
+
+.rvirtual-video img {
+    height: 15rem; /* modificarlo con el cambio de clases */
+    width: 50rem; /* modificarlo con el cambio de clases */
+    margin: 3rem; /* modificarlo con el cambio de clases */
+}
+
+.rvirtual-miniaturas {
+    display: flex;
+    flex-direction: row;
+    height: 10rem;
+    width: 20rem;
+}
+
+.rvirtual-miniaturas img {
+    padding: 1rem; /* modificarlo con el cambio de clases */
+    width: 1rem; /* modificarlo con el cambio de clases */
+    height: 9rem; /* modificarlo con el cambio de clases */
+}
 
 /* ------------ REALIDAD AUMENTADA ----------- */
 
+/*------- contenedor principal y flechas --------*/
+
+.raumentada-contenedor{
+    height: 35rem;
+}
+
+/*------------ raumentada-carrusel ---------- */
+
+.raumentada-contenido {
+    margin-bottom: 4rem;
+}
+
+.raumentada-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.raumentada-video img {
+    height: 15rem; /* modificarlo con el cambio de clases */
+    width: 50rem; /* modificarlo con el cambio de clases */
+    margin: 3rem; /* modificarlo con el cambio de clases */
+}
+
+.raumentada-miniaturas {
+    display: flex;
+    flex-direction: row;
+    height: 10rem;
+    width: 20rem;
+}
+
+.raumentada-miniaturas img {
+    padding: 1rem; /* modificarlo con el cambio de clases */
+    width: 1rem; /* modificarlo con el cambio de clases */
+    height: 9rem; /* modificarlo con el cambio de clases */
+}
 
 /* ------------ REALIDAD MIXTA ----------- */
 
+/*------- contenedor principal y flechas --------*/
+
+.rmixta-contenido {
+    margin-bottom: 4rem;
+}
+
+.rmixta-contenedor{
+    height: 35rem;
+}
+
+/*------------ rmixta-carrusel ---------- */
+
+.rmixta-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rmixta-video img {
+    height: 15rem; /* modificarlo con el cambio de clases */
+    width: 50rem; /* modificarlo con el cambio de clases */
+    margin: 3rem; /* modificarlo con el cambio de clases */
+}
+
+.rmixta-miniaturas {
+    display: flex;
+    flex-direction: row;
+    height: 10rem;
+    width: 20rem;
+}
+
+.rmixta-miniaturas img {
+    padding: 1rem; /* modificarlo con el cambio de clases */
+    width: 1rem; /* modificarlo con el cambio de clases */
+    height: 9rem; /* modificarlo con el cambio de clases */
+}
 
 /*------------------- ROAD MAP -------------------*/
 
@@ -136,18 +259,19 @@ img {
     justify-content: space-around;
 }
 
-#flecha-izquierda {
+.flechas-izquierdas {
     position: absolute;
     border: none;
     font-size: 25px;
-    width: 20px;
+    width: 1.5rem;
+    /* width: 20px; */
     color: rgb(7, 7, 7);
     cursor: pointer;
     z-index: 1;
     transition: .2s ease all;
 }
 
-#flecha-derecha {
+.flechas-derechas {
     position: absolute;
     border: none;
     margin-left: 2.5rem;
@@ -159,8 +283,8 @@ img {
     transition: .2s ease all;
 }
 
-#flecha-izquierda:hover,
-#flecha-derecha:hover {
+.flechas-izquierdas:hover,
+.flechas-derechas:hover {
     color: rgba(0, 0, 0, .9);
 }
 

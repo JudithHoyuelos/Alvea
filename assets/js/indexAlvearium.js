@@ -224,7 +224,7 @@ function onClickHotpoint(element) {
     const modal = document.querySelector("#modal");
     const exit = document.querySelector("#exitModal"); // Asegúrate de que este selector es correcto
     
-    
+    // Almacenar la posisciones iniciales de los puntos
     almacenarPosicionesInicialesSiNecesario(points);
 
     console.log(posicionesIniciales)
