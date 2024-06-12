@@ -1,105 +1,110 @@
-.formularios{
-    /* display:flex;
-    flex-direction:column; */
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    border-radius:10px;
-    
-    /* flex-wrap:wrap; */
-    width:400px;
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/Fondos/Fondo-footer-clean-web.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white; /* Asegúrate de que el texto sea visible en el fondo */
 }
-.formularios-item{
-    flex:1 1 300px;
-    margin:10px;
-}
-.nombre{
-    margin:10px;
-    flex:1 1 70px;
-    width:210px;
-    height:30px;
-    border-radius:10px;
-}
-.correo{
-    margin:10px;
-    flex:1 1 70px;
-    width:210px;
-    height:30px;
-    border-radius:10px;
-}
-.telefono{
-    margin:10px;
-    flex:1 1 70px;
-    width:210px;
-    height:30px;
-    border-radius:10px;
-}
-.pais{
-    margin:10px;
-    flex:1 1 70px;
-    width:210px;
-    height:30px;
-    border-radius:10px;
 
+.formularios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 10px;
+    width: 400px;
 }
-.nombreempresa{
-    margin:10px;
-    flex:1 1 70px;
-    width:210px;
-    height:30px;
-    border-radius:10px;
-}
-.apellido{
-    margin:10px;
-    flex:1 1 70px;
-    width:210px;
-    height:30px;
-    border-radius:10px;
-}
-.profesión{
-    margin:10px;
-    flex:1 1 70px;
-    width:210px;
-    height:30px;
-    border-radius:10px;
-}
-.permiso{
-    /* margin:10px; */
-    flex:1 1 70px;
-    /* width:150px; */
-    grid-column:span 2;
-    border-radius:10px;
-    margin-bottom:5%;
 
+.formularios-item {
+    flex: 1 1 300px;
+    margin: 10px;
 }
-.logo{
-    width:300px;
-    height:100px;
-    /* display:flex;
-    justify-content:center; */
-    margin-left:40%;
+
+.nombre, .correo, .telefono, .pais, .nombreempresa, .apellido, .profesión {
+    margin: 10px;
+    width: 210px;
+    height: 30px;
+    border-radius: 10px;
 }
-body{
-    background-image:url(../img/Fondos/1.png);
+
+.nombre {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1));
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.1);
+    border-color: transparent;
 }
-.imagenlogo{
-    width:300px;
-    height:100px;
+
+.nombre:focus {
+    border-color: white;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 }
-.contenido{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    margin-right:10%;
-    margin-left:10%;
-    margin-top:5%;
+
+.permiso {
+    grid-column: span 2;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    color: white;
 }
-.botonenvio{
-    border-radius:10px;
-    width:78%;
-    height:50px;
+
+#textopermiso {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: smaller;
+    color: white;
 }
-.formulario{
-    width:600px;
+
+.logo {
+    width: 300px;
+    height: 100px;
+    margin-left: 40%;
 }
-.elementabajo{
-    margin-top:15%;
+
+.imagenlogo {
+    width: 300px;
+    height: 100px;
 }
+
+.contenido {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.botonenvio {
+    border-radius: 21px;
+    width: 78%;
+    height: 50px;
+    background: transparent;
+    border-color: white;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.1);
+}
+
+.formulario {
+    width: 600px;
+}
+
+.elementabajo {
+    display: flex;
+    width: 100%; /* Asegúrate de que ocupe el ancho completo */
+    /* margin-top: 5%; */
+}
+
+.titulo {
+    font-family: 'Sora', sans-serif;
+}
+
+.parrafo, .textoabajo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: smaller;
+    color: white;
+}
+
+.rsociales {
+    margin-left: 60%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
