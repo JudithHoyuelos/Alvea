@@ -276,7 +276,8 @@ img {
     border: none;
     margin-left: 2.5rem;
     font-size: 25px;
-    width: 20px;
+    width: 1.5rem;
+    /* width: 20px; */
     color: rgb(7, 7, 7);
     cursor: pointer;
     z-index: 1;
@@ -433,9 +434,97 @@ img {
 
 /* ------------ INTELIGENCIA ARTIFICIAL ----------- */
 
+.ia-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.ia-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ia-contenido img {
+    width: 30rem;
+    background-color: rgba(255, 255, 255, 0.27);
+    /* background: #fafafa10; */
+    backdrop-filter: blur(0.3rem);
+}
 
 /* ------------ BLOCKCHAIN ----------- */
 
+.block-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.block-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32rem;
+    height: 90%;
+    width: 100%;
+    position: absolute;
+}
+
+.block-contenido .block-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+}
+
+.block-contenido .block-logo img {
+    width: 8rem;
+}
+
+.block-contenido .block-miniaturas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.block-contenido .block-miniaturas img {
+    width: 5rem;
+}
+
+#miniatura-1 {
+    top: 10%;
+}
+
+#miniatura-2 {
+    top: 10rem;
+    left: 6rem;
+}
+
+#miniatura-3 {
+    top: 10rem;
+    right: 6rem;
+}
+
+#miniatura-4 {
+    bottom: 10%;
+}
+
+#miniatura-5 {
+    bottom: 10rem;
+    left: 6rem;
+}
+
+#miniatura-6 {
+    bottom: 10rem;
+    right: 6rem;
+}
 
 /* -------------- MENU LATERAL ----------- */
 
@@ -544,7 +633,7 @@ img {
 }
 
 #logo-redondo {
-    height: 4rem;
+    height: 4rem; /* cambiar medidas  */
 }
 
 a {
@@ -561,16 +650,34 @@ a:hover {
 /* ----------------- SOLUCIONES/USE CASE ----------------------- */
 
 #useCase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
-    background-color: rgba(0, 255, 255, 0.8);
-    height: 5rem;
-    width: 10rem;
+    /* background-color: rgba(0, 255, 255, 0.8); */
+    height: 10rem;
+    width: 24rem;
     top: 15rem;
-    left: 46%;
+    left: 40%;
+}
+
+.useCase-titulo {
+    background-color: var(--lavander);
+    color: var(--four-color);
+    border-radius: 4rem;
+    padding: 0 1rem;
+    cursor: pointer;
+    scroll-behavior: smooth;
 }
 
 .useCase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: fixed;
+    overflow-x: hidden;
+    overflow-y: scroll;
     background-color: rgba(245, 255, 255, 0.6);
     height: 20rem;
     width: 50rem;
@@ -578,40 +685,90 @@ a:hover {
     left: 25%;
 }
 
+.caso-de-uso {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.useCase-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4rem;
+    height: 20rem;
+}
+
+.etiqueta-useCase {
+    background-color: var(--four-color);
+    color: var(--lavander);
+    border-radius: 4rem;
+    margin: 2rem;
+    padding: 0 1rem;
+    font-size: 20px;
+}
+
+.etiqueta-caso {
+    background-color: var(--lavander);
+    color: var(--four-color);
+    border-radius: 4rem;
+    padding: 0 1rem;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.practico {
+    color: var(--white-letter);
+    font-size: 13px;
+}
+
+.useCase-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4rem;
+}
+
+.useCase-img img {
+   width: 20rem;
+}
+
 .useCase-comercio {
-    position: fixed;
-    background-color: rgba(154, 37, 249, 0.6);
-    height: 5rem;
-    width: 10rem;
-    top: 15rem;
-    left: 46%;
+    /* position: fixed; */
+    /* background-color: rgba(154, 37, 249, 0.6);
+    height: 20rem;
+    width: 50rem; */
+    /* top: 12rem;
+    left: 46%; */
 }
 
 .useCase-turismo {
-    position: fixed;
-    background-color: rgba(252, 145, 23, 0.6);
+    /* position: fixed; */
+    /* background-color: rgba(252, 145, 23, 0.6);
     height: 5rem;
-    width: 10rem;
-    top: 15rem;
-    left: 46%;
+    width: 10rem; */
+    /* top: 15rem;
+    left: 46%; */
 }
 
 .useCase-entrenimiento {
-    position: fixed;
-    background-color: rgba(206, 0, 0, 0.6);
+    /* position: fixed; */
+    /* background-color: rgba(206, 0, 0, 0.6);
     height: 5rem;
-    width: 10rem;
-    top: 15rem;
-    left: 46%;
+    width: 10rem; */
+    /* top: 15rem;
+    left: 46%; */
 }
 
 .useCase-socializacion {
-    position: fixed;
-    background-color: rgba(249, 245, 37, 0.6);
+    /* position: fixed; */
+    /* background-color: rgba(249, 245, 37, 0.6);
     height: 5rem;
-    width: 10rem;
-    top: 15rem;
-    left: 46%;
+    width: 10rem; */
+    /* top: 15rem;
+    left: 46%; */
 }
 
 /* ------------------ BLOG ----------------- */

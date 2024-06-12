@@ -155,7 +155,9 @@ function onClickExitModal(e) {
 
 function onClickUseCase(e) {
     console.log('se ha hecho click en el use case');
+    const casoUso = document.querySelector(".useCase-titulo");
     const div = document.querySelector(".useCase");
+    casoUso.style.display = 'none';
     div.style.display = '';
 }
 

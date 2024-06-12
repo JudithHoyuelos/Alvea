@@ -90,8 +90,8 @@
                     <div class="roadmap-flechas">
                         <div class="roadmap-rayas"></div>
                         <div class="roadmap-flechitas">
-                            <i class="fa-regular fa-circle-left flechas-izquierdas"></i>
-                            <i class="fa-regular fa-circle-right flechas-derechas"></i>
+                            <img class="flechas-izquierdas" src="./assets/img/arrows_RoadMap/arrows RoadMap/left.svg" alt="">
+                            <img class="flechas-derechas" src="./assets/img/arrows_RoadMap/arrows RoadMap/right@2x.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -156,9 +156,9 @@
                         <div class="roadmap-rayas"></div>
                         <div class="roadmap-flechitas">
                             <!-- <i class="fa-regular fa-circle-left flechas-izquierdas"></i> -->
-                            <i class="fa-regular fa-circle-right flechas-derechas"></i>
+                            <!-- <i class="fa-regular fa-circle-right flechas-derechas"></i> -->
                             <img class="flechas-izquierdas" src="./assets/img/arrows_RoadMap/arrows RoadMap/left.svg" alt="">
-                            <img src="" alt="">
+                            <img class="flechas-derechas" src="./assets/img/arrows_RoadMap/arrows RoadMap/right@2x.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -222,8 +222,8 @@
                     <div class="roadmap-flechas">
                         <div class="roadmap-rayas"></div>
                         <div class="roadmap-flechitas">
-                            <i class="fa-regular fa-circle-left flechas-izquierdas"></i>
-                            <i class="fa-regular fa-circle-right flechas-derechas"></i>
+                            <img class="flechas-izquierdas" src="./assets/img/arrows_RoadMap/arrows RoadMap/left.svg" alt="">
+                            <img class="flechas-derechas" src="./assets/img/arrows_RoadMap/arrows RoadMap/right@2x.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -308,8 +308,8 @@
                     <div class="roadmap-flechas">
                         <div class="roadmap-rayas"></div>
                         <div class="roadmap-flechitas">
-                            <i class="fa-regular fa-circle-left flechas-izquierdas"></i>
-                            <i class="fa-regular fa-circle-right flechas-derechas"></i>
+                            <img class="flechas-izquierdas" src="./assets/img/arrows_RoadMap/arrows RoadMap/left.svg" alt="">
+                            <img class="flechas-derechas" src="./assets/img/arrows_RoadMap/arrows RoadMap/right@2x.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -319,7 +319,9 @@
         <!---------------- HISTORIA ---------------->
 
         <div id="info9" style="display:none">
-            <h2>Historia</h2>
+            <div class="global-info">
+                <h2>Historia</h2>
+            </div>
         </div>
 
         <!---------------- EQUIPO ---------------->
@@ -374,8 +376,10 @@
                         <h3 id="product-txt">Nombre Apellido</h3>
                     </div>
                     <div class="icons">
-                        <i class="fa-regular fa-circle-left flecha-izquierda"></i>
-                        <i class="fa-regular fa-circle-right flecha-derecha"></i>
+                        <!-- <i class="fa-regular fa-circle-left flecha-izquierda"></i>
+                        <i class="fa-regular fa-circle-right flecha-derecha"></i> -->
+                        <img class="flecha-izquierda" src="./assets/img/arrows_RoadMap/arrows RoadMap/left.svg" alt="">
+                        <img class="flecha-derecha" src="./assets/img/arrows_RoadMap/arrows RoadMap/right@2x.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -481,7 +485,7 @@
 
     <div id="menu-horizontal" style="display: '';">
         <a href="blog.html">Blog</a>
-        <a href=""><img id="logo-redondo" src="assets/img/logoimpro.png" alt="logo"></a>
+        <a href=""><img id="logo-redondo" src="assets/img/logoimpro.svg" alt="logo"></a>
         <a href="contacto.html">Contacto</a>
     </div>
     <div id="modales" style="display:none"></div>
@@ -494,22 +498,47 @@
     <!---------------- SOLUCIONES/USE CASE ---------------->
 
     <div id="useCase" style="display:none">
+        <h2 class="useCase-titulo">Caso de Uso</h2>
         <div class="useCase" style="display:none">
-            <div class="useCase-comercio" style="display:''">
-                <div class="useCase-info"></div>
-                <div class="useCase-img"></div>
+            <div class="caso-de-uso useCase-comercio" style="display:''">
+                <div class="useCase-info">
+                    <p class="etiqueta-useCase">Caso de uso</p>
+                    <p class="etiqueta-caso">Comercio</p>
+                    <p class="etiqueta-useCase practico">Pop Up callado</p>
+                </div>
+                <div class="useCase-img">
+                    <img src="./assets/img/callao.jpg" alt="">
+                </div>
             </div>
-            <div class="useCase-turismo" style="display:none">
-                <div class="useCase-info"></div>
-                <div class="useCase-img"></div>
+            <div class="caso-de-uso useCase-turismo" style="display:''">
+                <div class="useCase-info">
+                    <p class="etiqueta-useCase">Caso de uso</p>
+                    <p class="etiqueta-caso">Turismo</p>
+                    <p class="etiqueta-useCase practico">Ayuntamiento de Madrid</p>
+                </div>
+                <div class="useCase-img">
+                    <img src="./assets/img/ayuntamiento.jpg" alt="">
+                </div>
             </div>
-            <div class="useCase-entretenimiento" style="display:none">
-                <div class="useCase-info"></div>
-                <div class="useCase-img"></div>
+            <div class="caso-de-uso useCase-entretenimiento" style="display:''">
+                <div class="useCase-info">
+                    <p class="etiqueta-useCase">Caso de uso</p>
+                    <p class="etiqueta-caso">Entretenimiento</p>
+                    <p class="etiqueta-useCase practico">Zoologico Antiguo de Madrid</p>
+                </div>
+                <div class="useCase-img">
+                    <img src="./assets/img/casa-de-fieras-de-el-retiro.jpg" alt="">
+                </div>
             </div>
-            <div class="useCase-socializacion" style="display:none">
-                <div class="useCase-info"></div>
-                <div class="useCase-img"></div>
+            <div class="caso-de-uso useCase-socializacion" style="display:''">
+                <div class="useCase-info">
+                    <p class="etiqueta-useCase">Caso de uso</p>
+                    <p class="etiqueta-caso">Socialización</p>
+                    <p class="etiqueta-useCase practico">Restaurante La Martinuca</p>
+                </div>
+                <div class="useCase-img">
+                    <img src="./assets/img/restaurante-martinica.jpg" alt="">
+                </div>
             </div>
         </div>
     </div>
