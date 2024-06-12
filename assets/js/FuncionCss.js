@@ -151,7 +151,7 @@ document.querySelectorAll('.carrusel').forEach(carrusel => {
     });
 
     // Indicadores
-    const numeroPaginas = Math.ceil(peliculas.length / 1); // Ajusta este valor según cuántas tarjetas deseas mostrar por vista
+    const numeroPaginas = Math.ceil(peliculas.length / 1);
     for (let i = 0; i < numeroPaginas; i++) {
         const indicador = document.createElement('button');
         indicador.className = "botones-rayas";
