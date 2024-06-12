@@ -262,10 +262,12 @@ function onClickLogo(x, y, z, lookAtX, lookAtY, lookAtZ, initialPoints) {
         const arriba = document.querySelector("#useCase");
         const logo = document.querySelector('#inicio');
         const useCase = document.querySelector(".useCase");
+        const casoUso = document.querySelector(".useCase-titulo");
 
         if (currentPoints[0] == arriba) {
             arriba.style.display = 'none';
             useCase.style.display = 'none';
+            casoUso.style.display = '';
         } else {
             // Ocultar los puntos antiguos antes de mover la cámara
             currentPoints.forEach(point => {

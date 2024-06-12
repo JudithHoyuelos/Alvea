@@ -623,15 +623,17 @@ img {
 #menu-horizontal {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: space-between; */
     height: 1.6rem;
-    background-color: rgba(182, 35, 241, 0.6);
+    /* background-color: rgba(182, 35, 241, 0.6); */
+    background-color: rgba(246, 249, 249, 0.6);
+    box-shadow: inset 3px 2px 0px 0 rgba(20, 20, 20, 0.4);
     position: fixed;
     bottom: 2rem;
     left: 42%;
     border-radius: 3rem;
-    /* justify-content: center; */
-    align-items: center;
     padding:0 2rem;
 }
 
@@ -641,7 +643,6 @@ img {
 }
 
 a {
-    /* margin-left: 2rem; */
     text-decoration: none;
     color: white;
     font-size: larger;
@@ -676,6 +677,11 @@ a:hover {
     cursor: pointer;
 }
 
+.useCase-titulo:hover {
+    background-color: var(--four-color);
+    color: var(--lavander);
+}
+
 .useCase {
     display: flex;
     flex-direction: column;
@@ -685,7 +691,7 @@ a:hover {
     scroll-behavior: smooth;
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: rgba(245, 255, 255, 0.6);
+    /* background-color: rgba(245, 255, 255, 0.6); */
     height: 20rem;
     width: 50rem;
     top: 12rem;
@@ -703,7 +709,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-right: 4rem;
     height: 20rem;
 }
@@ -712,7 +718,7 @@ a:hover {
     background-color: var(--four-color);
     color: var(--lavander);
     border-radius: 4rem;
-    margin: 2rem;
+    margin: 2rem 0;
     padding: 0 1rem;
     font-size: 20px;
 }
