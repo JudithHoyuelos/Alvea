@@ -622,22 +622,26 @@ img {
 
 #menu-horizontal {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 1.6rem;
     background-color: rgba(182, 35, 241, 0.6);
     position: fixed;
     bottom: 2rem;
-    left: 40%;
+    left: 42%;
     border-radius: 3rem;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    padding-right: 2rem;
+    padding:0 2rem;
 }
 
 #logo-redondo {
-    height: 4rem; /* cambiar medidas  */
+    height: 6rem; /* cambiar medidas  */
+    border-radius: 2rem;
 }
 
 a {
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
     text-decoration: none;
     color: white;
     font-size: larger;
@@ -647,6 +651,10 @@ a:hover {
     color: deeppink;
 }
 
+#blog {
+    margin-right: 1.2rem;
+}
+
 /* ----------------- SOLUCIONES/USE CASE ----------------------- */
 
 #useCase {
@@ -654,7 +662,6 @@ a:hover {
     justify-content: center;
     align-items: center;
     position: fixed;
-    /* background-color: rgba(0, 255, 255, 0.8); */
     height: 10rem;
     width: 24rem;
     top: 15rem;
@@ -667,17 +674,17 @@ a:hover {
     border-radius: 4rem;
     padding: 0 1rem;
     cursor: pointer;
-    scroll-behavior: smooth;
 }
 
 .useCase {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: fixed;
+    scroll-behavior: smooth;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     background-color: rgba(245, 255, 255, 0.6);
     height: 20rem;
     width: 50rem;
@@ -735,40 +742,12 @@ a:hover {
    width: 20rem;
 }
 
-.useCase-comercio {
-    /* position: fixed; */
-    /* background-color: rgba(154, 37, 249, 0.6);
-    height: 20rem;
-    width: 50rem; */
-    /* top: 12rem;
-    left: 46%; */
-}
-
-.useCase-turismo {
-    /* position: fixed; */
-    /* background-color: rgba(252, 145, 23, 0.6);
-    height: 5rem;
-    width: 10rem; */
-    /* top: 15rem;
-    left: 46%; */
-}
-
-.useCase-entrenimiento {
-    /* position: fixed; */
-    /* background-color: rgba(206, 0, 0, 0.6);
-    height: 5rem;
-    width: 10rem; */
-    /* top: 15rem;
-    left: 46%; */
+.useCase-comercio .useCase-turismo .useCase-entrenimiento{
+    margin-bottom: 2rem;
 }
 
 .useCase-socializacion {
-    /* position: fixed; */
-    /* background-color: rgba(249, 245, 37, 0.6);
-    height: 5rem;
-    width: 10rem; */
-    /* top: 15rem;
-    left: 46%; */
+    margin-top: 2rem;
 }
 
 /* ------------------ BLOG ----------------- */
