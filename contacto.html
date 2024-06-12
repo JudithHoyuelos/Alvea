@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/css/contacto.css">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    
+    <script src="./assets/js/indexAlvearium.js" type="module"></script>
 </head>
 <body>
     <div class="contenedor">
@@ -35,7 +35,7 @@
                     <!-- <div class="prueba"></div> -->
       
                 </form>      
-                <div>
+                <div class="epermiso">
                     <input class="permiso" id="permiso" type="checkbox" value="permiso" name="permiso">  
                     <label for="permiso" id="textopermiso">Al enviar este formulario confirmo que estoy de acuerdo con la politica de privacidad</label><br>
                     <!-- <p>Al enviar este formulario confirmo que estoy de acuerdo con la politica de privacidad</p> -->
@@ -44,7 +44,7 @@
             </div>
         </div>
         
-        <hr width="100%" color="black" style="margin-top:18%">
+        <hr width="100%" color="white" style="margin-top:12%">
 
         <div class="elementabajo">
             <div class="textoabajo">Learn about our policy.Read our cookies recipe <br> Alvearium Recipe 2024</div>
@@ -58,7 +58,19 @@
             </div>
         </div>
    </div>
-
+   <div id="menu-lateral">
+    <img id="icono-menu-lateral" src="assets/img/menu.png" alt="menu">
+   </div>
+   <div id="desplegable" class="glass-effect" style="display:none">
+    <img id="exit" src="assets/img/exit.png" alt="exit">
+    <div class="contenido-menu-principal">
+        <div class="menu-principal">
+            <p class="menu-lateral-etiqueta"></p>
+            <h3 class="titulo-menu-lateral" id="sobre">Sobre Nostros</h3>
+            <p class="menu-lateral-parrafo">Road Map,Equipo,Historia</p>
+        </div>
+    </div>
+   </div>
     <script src="https://kit.fontawesome.com/b8970cc01f.js" crossorigin="anonymous"></script>
 </body>
 </html>
