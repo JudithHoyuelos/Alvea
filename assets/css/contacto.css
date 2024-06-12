@@ -64,7 +64,7 @@ body {
 }
 
 .imagenlogo {
-    width: 300px;
+    /* width: 300px; */
     height: 100px;
 }
 
@@ -110,6 +110,55 @@ body {
 }
 .epermiso{
     margin-top:5%;
+}
+
+#menu-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: space-between; */
+    height: 1.6rem;
+    /* background-color: rgba(182, 35, 241, 0.6); */
+    /* background-color: rgba(246, 249, 249, 0.6); */
+    box-shadow: inset 3px 2px 0px 0 rgba(20, 20, 20, 0.4);
+    /* position: fixed; */
+    /* bottom: 2rem; */
+    /* left: 42%; */
+    
+    border-radius: 3rem;
+    z-index:1000;
+    /* padding:0 2rem; */
+}
+
+#logo-redondo {
+    height: 6rem; /* cambiar medidas  */
+    border-radius: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+}
+
+a:hover {
+    color: deeppink;
+}
+
+#blog {
+    margin-right: 1.2rem;
+    background: linear-gradient(to right, rgba(182, 35, 241, 0.6), rgba(255, 255, 255, 1));
+    width:100%;
+}
+#contacto{
+    background: linear-gradient(to right, rgba(182, 35, 241, 0.6), rgba(255, 255, 255, 1));
+    width:100%;
+}
+#menu-lateral{
+    display: flex;
+    top:10%;
+    right:10%;
 }
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
