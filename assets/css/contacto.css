@@ -54,8 +54,9 @@ body > * {
 
 .nombre, .correo1, .telefono, .pais, .nombreempresa, .apellido, .profesión {
     margin: 10px;
-    width: 210px;
-    height: 30px;
+    width: 215px;
+    height: 36px;
+    border:0px;
     border-radius: 10px;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1));
     box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.21);
@@ -135,9 +136,15 @@ body > * {
 }
 
 .titulo {
+    width:210px;
     font-family: 'Sora', sans-serif;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgb(255, 17, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Asegúrate de que el texto sea transparente */
 }
-
+ /* background:linear-gradient(to right, rgba(255,255,255,1),rgba(255,0,0,1));    
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)); */
 .parrafo, .textoabajo,.correo {
     font-family: 'Space Grotesk', sans-serif;
     font-size: smaller;
@@ -187,6 +194,7 @@ body > * {
 #logo-redondo {
     height: 6rem; /* cambiar medidas  */
     border-radius: 2rem;
+    z-index:2;
 }
 
 a {
@@ -200,13 +208,20 @@ a:hover {
 }
 
 #blog {
-    margin-right: 1.2rem;
+    /* margin-right: 1.2rem; */
     background: linear-gradient(to right, rgba(182, 35, 241, 0.6), rgba(255, 255, 255, 1));
-    width:100%;
+    /* width:100%; */
+    width:200px;
+    height:30px;
+    border-radius:30px;
+    position: absolute;
 }
 #contacto{
     background: linear-gradient(to right, rgba(182, 35, 241, 0.6), rgba(255, 255, 255, 1));
-    width:100%;
+    /* width:100%; */
+    width:150px;
+    height:30px;
+    border-radius:30px;
 }
 #menu-lateral{
     /* display: flex;
@@ -297,6 +312,13 @@ a:hover {
 }
 .texto{
     margin-right:10%;
+}
+#titulo{
+    background:linear-gradient(to right (rgba(255,255,255,1) rgba(red)))
+}
+.fondologo{
+    display:flex;
+    align-items:center;
 }
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
