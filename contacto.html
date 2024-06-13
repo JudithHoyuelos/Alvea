@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./assets/css/contacto.css">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    <script src="./assets/js/indexAlvearium.js" type="module"></script>
+    <!-- <script src="./assets/js/indexAlvearium.js" type="module"></script> -->
+     <script src="assets/js/Menus.js" type="module"></script>
 </head>
 <body>
     <div class="contenedor">
@@ -20,13 +21,13 @@
                 <div class="parrafo">¿Estas interesado en conocernos? <br>
                     Rellena los siguientes campos y nos pondremos <br>
                     en contacto los antes posible
-                </div>
-                <div class="correo"></div>
+                </div><br>
+                <div class="correo">imfernandez@alvearium.io<br> support@alvearium.io</div>
             </div>
             <div class="formulario">
                 <form class="formularios">
                     <input class="nombre" type="text" name="nombre" >
-                    <input class="correo" type="email" name="correo">
+                    <input class="correo1" type="email" name="correo">
                     <input class="telefono" type="text" name="telefono">
                     <input class="pais" type="text" name="pais">
                     <input class="nombreempresa" type="text" name="nombreempresa">
@@ -44,7 +45,7 @@
             </div>
         </div>
         
-        <hr width="100%" color="white" style="margin-top:12%">
+        <hr width="100%" color="white" style="margin-top:6%">
 
         <div class="elementabajo">
             <div class="textoabajo">Learn about our policy.Read our cookies recipe <br> Alvearium Recipe 2024</div>
@@ -65,12 +66,43 @@
     <img id="exit" src="assets/img/exit.png" alt="exit">
     <div class="contenido-menu-principal">
         <div class="menu-principal">
-            <p class="menu-lateral-etiqueta"></p>
+            <p class="menu-lateral-etiqueta">01</p>
             <h3 class="titulo-menu-lateral" id="sobre">Sobre Nostros</h3>
             <p class="menu-lateral-parrafo">Road Map,Equipo,Historia</p>
         </div>
+        <div class="menu-principal">
+            <p class="menu-lateral-etiqueta">02</p>
+            <h3 class="titulo-menu-lateral" id="soluciones">Soluciones</h3>
+            <p class="menu-lateral-parrafo">Use Cases: Comercio, Turismo, Entretenimiento, Socialización</p>
+        </div>
+        <div class="menu-principal">
+            <p class="menu-lateral-etiqueta">03</p>
+            <h3 class="titulo-menu-lateral" id="tecnologias">Tecnologías</h3>
+            <p class="menu-lateral-parrafo">Realidad Extendida, Inteligencia Artificial, Blockchain</p>
+        </div>
+        <div class="menu-principal">
+            <p class="menu-lateral-etiqueta">04</p>
+            <h3 class="titulo-menu-lateral" id="experiencias">Experiencias</h3>
+            <p class="menu-lateral-parrafo">Realidad Virtual, Realidad aumentada, Realidad mixta</p>
+        </div>
+
     </div>
+    
    </div>
+   <div class="glass-effect" id="menu-horizontal" style="display:'';">
+    <div id="blog" href="blog.html">Blog</div>
+        <!-- <a id="blog" href="blog.html">Blog</a> -->
+    <div><img id="logo-redondo" src="assets/img/logoimpro.svg" alt="logo"> </div>
+        <!-- <a href=""><img id="logo-redondo" src="assets/img/logoimpro.svg" alt="logo"></a> -->
+        <!-- <a href="contacto.html">Contacto</a> -->
+        <div id="contacto" href="contacto.html">Contacto</div>
+    </div>
+    <div id="modales" style="display:none"></div>
+    <div id="inicio" style="display:none">
+        <a href="#">
+            <img id="logo-blanco" src="assets/img/Logos/Alv_PositivoPNG.png" alt="logo">
+        </a>
+    </div>
     <script src="https://kit.fontawesome.com/b8970cc01f.js" crossorigin="anonymous"></script>
 </body>
 </html>

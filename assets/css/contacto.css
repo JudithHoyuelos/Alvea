@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -8,9 +8,38 @@ body {
     background-image: url(../img/Fondos/Fondo-footer-clean-web.jpg);
     background-size: cover;
     background-attachment: fixed;
+    color: white; Asegúrate de que el texto sea visible en el fondo 
+} */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: white; /* Asegúrate de que el texto sea visible en el fondo */
+    position: relative;
+    z-index: 0; /* Asegúrate de que el contenido esté en el frente */
 }
 
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/Fondos/Fondo-footer-clean-web.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(3px); /* Ajusta el nivel de desenfoque según tus necesidades */
+    z-index: -1; /* Asegúrate de que la imagen de fondo esté detrás del contenido */
+}
+
+body > * {
+    position: relative;
+    z-index: 1; /* Asegúrate de que el contenido esté en el frente */
+}
 .formularios {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -23,23 +52,34 @@ body {
     margin: 10px;
 }
 
-.nombre, .correo, .telefono, .pais, .nombreempresa, .apellido, .profesión {
+.nombre, .correo1, .telefono, .pais, .nombreempresa, .apellido, .profesión {
     margin: 10px;
     width: 210px;
     height: 30px;
     border-radius: 10px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1));
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.21);
+    border-color: transparent;
+    border-radius:20px;
 }
 
 .nombre {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1));
-    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.21);
     border-color: transparent;
+    border-radius:20px;
     
 }
 
 .nombre:focus {
     border-color: transparent;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    outline:2px solid white;
+}
+.correo1:focus, .telefono:focus, .pais:focus, .nombreempresa:focus, .apellido:focus, .profesion:focus {
+    border-color: transparent;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+    outline: 2px solid white;
 }
 
 .permiso {
@@ -51,7 +91,7 @@ body {
 
 #textopermiso {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: smaller;
+    font-size: x-small;
     color: white;
 }
 
@@ -62,16 +102,16 @@ body {
 }
 
 .imagenlogo {
-    width: 300px;
+    /* width: 300px; */
     height: 100px;
 }
 
 .contenido {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-right: 10%;
-    margin-left: 18%; 
-    margin-top: 10%;
+    /* margin-right: 5%; */
+    margin-left: 10%; 
+    margin-top: 15%;
 }
 
 .botonenvio {
@@ -81,6 +121,7 @@ body {
     background: transparent;
     border-color: white;
     box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.1);
+    color:white;
 }
 
 .formulario {
@@ -97,7 +138,7 @@ body {
     font-family: 'Sora', sans-serif;
 }
 
-.parrafo, .textoabajo {
+.parrafo, .textoabajo,.correo {
     font-family: 'Space Grotesk', sans-serif;
     font-size: smaller;
     color: white;
@@ -108,6 +149,154 @@ body {
 }
 .epermiso{
     margin-top:5%;
+}
+
+#menu-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: space-between; */
+    height: 1.6rem;
+    /* background-color: rgba(182, 35, 241, 0.6); */
+    background-color: rgba(246, 249, 249, 0.6);
+    box-shadow: inset 3px 2px 0px 0 rgba(20, 20, 20, 0.4);
+    position: fixed;
+    bottom: 2rem;
+    left: 42%;
+    border-radius: 3rem;
+    padding:0 2rem;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* height: 1.6rem; */
+    /* background-color: rgba(182, 35, 241, 0.6); */
+    /* background-color: rgba(246, 249, 249, 0.6); */
+    /* box-shadow: inset 3px 2px 0px 0 rgba(20, 20, 20, 0.4); */
+    /* position: fixed; */
+    /* bottom: 2rem; */
+    /* left: 42%; */
+/*     
+    border-radius: 3rem;
+    z-index:1000;
+    padding:0 2rem; */ 
+}
+
+#logo-redondo {
+    height: 6rem; /* cambiar medidas  */
+    border-radius: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+}
+
+a:hover {
+    color: deeppink;
+}
+
+#blog {
+    margin-right: 1.2rem;
+    background: linear-gradient(to right, rgba(182, 35, 241, 0.6), rgba(255, 255, 255, 1));
+    width:100%;
+}
+#contacto{
+    background: linear-gradient(to right, rgba(182, 35, 241, 0.6), rgba(255, 255, 255, 1));
+    width:100%;
+}
+#menu-lateral{
+    /* display: flex;
+    position:fixed;
+    top:10%;
+    right:10%; */
+    position: fixed;
+    top: 2rem;
+    right: 2%;
+    border: solid 0.5px var(--white-letter);
+    border-radius: 15%;
+}
+#icono-menu-lateral {
+    width: 2rem;
+    padding: 0.3rem;
+}
+#desplegable{
+    height: 100vh; /* Toma el 100% de la altura de la ventana*/
+    width: 30%; /*Toma el 50% del ancho de la ventana*/
+    position: fixed; /*Fija la posición del div*/
+    top: 0; /*Coloca el div en la parte superior de la ventana*/
+    right: 0; /*Coloca el div en el lado derecho de la ventana*/
+    background-color: rgba(246, 249, 249, 0.6); /* Color semi-transparente (aqua) */
+    border-radius: 3rem 0 0 3rem;
+    box-shadow: inset 10px 0px 10px 0 rgba(20, 20, 20, 0.4);
+}
+.glass-effect {
+    background: #fafafa10;
+    backdrop-filter: blur(0.3rem);
+}
+#exit {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 2rem;
+    border: solid 1px black;
+    border-radius: 15%;
+}
+.contenido-menu-principal {
+    margin: 0 3rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 5%;
+}
+.menu-principal {
+    width: 90%;
+    margin-top: 3rem;
+    border-bottom: solid black 1px;
+}
+
+.menu-principal .menu-lateral-etiqueta {
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+.menu-principal .menu-lateral-parrafo {
+    font-size: 0.8rem;
+    margin: 0.4rem 0;
+}
+
+.menu-principal .titulo-menu-lateral{
+    font-size: 2rem;
+    margin-top: 0.7rem;
+    cursor: pointer;
+}
+
+#sobre:hover {
+    color: var(--primary-color);
+    transition: 0.5s;
+}
+
+#soluciones:hover {
+    color: var(--second-color);
+    transition: 0.5s;
+}
+
+#tecnologias:hover {
+    color: var(--third-color);
+    transition: 0.5s;
+}
+
+#experiencias:hover {
+    color: var(--four-color);
+    transition: 0.5s;
+}
+.texto{
+    margin-right:10%;
 }
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
