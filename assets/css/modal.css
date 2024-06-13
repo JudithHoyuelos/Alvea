@@ -312,6 +312,19 @@ img {
     font-size: 30px;
 }
 
+.roadmap-titulo {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.roadmap-years {
+    margin-left: 4rem;
+}
+
+.roadmap-years img {
+    width: 5rem;
+}
+
 .roadmap-etiquetas {
     margin: 1rem 0;
 }
@@ -319,18 +332,44 @@ img {
 .roadmap-etiqueta {
     display: flex;
     margin-left: 1rem;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .etiqueta-parrafo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+.etiquetas-puntos {
+    display: flex;
+    flex-direction: row
+}
+
+.etiquetas-punto {
+    margin-top: 0.5rem;
+    height: 15px;
+}
+
+.etiqueta-apartado {
+    display: flex;
+    color: var(--primary-color);
+    font-size: 16px;
+    border-radius: 30%;
+    gap: 2rem;
+    margin: 0.2rem;
+}
+
+.etiqueta-eventos {
+    display: flex;
+    color: var(--second-color);
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .etiqueta-roadmap {
     display: flex;
-    background-color: var(--lavander);
-    font-size: 18px;
+    /* background-color: var(--lavander); */
+    font-size: 12px;
     border-radius: 30%;
     gap: 2rem;
     margin: 0.2rem;
@@ -628,7 +667,7 @@ img {
     /* justify-content: space-between; */
     height: 1.6rem;
     /* background-color: rgba(182, 35, 241, 0.6); */
-    background-color: rgba(246, 249, 249, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     box-shadow: inset 3px 2px 0px 0 rgba(20, 20, 20, 0.4);
     position: fixed;
     bottom: 2rem;
@@ -690,12 +729,27 @@ a:hover {
     position: fixed;
     scroll-behavior: smooth;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
     /* background-color: rgba(245, 255, 255, 0.6); */
     height: 20rem;
     width: 50rem;
     top: 12rem;
     left: 25%;
+}
+
+/* Ocultar la barra de desplazamiento para navegadores webkit */
+.useCase::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ocultar la barra de desplazamiento para Firefox */
+.useCase {
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Para otros navegadores */
+.useCase {
+    -ms-overflow-style: none; /* IE and Edge */
 }
 
 .caso-de-uso {
