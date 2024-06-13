@@ -79,6 +79,8 @@ function onClickExit(e) {
     menu.style.display = '';
 }
 
+// Movimiento de los puntos cuando se habre y se cierra el modal
+
 // Almacena las posiciones iniciales de los puntos
 const posicionesIniciales = {
     // punto5: {left: 768, top: 225},

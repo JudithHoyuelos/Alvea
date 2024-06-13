@@ -7,4 +7,4 @@ Para arrancar el programa hay que poner en la consola del editor el comando 'npx
 
 En la consola aparecerá un link con el localhost, el cuál habrá que pinchar.
 
-Lo que se abrirá es el index que es la parte del loging, por lo que en la ruta del navegador hay que cambiarla a 'informacion.html'.
+Lo que se abrirá es el index que es la parte informativa, por lo que si se quiere pasar al login, en la ruta del navegador hay que cambiarla a 'login.html'.
