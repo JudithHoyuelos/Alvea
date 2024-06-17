@@ -70,6 +70,7 @@ img {
     position: fixed;
     background-color: red; /* Cambiar color mas tarde */
     border-radius: 100%;
+    cursor: pointer;
 }
 
 #inicio {

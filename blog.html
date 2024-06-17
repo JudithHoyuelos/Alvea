@@ -3,55 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="./assets/css/modal.css">
     <link rel="stylesheet" href="./assets/css/blog.css">
     <script src="assets/js/Menus.js" type="module"></script>
 </head>
 <body>
-    <!--------------- MENU LATERAL ---------------->
+    <div class="content">
+        <!--------------- CONTENIDO ---------------->
+        <div class="encabezado">
+            <div class="titulo">
+                <h3 class="degradado">El blog de Alvy</h3>
+                <img class="alvi" src="./assets/img/Alvi.svg" alt="">
+            </div>
+            <p class="descripcion">Índice de contenidos</p>
+        </div>
 
-    <div id="menu-lateral">
-        <img id="icono-menu-lateral" src="assets/img/menu.png" alt="menu">
-    </div>
-    <div id="desplegable" class="glass-effect" style="display:none">
-        <img id="exit" src="assets/img/exit.png" alt="exit">
-        <div class="contenido-menu-principal">
-            <div class="menu-principal">
-                <p class="menu-lateral-etiqueta">01</p>
-                <h3 class="titulo-menu-lateral" id="sobre">Sobre Nosotros</h3>
-                <p class="menu-lateral-parrafo">Road Map, Equipo, Historia</p>
+        <!--------------- BLOG ---------------->
+        <div class="blog-puntos">
+            <div class="blog-puntos-contenedor">
+                <div class="blog-puntos-iniciales" id="puntos1" style="display: ''">
+                    <p>5</p>
+                </div>
+                <div class="blog-punto-secundarios" id="bloque1" style="display: none">
+                    <div class="blog-puntos-cerrar" id="cerrar1"></div>
+                    <div class="blog-puntos-secundarios" id="blogPunto1">
+                        <p>1</p>
+                    </div>
+                    <div class="blog-entradas" id="entrada1" style="display:none">
+                        <h4 class="blog-titulo">Fundación de Alvearium</h4>
+                        <p class="blog-year">28 de enero de 2022</p>
+                    </div>
+                    <div class="blog-puntos-secundarios" id="blogPunto2" style="display: ''">
+                        <p>2</p>
+                    </div>
+                    <div class="blog-entradas" id="entrada2" style="display:none">
+                        <h4 class="blog-titulo">Desarrollo de la <br>prueba de concepto</h4>
+                        <p class="blog-year">23 de marzo de 2022</p>
+                    </div>
+                    <div class="blog-puntos-secundarios" id="blogPunto3" style="display: ''">
+                        <p>3</p>
+                    </div>
+                    <div class="blog-entradas" id="entrada3" style="display:none">
+                        <h4 class="blog-titulo">Creación y lanzamiento <br>
+                            del primer video promocional</h4>
+                        <p class="blog-year">20 de julio de 2022</p>
+                    </div>
+                    <div class="blog-puntos-secundarios" id="blogPunto4" style="display: ''">
+                        <p>4</p>
+                    </div>
+                    <div class="blog-entradas" id="entrada4" style="display:none">
+                        <h4 class="blog-titulo">Alvearium entra en el Cluster de Industrias <br>Creativas y del Videojuego de Madrid</h4>
+                        <p class="blog-year">20 de octubre de 2022</p>
+                    </div>
+                    <div class="blog-puntos-secundarios" id="blogPunto5" style="display:''">
+                        <p>5</p>
+                    </div>
+                    <div class="blog-entradas" id="entrada5" style="display:none">
+                        <h4 class="blog-titulo">Desarrollo de prototipo inmersivo (PC-VR)</h4>
+                        <p class="blog-year">21 de octubre de 2022</p>
+                    </div>
+                    <div class="blog-puntos-abrir">
+                        <img class="puntos-abir" id="mostrar1" src="./assets/img/Abrir.svg" alt="">
+                        <img class="puntos-abir" id="ocultar1" style="display:none" src="./assets/img/Abrir22.svg" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="menu-principal">
-                <p class="menu-lateral-etiqueta">02</p>
-                <h3 class="titulo-menu-lateral" id="soluciones">Soluciones</h3>
-                <p class="menu-lateral-parrafo">Use Cases: Comercio, Turismo, Entretenimiento, Socialización</p>
+            <div class="blog-puntos-contenedor">
+                <div class="blog-puntos-iniciales" id="puntos2" style="display: ''">
+                    <p>10</p>
+                </div>
+                <div class="blog-punto-secundarios" id="bloque2" style="display: none">
+                    <div class="blog-puntos-cerrar" id="cerrar2"></div>
+                    <div class="blog-puntos-secundarios" id="blogPunto6">
+                        <p>6</p>
+                    </div>
+                    <div class="blog-entradas" id="entrada6" style="display:none">
+                        <h4 class="blog-titulo">Alvearium asegura 100.000 € en ronda pre-seed, alcanzando una valoración de 1 millón de euros</h4>
+                        <p class="blog-year">2 de noviembre de 2022</p>
+                    </div>
+                    <div class="blog-puntos-secundarios" id="blogPunto7">
+                        <p>7</p>
+                    </div>
+                    <div class="blog-entradas" id="entrada7" style="display:none">
+                        <h4 class="blog-titulo">Premios Blockchain y Tecnologías Avanzadas 2022</h4>
+                        <p class="blog-year">20 de diciembre de 2022</p>
+                    </div>
+                    <div class="blog-puntos-secundarios" id="blogPunto8">
+                        <p>8</p>
+                    </div>
+                    <div class="blog-entradas" id="entrada8" style="display:none">
+                        <h4 class="blog-titulo">El respaldo institucional y el entusiasmo empresarial impulsan a Alvearium VR en Bilbao</h4>
+                        <p class="blog-year">23 de diciembre de 2022</p>
+                    </div>
+                    <div class="blog-puntos-secundarios" id="blogPunto9">
+                        <p>9</p>
+                    </div>
+                    <div class="blog-entradas" id="entrada9" style="display:none">
+                        <h4 class="blog-titulo">Facturación 2022: 45.800€</h4>
+                        <p class="blog-year">2 de enero de 2023</p>
+                    </div>
+                    <div class="blog-puntos-secundarios" id="blogPunto10">
+                        <p>10</p>
+                    </div>
+                    <div class="blog-entradas" id="entrada10" style="display:none">
+                        <h4 class="blog-titulo"> Apoyo del Área de Patrimonio del <br> Ayuntamiento Madrid</h4>
+                        <p class="blog-year">26 de enero de 2023</p>
+                    </div>
+                    <div class="blog-puntos-abrir">
+                        <img class="puntos-abir" id="mostrar2" src="./assets/img/Abrir.svg" alt="">
+                        <img class="puntos-abir" id="ocultar2" style="display:none" src="./assets/img/Abrir22.svg" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="menu-principal">
-                <p class="menu-lateral-etiqueta">03</p>
-                <h3 class="titulo-menu-lateral" id="tecnologias">Tecnologías</h3>
-                <p class="menu-lateral-parrafo">Realidad Extendida, Inteligencia Artificial, Blockchain</p>
+            <div class="blog-puntos-contenedor">
+                <div class="blog-puntos-iniciales" id="puntos3" style="display: ''">
+                    <p>15</p>
+                </div>
+                <div class="blog-punto-secundarios" id="bloque3" style="display: none">
+                    <div class="blog-puntos-cerrar" id="cerrar3"></div>
+                    <div class="blog-puntos-secundarios" id="blogPunto11">
+                        <p>11</p>
+                    </div>
+                    <div class="blog-entradas" id="entrada11" style="display:none">
+                        <h4 class="blog-titulo">Entrada en el programa de incubación de Madrid in Game, en el Campus del Videojuego de Madrid</h4>
+                        <p class="blog-year">23 de marzo de 2023</p>
+                    </div>
+                    <div class="blog-puntos-secundarios" id="blogPunto12">
+                        <p>12</p>
+                    </div>
+                    <div class="blog-entradas" id="entrada12" style="display:none">
+                        <h4 class="blog-titulo">Acuerdo con escuelas de formación y universidades</h4>
+                        <p class="blog-year">3 de abril de 2023</p>
+                    </div>
+                    <div class="blog-puntos-secundarios" id="blogPunto13">
+                        <p>13</p>
+                    </div>
+                    <div class="blog-entradas" id="entrada13" style="display:none">
+                        <h4 class="blog-titulo">Participación en eventos (4YFN Mobile World Congress 2022, BVenture, Librecon, Auren Investors Open day, Meta World Congress, Open Expo Europe, Cyberwall)</h4>
+                        <p class="blog-year">24 de junio de 2023</p>
+                    </div>
+                    <div class="blog-puntos-secundarios" id="blogPunto14">
+                        <p>14</p>
+                    </div>
+                    <div class="blog-entradas" id="entrada14" style="display:none">
+                        <h4 class="blog-titulo">Lanzamiento del <br> White Paper</h4>
+                        <p class="blog-year">3 de julio de 2023</p>
+                    </div>
+                    <div class="blog-puntos-secundarios" id="blogPunto15">
+                        <p>15</p>
+                    </div>
+                    <div class="blog-entradas" id="entrada15" style="display:none">
+                        <h4 class="blog-titulo">Alvearium cierra con éxito su tercera ronda pre-seed recaudando 50.000$ en tan solo una hora</h4>
+                        <p class="blog-year">13 de julio de 2023</p>
+                    </div>
+                    <div class="blog-puntos-abrir">
+                        <img class="puntos-abir" id="mostrar3" src="./assets/img/Abrir.svg" alt="">
+                        <img class="puntos-abir" id="ocultar3" style="display:none" src="./assets/img/Abrir22.svg" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="menu-principal">
-                <p class="menu-lateral-etiqueta">04</p>
-                <h3 class="titulo-menu-lateral" id="experiencias">Experiencias</h3>
-                <p class="menu-lateral-parrafo">Realidad Virtual, Realidad aumentada, Realidad mixta</p>
+        </div>
+
+        <!--------------- MENU LATERAL ---------------->
+        <div id="menu-lateral">
+            <img id="icono-menu-lateral" src="assets/img/menu.png" alt="menu">
+        </div>
+        <div id="desplegable" class="glass-effect" style="display:none">
+            <img id="exit" src="assets/img/exit.png" alt="exit">
+            <div class="contenido-menu-principal">
+                <div class="menu-principal">
+                    <p class="menu-lateral-etiqueta">01</p>
+                    <h3 class="titulo-menu-lateral" id="sobre">Sobre Nosotros</h3>
+                    <p class="menu-lateral-parrafo">Road Map, Equipo.</p>
+                </div>
+                <div class="menu-principal">
+                    <p class="menu-lateral-etiqueta">02</p>
+                    <h3 class="titulo-menu-lateral" id="soluciones">Soluciones</h3>
+                    <p class="menu-lateral-parrafo"><b>Casos de Uso:</b> Turismo, Patrimonio, Comercio, Delivery, Entretenimiento,Socialización.</p>
+                </div>
+                <div class="menu-principal">
+                    <p class="menu-lateral-etiqueta">03</p>
+                    <h3 class="titulo-menu-lateral" id="tecnologias">Tecnologías</h3>
+                    <p class="menu-lateral-parrafo">Realidad Extendida, Inteligencia <br>Artificial, Blockchain.</p>
+                </div>
+                <div class="menu-principal">
+                    <p class="menu-lateral-etiqueta">04</p>
+                    <h3 class="titulo-menu-lateral" id="experiencias">Porfolio</h3>
+                    <p class="menu-lateral-parrafo">Realidad Virtual, Realidad <br>aumentada, Realidad mixta.</p>
+                </div>
             </div>
+        </div>
+        <!---------------- MENU HORIZONTAL INFERIOR ---------------->
+        <div class="glass-effect" id="menu-horizontal" style="display: '';">
+            <a id="blog" href="blog.html">Blog</a>
+            <a href=""><img id="logo-redondo" src="assets/img/logoimpro.svg" alt="logo"></a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+        <div id="modales" style="display:none"></div>
+        <div id="inicio">
+            <a href="index.html">
+                <img id="logo-blanco" src="assets/img/Logos/Alv_PositivoPNG.png" alt="logo">
+            </a>
         </div>
     </div>
 
-    <!---------------- MENU HORIZONTAL INFERIOR ---------------->
-
-    <div class="glass-effect" id="menu-horizontal" style="display: '';">
-        <a id="blog" href="blog.html">Blog</a>
-        <a href=""><img id="logo-redondo" src="assets/img/logoimpro.svg" alt="logo"></a>
-        <a href="contacto.html">Contacto</a>
-    </div>
-    <div id="modales" style="display:none"></div>
-    <div id="inicio">
-        <a href="index.html">
-            <img id="logo-blanco" src="assets/img/Logos/Alv_PositivoPNG.png" alt="logo">
-        </a>
-    </div>
+    <script src="assets/js/Blog.js"></script>
 </body>
 </html>
