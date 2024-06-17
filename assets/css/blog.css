@@ -1,3 +1,234 @@
 body {
-    background-color: blue;
+    /* margin: 0;
+    padding: 0; */
+    min-height: 100vh;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    /* color: white;  */
+    position: relative;
+    z-index: 0; /* Asegúrate de que el contenido esté en el frente */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/Fondos/Fondo-footer-clean-web.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(3px); /* Ajusta el nivel de desenfoque según tus necesidades */
+    z-index: -1; /* Asegúrate de que la imagen de fondo esté detrás del contenido */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Asegúrate de que el contenido esté delante del pseudo-elemento */
+}
+
+.blog-puntos {
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado {
+    margin: 0rem 2rem;
+    padding-top: 5rem;
+    color: var(--white-letter);
+}
+
+.titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.degradado {
+    background: linear-gradient(to right, var(--white-letter), #FA8071);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Asegúrate de que el texto sea transparente */
+}
+
+.alvi {
+    margin-left: 2rem;
+}
+
+.descripcion {
+    font-size: 20px;
+}
+
+.blog-puntos {
+    margin-left: 2rem;
+}
+
+.blog-puntos-iniciales {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgb(229, 0, 134); 
+    border-radius: 100%;
+    color: var(--white-letter);
+    font-weight: 700;
+    font-size: 1.5rem;
+    /* comienzo de sombra de bloque*/
+    -webkit-box-shadow: 10px 10px 20px 20px rgb(255, 255, 255);
+    -moz-box-shadow: 10px 10px 20px 0px rgb(255, 255, 255);
+    box-shadow: 10px 3px 10px 1px rgba(255, 255, 255, 0.874);
+    /* fin de sombra de bloque*/
+    box-shadow: inset 6px 2px 10px 0 rgb(255, 255, 255);
+}
+
+.blog-puntos-contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.blog-punto-secundarios {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.blog-puntos-iniciales:hover {
+    background-color: var(--white-letter);
+    color: var(--medium-purple);
+}
+
+.blog-puntos-secundarios {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--lavander);
+    border-radius: 100%;
+    color: var(--second-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.blog-puntos-secundarios:hover {
+    background: linear-gradient(to bottom, var(--primary-color), var(--dark-orchid));
+    color: var(--white-letter);
+}
+
+.blog-puntos-cerrar {
+    display: flex;
+    /* flex-direction: row; */
+    cursor: pointer;
+    margin-top: 0.8rem;
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--four-color);
+    border-radius: 100%;
+    box-shadow: inset 6px 2px 10px 0 rgb(255, 255, 255);
+}
+
+.blog-entradas {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: white; /* Cambiar color mas tarde */
+    width: 14rem;
+    border-radius: 6rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0rem;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+.blog-year {
+    font-size: 11px;
+}
+
+.blog-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: deeppink;
+}
+
+.blog-puntos-abrir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.puntos-abir:hover {
+    background-color: blueviolet;
+}
+
+#entrada3 {
+    width: 16rem;
+}
+
+#entrada4 {
+    width: 22rem;
+}
+
+#entrada5 {
+    width: 15rem;
+    padding-left: 1rem;
+}
+
+#entrada6 {
+    width: 26rem;
+}
+
+#entrada7 {
+    width: 19rem;
+}
+
+#entrada8 {
+    width: 28rem;
+}
+
+#entrada9 {
+    margin-top: 1rem;
+}
+
+#entrada10 {
+    width: 20rem;
+    margin-top: 1rem;
+}
+
+#entrada11 {
+    width: 27rem;
+}
+
+#entrada12 {
+    width: 15rem;
+}
+
+#entrada13 {
+    width: 32rem;
+}
+
+#entrada14 {
+    margin-top: 1rem;
+}
+
+#entrada15 {
+    width: 30rem;
+    margin-top: 1rem;
 }
