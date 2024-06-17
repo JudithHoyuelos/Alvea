@@ -204,6 +204,7 @@ body::before {
 }
 
 #entrada9 {
+    margin-left: 3rem;
     margin-top: 1rem;
 }
 
@@ -225,10 +226,15 @@ body::before {
 }
 
 #entrada14 {
+    margin-left: 3rem;
     margin-top: 1rem;
 }
 
 #entrada15 {
     width: 30rem;
+    margin-top: 1rem;
+}
+
+.alinear {
     margin-top: 1rem;
 }
