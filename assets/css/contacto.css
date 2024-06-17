@@ -20,6 +20,7 @@ body {
     color: white; /* Asegúrate de que el texto sea visible en el fondo */
     position: relative;
     z-index: 0; /* Asegúrate de que el contenido esté en el frente */
+    overflow:hidden;
 }
 
 body::before {
@@ -115,6 +116,7 @@ body > * {
 .imagenlogo {
     /* width: 300px; */
     height: 100px;
+    margin-bottom:30px;
 }
 
 .contenido {
@@ -122,12 +124,12 @@ body > * {
     grid-template-columns: repeat(3, 1fr);
     /* margin-right: 5%; */
     margin-left: 10%; 
-    margin-top: 15%;
+    margin-top: 12%;
 }
 
 .botonenvio {
     border-radius: 21px;
-    width: 78%;
+    width: 75%;
     height: 50px;
     background: transparent;
     border-color: white;
@@ -170,7 +172,7 @@ body > * {
     color: purple;
 }
 .rsociales {
-    margin-left: 60%;
+    margin-left: 75%;
 }
 .epermiso{
     margin-top:5%;
@@ -210,10 +212,12 @@ body > * {
 }
 
 #logo-redondo {
+    margin-bottom:150px;
     height: 6rem; /* cambiar medidas  */
     position:relative;
     border-radius: 2rem;
     z-index:0;
+    
     
 }
 
@@ -231,7 +235,7 @@ a:hover {
     /* margin-right: 1.2rem; */
     background: linear-gradient(to top right, rgba(150, 35, 241, 0.6), rgba(255, 255, 255, 1));
     /* width:100%; */
-    width:100px;
+    width:160px;
     height:20px;
     border-radius:30px;
     position: absolute;
@@ -239,17 +243,18 @@ a:hover {
     /* padding-right:20px;  */
     padding-top:5px;
     padding-bottom:5px;
-    padding-left:75px;
+    padding-left:90px;
     padding-right:20px;
     /* box-shadow:inset 0 0 0 5px linear-gradient(top,rgba(255,255,255,1),rgba(255,255,255,0)); */
     /* box-shadow:inset 0 0 0 5px linear-gradient(to top right, rgba(255,255,255,1),rgba(255,255,255,0.0)); */
     font-family:'Sora',sans-serif;
     z-index:-1;
+    margin-bottom:150px;
 }
 #contacto{
     background: linear-gradient(to top right, rgba(255,255,255,1), rgba(150,35,241,0.6));
     /* width:100%; */
-    width:110px;
+    width:150px;
     height:20px;
     border-radius:30px;
     position:absolute;
@@ -258,10 +263,12 @@ a:hover {
     left:1rem;  
     padding-top:5px;
     padding-bottom:5px;
-    padding-left:75px;
+    padding-left:140px;
     padding-right:20px;
     font-family:'Sora',sans-serif;
     z-index:-1;
+    margin-bottom:150px;
+    
 }
 #menu-lateral{
     /* display: flex;
@@ -287,6 +294,8 @@ a:hover {
     background-color: rgba(246, 249, 249, 0.6); /* Color semi-transparente (aqua) */
     border-radius: 3rem 0 0 3rem;
     box-shadow: inset 10px 0px 10px 0 rgba(20, 20, 20, 0.4);
+    font-family:'Sora',sans-serif;
+    color:black;
 }
 .glass-effect {
     background: #fafafa10;
@@ -312,7 +321,7 @@ a:hover {
 .menu-principal {
     width: 90%;
     margin-top: 3rem;
-    border-bottom: solid black 1px;
+    border-bottom: solid purple 1px;
 }
 
 .menu-principal .menu-lateral-etiqueta {
@@ -371,6 +380,22 @@ a:hover {
 }
 .img4{
     margin-right:10px;
+}
+#sobre:hover{
+    color:purple;
+    transition:0.5s;
+}
+#soluciones:hover{
+    color:purple;
+    transition:0.5s;
+}
+#tecnologias:hover{
+    color:purple;
+    transition:0.5s;
+}
+#experiencias:hover{
+    color:purple;
+    transition:0.5s;
 }
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
