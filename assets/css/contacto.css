@@ -398,7 +398,7 @@ a:hover {
     transition:0.5s;
 }
 /* Media queries para dispositivos móviles */
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
     .formularios {
         display: grid;
         grid-template-columns: 1fr;
@@ -469,10 +469,10 @@ a:hover {
     #desplegable {
         width: 80%;
     }
-} */
+} 
 
 /* Media queries para tabletas */
-/* @media (min-width: 601px) and (max-width: 1024px) {
+ @media (min-width: 601px) and (max-width: 1024px) {
     .formularios {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -538,10 +538,10 @@ a:hover {
     #desplegable {
         width: 60%;
     }
-} */
+} 
 
 /* Media queries para dispositivos de escritorio */
-/* @media (min-width: 1025px) {
+ @media (min-width: 1025px) {
     .formularios {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -603,7 +603,7 @@ a:hover {
     #desplegable {
         width: 30%;
     }
-} */
+} 
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
