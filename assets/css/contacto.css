@@ -397,5 +397,213 @@ a:hover {
     color:purple;
     transition:0.5s;
 }
+/* Media queries para dispositivos móviles */
+@media (max-width: 600px) {
+    .formularios {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    .formularios-item {
+        flex: 1 1 100%;
+        margin: 5px;
+    }
+
+    .nombre, .correo1, .telefono, .pais, .nombreempresa, .apellido, .profesión {
+        width: 100%;
+    }
+
+    .permiso {
+        width: 100%;
+    }
+
+    .logo {
+        width: 80px;
+        height: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .imagenlogo {
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .contenido {
+        grid-template-columns: 1fr;
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+
+    .botonenvio {
+        width: 100%;
+        height: 40px;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .elementabajo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .titulo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .rsociales {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    #menu-horizontal {
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #desplegable {
+        width: 80%;
+    }
+}
+
+/* Media queries para tabletas */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .formularios {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 80%;
+    }
+
+    .formularios-item {
+        flex: 1 1 45%;
+        margin: 10px;
+    }
+
+    .nombre, .correo1, .telefono, .pais, .nombreempresa, .apellido, .profesión {
+        width: 100%;
+    }
+
+    .logo {
+        width: 90px;
+        height: 45px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .imagenlogo {
+        height: 90px;
+        margin-bottom: 25px;
+    }
+
+    .contenido {
+        grid-template-columns: 1fr 1fr;
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+
+    .botonenvio {
+        width: 90%;
+        height: 45px;
+    }
+
+    .formulario {
+        width: 80%;
+    }
+
+    .elementabajo {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .titulo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .rsociales {
+        margin-left: 70%;
+    }
+
+    #menu-horizontal {
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #desplegable {
+        width: 60%;
+    }
+}
+
+/* Media queries para dispositivos de escritorio */
+@media (min-width: 1025px) {
+    .formularios {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 400px;
+    }
+
+    .formularios-item {
+        flex: 1 1 300px;
+        margin: 10px;
+    }
+
+    .nombre, .correo1, .telefono, .pais, .nombreempresa, .apellido, .profesión {
+        width: 175px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 50px;
+        margin-left: 40%;
+    }
+
+    .imagenlogo {
+        height: 100px;
+        margin-bottom: 30px;
+    }
+
+    .contenido {
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 10%;
+        margin-top: 12%;
+    }
+
+    .botonenvio {
+        width: 75%;
+        height: 50px;
+    }
+
+    .formulario {
+        width: 600px;
+    }
+
+    .elementabajo {
+        width: 100%;
+    }
+
+    .titulo {
+        width: 210px;
+    }
+
+    .rsociales {
+        margin-left: 75%;
+    }
+
+    #menu-horizontal {
+        bottom: 2rem;
+        left: 42%;
+    }
+
+    #desplegable {
+        width: 30%;
+    }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
