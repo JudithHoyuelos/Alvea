@@ -606,7 +606,40 @@ a:hover {
     }
 } 
 /* Media queries para resolución específica de 1310x665 */
-@media (min-width: 1300px) and (max-width: 1320px) and (min-height: 660px) and (max-height: 670px) {
+/* Media queries para resolución específica de 1310x665 */
+@media (min-width: 1300px) and (max-width: 1320px) and (min-height: 55px) and (max-height: 790px) {
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white; 
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../img/Fondos/Fondo-footer-clean-web.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        filter: blur(3px);
+        z-index: -1;
+    }
+
+    body > * {
+        position: relative;
+        z-index: 1;
+    }
+
     .formularios {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -668,7 +701,173 @@ a:hover {
     #desplegable {
         width: 30%;
     }
+
+    /* Estilos específicos para #modales y #inicio */
+    #modales {
+        display: none;
+    }
+
+    #inicio {
+        display: none;
+        text-align: center;
+    }
+
+    #inicio a {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #logo-blanco {
+        max-width: 100%;
+        height: auto;
+    }
 }
+/* Media queries para resolución específica de 1206x690 */
+@media (min-width: 1200px) and (max-width: 1210px) and (min-height: 685px) and (max-height: 695px) {
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white; 
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../img/Fondos/Fondo-footer-clean-web.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        filter: blur(3px);
+        z-index: -1;
+    }
+
+    body > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .formularios {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 400px;
+    }
+
+    .formularios-item {
+        flex: 1 1 300px;
+        margin: 10px;
+    }
+
+    .nombre, .correo1, .telefono, .pais, .nombreempresa, .apellido, .profesión {
+        width: 175px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 50px;
+        margin-left: 40%;
+    }
+
+    .imagenlogo {
+        height: 100px;
+        margin-bottom: 30px;
+    }
+
+    .contenido {
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 10%;
+        margin-top: 12%;
+    }
+
+    .botonenvio {
+        width: 75%;
+        height: 50px;
+    }
+
+    .formulario {
+        width: 600px;
+    }
+
+    .elementabajo {
+        width: 100%;
+    }
+
+    .titulo {
+        width: 210px;
+    }
+
+    .rsociales {
+        margin-left: 75%;
+    }
+
+    #menu-horizontal {
+        bottom: 2rem;
+        left: 42%;
+    }
+
+    #desplegable {
+        width: 30%;
+    }
+
+    /* Estilos específicos para #modales y #inicio */
+    #modales {
+        display: none;
+    }
+
+    #inicio {
+        display: none;
+        text-align: center;
+    }
+
+    #inicio a {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #logo-blanco {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Estilos para fondologo, blog y contacto */
+    .fondologo {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Centra el contenido horizontalmente */
+        flex-direction: column; /* Cambia a columna para asegurar que todos los elementos sean visibles */
+    }
+
+    #blog, #contacto {
+        width: 150px; /* Ajusta el ancho para que se adapten mejor */
+        font-size: smaller; /* Ajusta el tamaño de la fuente si es necesario */
+        padding: 5px 10px; /* Ajusta el padding para un mejor ajuste */
+    }
+
+    #blog {
+        position: static; /* Quita la posición absoluta */
+        margin: 10px 0; /* Añade margen para separación */
+    }
+
+    #contacto {
+        position: static; /* Quita la posición absoluta */
+        margin: 10px 0; /* Añade margen para separación */
+    }
+
+    .img1, .img2, .img3, .img4 {
+        margin-right: 0; /* Ajusta el margen si es necesario */
+        margin-bottom: 10px; /* Añade margen inferior para separación */
+    }
+}
+    
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
