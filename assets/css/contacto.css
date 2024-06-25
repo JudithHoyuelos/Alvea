@@ -53,7 +53,7 @@ body > * {
     margin: 10px;
 }
 
-.nombre, .correo1, .telefono, .pais, .nombreempresa, .apellido, .profesión {
+.nombre, .correo1, .telefono, .pais, .nombreempresa, .apellido, .profesion {
     margin: 10px;
     width: 175px;
     height: 36px;
