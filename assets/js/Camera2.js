@@ -17,8 +17,8 @@ camera.lookAt(0, 1, -11);
 // camera.lookAt(-9, 1, 0);
 
 // hotpoint ariba
-// camera.position.set(-0.06712472858464706, 1.8324140151651975, -7.752030493442582);
-// camera.lookAt(0, 1, -17);
+// camera.position.set(-0.05881682153498034, 1.8324140151651975, -9.332008651101873);
+// camera.lookAt(-0.05, 1.8, -12);
 
 // hotpoint abajo
 // camera.position.set(0.6201922849652849, 1.8324140151651975, 2.5258305164814105);

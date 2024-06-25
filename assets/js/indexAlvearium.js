@@ -167,7 +167,7 @@ function onClickUseCase(e) {
 let modelo = new GLTFLoader();
 modelo.load(
     // resource URL
-    'assets/mitadAlvea/AlveaSinMatIlu.glb',
+    'assets/mitadAlvea/AlveaWebOpt_1.glb',
     // 'assets/mitadAlvea/Alvea.glb',
     // 'assets/GLTF/AlveaPruebaGLTF.gltf',
     // called when the resource is loaded
@@ -438,7 +438,7 @@ function updateAnnotationPosition() {
     
     // Add events to each annotation with their respective camera positions and lookAt positions
     addAnnotationEvents(position1, 39, -35, 0.6201922849652849, 1.8324140151651975, 2.5258305164814105, -6, 1, -4, newPositionsAbajo);
-    addAnnotationEvents(position2, 39, -35, -0.06712472858464706, 1.8324140151651975, -7.752030493442582, 0, 1, -11, arriba); // Actualiza estos valores según sea necesario
+    addAnnotationEvents(position2, 39, -35, -0.05881682153498034, 1.8324140151651975, -9.332008651101873, -0.05, 1.8, -12, arriba); // Actualiza estos valores según sea necesario
     addAnnotationEvents(position3, 39, -35, -4.737092106867862, 1.8324140151651975, 0.07007195162038703, -9, 1, 0, newPositionsIzquierda); // Actualiza estos valores según sea necesario
     addAnnotationEvents(position4, 39, -35, 4.547513663373049, 1.8324140151651975, 3.9819783918301144, 10, 1, -1, newPositionsDerecha); // Actualiza estos valores según sea necesario
 
@@ -448,7 +448,7 @@ function updateAnnotationPosition() {
     const tecnologias = document.querySelector("#tecnologias");
     const experiencias = document.querySelector("#experiencias");
     sobre.addEventListener('click', onClick(4.547513663373049, 1.8324140151651975, 3.9819783918301144, 10, 1, -1, newPositionsDerecha));
-    soluciones.addEventListener('click', onClick(-0.06712472858464706, 1.8324140151651975, -7.752030493442582, 0, 1, -11, arriba));
+    soluciones.addEventListener('click', onClick(-0.05881682153498034, 1.8324140151651975, -9.332008651101873, -0.05, 1.8, -12, arriba));
     tecnologias.addEventListener('click', onClick(0.6201922849652849, 1.8324140151651975, 2.5258305164814105, -6, 1, -4, newPositionsAbajo));
     experiencias.addEventListener('click', onClick(-4.737092106867862, 1.8324140151651975, 0.07007195162038703, -9, 1, 0, newPositionsIzquierda));
 
