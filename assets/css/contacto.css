@@ -53,7 +53,7 @@ body > * {
     margin: 10px;
 }
 
-.nombre, .correo1, .telefono, .pais, .nombreempresa, .apellido, .profesion {
+.nombre, .correo1, .telefono, .pais, .nombreempresa, .apellido, .profesión {
     margin: 10px;
     width: 175px;
     height: 36px;
@@ -80,7 +80,7 @@ body > * {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
     outline:2px solid white;
 }
-.correo1:focus, .telefono:focus, .pais:focus, .nombreempresa:focus, .apellido:focus, .profesion:focus {
+.correo1:focus, .telefono:focus, .pais:focus, .nombreempresa:focus, .apellido:focus, .profesión:focus {
     border-color: transparent;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
     outline: 2px solid white;
