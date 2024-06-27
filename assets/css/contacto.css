@@ -871,7 +871,7 @@ a:hover {
         /* margin-bottom: 10px; Añade margen inferior para separación */
     /* } */
 /* } */
-@media (min-width: 1115px) and (max-width: 1300px) and (min-height: 686px) and (max-height: 840px   ) {
+@media (min-width: 1115px) and (max-width: 2600px) and (min-height: 630px) and (max-height: 840px   ) {
     body {
         margin: 0;
         padding: 0;
