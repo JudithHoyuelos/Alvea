@@ -1,6 +1,5 @@
 import THREE from './three';
 // import { gsap } from "gsap";
-import { gsap } from 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { PointerLockControls } from 'three/addons/controls/PointerLockControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
