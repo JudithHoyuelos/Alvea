@@ -264,7 +264,7 @@ img {
     position: absolute;
     border: none;
     font-size: 25px;
-    width: 1.5rem;
+    margin-top: 0.4rem;
     /* width: 20px; */
     color: rgb(7, 7, 7);
     cursor: pointer;
@@ -276,8 +276,8 @@ img {
     position: absolute;
     border: none;
     margin-left: 2.5rem;
+    margin-top: 0.4rem;
     font-size: 25px;
-    width: 1.5rem;
     /* width: 20px; */
     color: rgb(7, 7, 7);
     cursor: pointer;
@@ -309,8 +309,12 @@ img {
     margin-right: 0 3rem;
 }
 
-.roadmap-info-titulo{
-    font-size: 30px;
+.roadmap-info-titulo {
+    font-size: 25px;
+}
+
+.roadmap-descripcion p {
+    font-size: 15px;
 }
 
 .roadmap-titulo {
@@ -332,13 +336,17 @@ img {
 
 .roadmap-etiqueta {
     display: flex;
-    margin-left: 1rem;
     flex-direction: row;
 }
 
 .etiqueta-parrafo {
     display: flex;
     flex-direction: column;
+    margin-left: 1rem;
+}
+
+.etiqueta-encabezado {
+    margin-left: 0rem;
 }
 
 .etiquetas-puntos {
@@ -347,17 +355,32 @@ img {
 }
 
 .etiquetas-punto {
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
     height: 15px;
+}
+
+.etiquetas-puntos-parrafo {
+    display: flex;
+    flex-direction: row
+}
+
+.etiquetas-punto-parrafo {
+    margin-top: 0.3rem;
+    height: 0.5rem;
 }
 
 .etiqueta-apartado {
     display: flex;
     color: var(--primary-color);
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 30%;
     gap: 2rem;
     margin: 0.2rem;
+    cursor: pointer;
+}
+
+.etiqueta-apartado:hover {
+    color: var(--third-color);
 }
 
 .etiqueta-eventos {
@@ -370,10 +393,14 @@ img {
 .etiqueta-roadmap {
     display: flex;
     /* background-color: var(--lavander); */
-    font-size: 12px;
+    font-size: 10px;
     border-radius: 30%;
     gap: 2rem;
     margin: 0.2rem;
+}
+
+.etiqueta-info {
+    width: 12rem;
 }
 
 /*------------ roadmap-carrusel ---------- */
@@ -383,6 +410,15 @@ img {
     padding: 20px 0;
     overflow: hidden;
     scroll-behavior: smooth;
+}
+
+.global-info h2 {
+    color: var(--primary-color);
+}
+
+.titulo-desplegable {
+    font-size: 10px;
+    font-weight: bold;
 }
 
 .global-info .roadmap-contenedor-carrusel .roadmap-carrusel {
@@ -400,11 +436,10 @@ img {
 
 .global-info .roadmap-contenedor-carrusel .roadmap-img img {
     width: 60%;
+    height: 12rem;
     vertical-align: top;
     margin-top: 1rem; /* cambio provisional para que pueda manejar la funcionalidad */
 }
-
-/* ------------ HISTORIA ----------- */
 
 
 /* ------------ EQUIPO ----------- */
@@ -578,7 +613,8 @@ img {
 
 #icono-menu-lateral {
     width: 2rem;
-    padding: 0.3rem;
+    padding: 0 0.3rem;
+    padding-top: 0.3rem;
 }
 
 #desplegable {
@@ -673,13 +709,13 @@ img {
     box-shadow: inset 3px 2px 0px 0 rgba(255, 255, 255, 0.4);
     position: fixed;
     bottom: 2rem;
-    left: 42%;
+    left: 40%;
     border-radius: 3rem;
     padding:0 2rem;
     padding-top:5px;
     padding-bottom:5px;
     padding-left:75px;
-    padding-right:45px;
+    padding-right:75px;
 }
 
 #logo-redondo {
@@ -690,7 +726,8 @@ img {
 a {
     text-decoration: none;
     color: white;
-    font-size: larger;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 a:hover {

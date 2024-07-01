@@ -138,7 +138,7 @@ function onClickExitModal(e) {
         punto6: document.querySelector("#punto6"),
         punto7: document.querySelector("#punto7"),
         punto8: document.querySelector("#punto8"),
-        punto9: document.querySelector("#punto9"),
+        // punto9: document.querySelector("#punto9"),
         punto10: document.querySelector("#punto10"),
         punto11: document.querySelector("#punto11"),
         punto12: document.querySelector("#punto12"),
@@ -204,7 +204,7 @@ function onClickHotpoint(element) {
         punto6: document.querySelector("#punto6"),
         punto7: document.querySelector("#punto7"),
         punto8: document.querySelector("#punto8"),
-        punto9: document.querySelector("#punto9"),
+        // punto9: document.querySelector("#punto9"),
         punto10: document.querySelector("#punto10"),
         punto11: document.querySelector("#punto11"),
         punto12: document.querySelector("#punto12"),
@@ -216,7 +216,7 @@ function onClickHotpoint(element) {
         info6: document.querySelector("#info6"),
         info7: document.querySelector("#info7"),
         info8: document.querySelector("#info8"),
-        info9: document.querySelector("#info9"),
+        // info9: document.querySelector("#info9"),
         info10: document.querySelector("#info10"),
         info11: document.querySelector("#info11"),
         info12: document.querySelector("#info12"),
@@ -246,7 +246,7 @@ function onClickHotpoint(element) {
             const modalId = `info${pointId.replace('punto', '')}`;
             modals[modalId].style.display = '';
             if (logo) logo.style.left = '30%';
-            if (menuHorizontal) menuHorizontal.style.left = '30%';
+            if (menuHorizontal) menuHorizontal.style.left = '25%';
             
             // Mueve los puntos a la izquierda
             const distanciaMovimiento = 300; // Ajusta esta distancia según sea necesario
@@ -422,7 +422,7 @@ function updateAnnotationPosition() {
     const position7 = updatePosition(new THREE.Vector3(2.5, 0.5, -11), '#punto7');
 
     const position8 = updatePosition(new THREE.Vector3(0, 3, -11), '#punto8');
-    const position9 = updatePosition(new THREE.Vector3(2, -3, -11), '#punto9');
+    // const position9 = updatePosition(new THREE.Vector3(2, -3, -11), '#punto9');
     const position10 = updatePosition(new THREE.Vector3(6.5, 4, -11), '#punto10');
 
     const position11 = updatePosition(new THREE.Vector3(3.5, -2, -11), '#punto11');
@@ -431,7 +431,7 @@ function updateAnnotationPosition() {
 
     // Array de posiciones para pasarlas a la función onClick
     initialPoints = [position1, position2, position3, position4]; // Guardar los puntos iniciales
-    const newPositionsDerecha = [position8, position9, position10];
+    const newPositionsDerecha = [position8, position10];
     const newPositionsIzquierda = [position5, position6, position7];
     const newPositionsAbajo = [position11, position12, position13];
     const arriba = document.querySelector("#useCase");

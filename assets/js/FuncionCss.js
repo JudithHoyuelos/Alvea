@@ -5,14 +5,12 @@ const peliculas = document.querySelectorAll('.roadmap-img');
 const etiquetas = [
     document.querySelector('#roadmap-etiqueta-1'),
     document.querySelector('#roadmap-etiqueta-2'),
-    document.querySelector('#roadmap-etiqueta-3'),
-    document.querySelector('#roadmap-etiqueta-4')
+    document.querySelector('#roadmap-etiqueta-3')
 ];
 const titulos = [
     document.querySelector('#roadmap-titulo-1'),
     document.querySelector('#roadmap-titulo-2'),
-    document.querySelector('#roadmap-titulo-3'),
-    document.querySelector('#roadmap-titulo-4')
+    document.querySelector('#roadmap-titulo-3')
 ];
 
 const contenidos = [
@@ -34,6 +32,30 @@ const mixtas = [
     document.querySelector('#rmixta-contenedor-2'),
     document.querySelector('#rmixta-contenedor-3'),
     document.querySelector('#rmixta-contenedor-4')
+];
+
+const fases = [
+    document.querySelector('#fase1-1'),
+    document.querySelector('#fase1-2'),
+    document.querySelector('#fase1-3'),
+    document.querySelector('#fase2-1'),
+    document.querySelector('#fase2-2'),
+    document.querySelector('#fase2-3'),
+    document.querySelector('#fase3-1'),
+    document.querySelector('#fase3-2'),
+    document.querySelector('#fase3-3')
+];
+
+const titulosFases = [
+    document.querySelector('#titulo-fase1-1'),
+    document.querySelector('#titulo-fase1-2'),
+    document.querySelector('#titulo-fase1-3'),
+    document.querySelector('#titulo-fase2-1'),
+    document.querySelector('#titulo-fase2-2'),
+    document.querySelector('#titulo-fase2-3'),
+    document.querySelector('#titulo-fase3-1'),
+    document.querySelector('#titulo-fase3-2'),
+    document.querySelector('#titulo-fase3-3')
 ];
 
 // const flechaIzquierda = document.getElementById('flecha-izquierda');
@@ -84,11 +106,11 @@ function updateLabels() {
 // });
 
 // flechaIzquierda.addEventListener('click', () => {
-    // if (currentIndex > 0) {
-    //     fila.scrollLeft -= fila.offsetWidth;
-    //     currentIndex--;
-    //     updateLabels();
-    // }
+// if (currentIndex > 0) {
+//     fila.scrollLeft -= fila.offsetWidth;
+//     currentIndex--;
+//     updateLabels();
+// }
 
 //     const indicadorActivo = document.querySelector('.roadmap-rayas .activo');
 //     if (indicadorActivo && indicadorActivo.previousElementSibling) {
@@ -169,6 +191,55 @@ document.querySelectorAll('.carrusel').forEach(carrusel => {
     }
 });
 
+// funcionamiento de las fases 
+titulosFases.forEach((tituloFase, index) => {
+    tituloFase.addEventListener('click', () => {
+        const numeroFase = tituloFase.id.replace("titulo-fase", "");
+        const fase = document.querySelector(`#fase${numeroFase}`);
+
+        if (fase) {
+            if (fase.style.display === 'none') {
+                fase.style.display = '';
+            } else {
+                fase.style.display = 'none';
+            }
+        } else {
+            console.error(`No se encontró la fase para el número: ${numeroFase}`);
+        }
+    });
+});
+
+// hover de los puntos 
+const etiquetaPunto1 = document.querySelector('.etiquetaPunto1');
+
+etiquetaPunto1.addEventListener('mouseenter', () => {
+    etiquetaPunto1.src = './assets/img/roadMap/Bullet_Point_1_1.svg';
+});
+
+etiquetaPunto1.addEventListener('mouseleave', () => {
+    etiquetaPunto1.src = './assets/img/roadMap/Bullet_Point_1_2.svg';
+});
+
+const etiquetaPunto2 = document.querySelector('.etiquetaPunto2');
+
+etiquetaPunto2.addEventListener('mouseenter', () => {
+    etiquetaPunto2.src = './assets/img/roadMap/Bullet_Point_2_1.svg';
+});
+
+etiquetaPunto2.addEventListener('mouseleave', () => {
+    etiquetaPunto2.src = './assets/img/roadMap/Bullet_Point_2_2.svg';
+});
+
+const etiquetaPunto3 = document.querySelector('.etiquetaPunto3');
+
+etiquetaPunto3.addEventListener('mouseenter', () => {
+    etiquetaPunto3.src = './assets/img/roadMap/Bullet_Point_3_1.svg';
+});
+
+etiquetaPunto3.addEventListener('mouseleave', () => {
+    etiquetaPunto3.src = './assets/img/roadMap/Bullet_Point_3_2.svg';
+});
+
 
 // slider
 
@@ -189,11 +260,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     const flechaIzquierdaEquipo = document.querySelector('.flecha-izquierda');
     const flechaDerechaEquipo = document.querySelector('.flecha-derecha');
-    
+
     flechaDerechaEquipo.addEventListener('click', () => {
         swiper.slideNext();
     });
-    
+
     flechaIzquierdaEquipo.addEventListener('click', () => {
         swiper.slidePrev();
     });
