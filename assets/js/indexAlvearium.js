@@ -12,6 +12,13 @@ import scene from './Screen';
 import lights from './Luzambiental';
 import gridHelper from './Plane';
 
+// Verificar si GSAP está cargado correctamente
+if (typeof gsap !== "undefined") {
+    console.log("GSAP está cargado");
+} else {
+    console.error("GSAP no está cargado");
+}
+
 // Fondo con imagen 
 var loader = new THREE.TextureLoader();
 
