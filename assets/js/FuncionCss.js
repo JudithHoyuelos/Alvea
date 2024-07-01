@@ -209,6 +209,7 @@ titulosFases.forEach((tituloFase, index) => {
     });
 });
 
+
 // hover de los puntos 
 const etiquetaPunto1 = document.querySelector('.etiquetaPunto1');
 
