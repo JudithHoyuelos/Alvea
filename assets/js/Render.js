@@ -1,4 +1,4 @@
-import THREE from './three';
+import THREE from './three.js';
 
 const renderer = new THREE.WebGLRenderer({antialia: true});
 renderer.setSize( window.innerWidth, window.innerHeight );
