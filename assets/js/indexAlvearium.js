@@ -1,6 +1,6 @@
 import THREE from './three';
 // import { gsap } from '@vendor/gsap/gsap.min.js';
-import { OrbitControls } from '@vendor/three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from '../vendor/three/examples/jsm/controls/OrbitControls.js';
 import { PointerLockControls } from '@vendor/three/examples/jsm/controls/PointerLockControls.js';
 import { GLTFLoader } from '@vendor/three/examples/jsm/loaders/GLTFLoader.js';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader';
