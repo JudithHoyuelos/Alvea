@@ -1,14 +1,14 @@
-import THREE from './three';
+import THREE from './three.js';
 // import { gsap } from '@vendor/gsap/gsap.min.js';
 import { OrbitControls } from '../vendor/three/examples/jsm/controls/OrbitControls.js';
 import { PointerLockControls } from '../vendor/three/examples/jsm/controls/PointerLockControls.js';
 import { GLTFLoader } from '../vendor/three/examples/jsm/loaders/GLTFLoader.js';
 // import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader';
-import camera from './Camera2';
-import renderer from './Render';
-import scene from './Screen';
-import lights from './Luzambiental';
-import gridHelper from './Plane';
+import camera from './Camera2.js';
+import renderer from './Render.js';
+import scene from './Screen.js';
+import lights from './Luzambiental.js';
+import gridHelper from './Plane.js';
 
 // Verificar si GSAP está cargado correctamente
 if (typeof gsap !== "undefined") {
