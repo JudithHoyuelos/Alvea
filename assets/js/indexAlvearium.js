@@ -1,5 +1,4 @@
-// import THREE from './three.js';
-import * as THREE from '../vendor/three/build/three.module.js';
+import THREE from './three.js';
 // import THREE from './path/to/three.js';
 // import { gsap } from '@vendor/gsap/gsap.min.js';
 import { OrbitControls } from '../vendor/three/examples/jsm/controls/OrbitControls.js';
