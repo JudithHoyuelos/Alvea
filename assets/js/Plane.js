@@ -1,4 +1,4 @@
-// import THREE from "./three.js";
+import THREE from "./three.js";
 
 const gridHelper = new THREE.GridHelper( 200, 50 );
 
