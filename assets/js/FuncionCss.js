@@ -271,3 +271,243 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// TECNOLOGIAS
+
+// primera parte de los titulos navegacion
+const contenedorTitulosGrandes = document.querySelector('.rextendida-titulos');
+const recuadroTitulosPequeños = document.querySelector('.rextendida-explicacion');
+const rextendidaConcepto = [
+    document.querySelector('#explicacion-extendida-rv'),
+    document.querySelector('#explicacion-extendida-ar'),
+    document.querySelector('#explicacion-extendida-mr')   
+]
+const titulosGrandes = [
+    document.querySelector('#titulo-rv'),
+    document.querySelector('#titulo-ar'),
+    document.querySelector('#titulo-mr')
+]
+
+// segunda parte de los titulos navegacion
+const rextendidaExplicaciones = [
+    document.querySelector('.explicacion-rv'),
+    document.querySelector('.explicacion-ar'),
+    document.querySelector('.explicacion-mr')   
+]
+const titulosPequeños = [
+    document.querySelector('#explicacion-rv'),
+    document.querySelector('#explicacion-ar'),
+    document.querySelector('#explicacion-mr')
+]
+
+// Oculta todos los conceptos extendidos al principio
+// rextendidaConcepto.forEach(concepto => concepto.style.display = 'none');
+
+// Oculta todos los conceptos extendidos al principio si existen
+rextendidaConcepto.forEach(concepto => {
+    if (concepto) {
+        concepto.style.display = 'none';
+    }
+});
+
+// Function to hide all rextendidaExplicaciones
+function hideAllExplicaciones() {
+    rextendidaExplicaciones.forEach(explicacion => {
+        if(explicacion){
+            explicacion.style.display = 'none';
+        }
+    });
+}
+
+// Function to reset styles of all titulosPequeños
+function resetStyles() {
+    titulosPequeños.forEach(titulo => {
+        // Remove inline styles applied for hover effect
+        titulo.style.color = '';
+        // titulo.style.backgroundColor = '';
+        // Reset any other hover styles here
+    });
+}
+
+// Function to apply hover styles to a specific tituloPequeño
+function applyHoverStyles(titulo, index) {
+    // Define hover styles for each tituloPequeño based on their index or ID
+    switch (index) {
+        case 0:
+            titulo.style.color = '#C21AD6'; // Replace with actual color
+            // titulo.style.backgroundColor = '#bgColor1'; // Replace with actual background color
+            break;
+        case 1:
+            titulo.style.color = 'rgb(229 0 133)';
+            // titulo.style.backgroundColor = '#bgColor2';
+            break;
+        case 2:
+            titulo.style.color = '#727DEF';
+            // titulo.style.backgroundColor = '#bgColor3';
+            break;
+        // Add more cases if needed
+    }
+}
+
+// Add event listeners to each tituloGrande
+titulosGrandes.forEach((titulo, index) => {
+    titulo.addEventListener('click', () => {
+        // Ocultar el contenedor de títulos grandes
+        contenedorTitulosGrandes.style.display = 'none';
+
+        // Mostrar recuadro con los titulos pequeños
+        recuadroTitulosPequeños.style.display = '';
+
+        // Mostrar el concepto extendido correspondiente
+        rextendidaConcepto[index].style.display = '';
+
+        // Mostrar el contenedor de explicaciones correspondiente
+        hideAllExplicaciones();
+        rextendidaExplicaciones[index].style.display = '';
+
+        // Cambiar el color del título pequeño correspondiente
+        resetStyles();
+        applyHoverStyles(titulosPequeños[index], index);
+    });
+});
+
+// Add event listeners to each tituloPequeño
+titulosPequeños.forEach((titulo, index) => {
+    titulo.addEventListener('click', () => {
+        // Hide all explicaciones
+        hideAllExplicaciones();
+        // Show the corresponding explicacion
+        rextendidaExplicaciones[index].style.display = '';
+
+        // Cambiar el color del título pequeño correspondiente
+        resetStyles();
+        applyHoverStyles(titulo, index);
+    });
+});
+
+
+// segunda parte de los titulos navegacion
+
+const rv = document.querySelector('.rv');
+const contenedorRV = document.querySelector('#ex-rv2');
+
+rv.addEventListener('click', () => {
+    const computedStyle = window.getComputedStyle(contenedorRV);
+    // const computedStyleAplicaciones = window.getComputedStyle(aplicaciones);
+
+    // Mostrar los punto
+    if (computedStyle.display === 'none') {
+        contenedorRV.style.display = '';
+        // aplicaciones.style.display = 'none';
+    } else {
+        // Ocultar los puntos
+        contenedorRV.style.display = 'none';
+    }
+});
+
+const ar = document.querySelector('.ar');
+const contenedorAR = document.querySelector('#ex-ar2');
+
+ar.addEventListener('click', () => {
+    const computedStyle = window.getComputedStyle(contenedorAR);
+    // const computedStyleAplicaciones = window.getComputedStyle(aplicaciones);
+
+    // Mostrar los punto
+    if (computedStyle.display === 'none') {
+        contenedorAR.style.display = '';
+        // aplicaciones.style.display = 'none';
+    } else {
+        // Ocultar los puntos
+        contenedorAR.style.display = 'none';
+    }
+});
+
+const rm = document.querySelector('.rm');
+const contenedorRM = document.querySelector('#ex-rm2');
+
+rm.addEventListener('click', () => {
+    const computedStyle = window.getComputedStyle(contenedorRM);
+    // const computedStyleAplicaciones = window.getComputedStyle(aplicaciones);
+
+    // Mostrar los punto
+    if (computedStyle.display === 'none') {
+        contenedorRM.style.display = '';
+        // aplicaciones.style.display = 'none';
+    } else {
+        // Ocultar los puntos
+        contenedorRM.style.display = 'none';
+    }
+});
+
+// ventajas 
+const ventaja = document.querySelectorAll('.ventaja');
+const ventajas = document.querySelectorAll('.ventajas');
+console.log(ventaja)
+console.log(ventajas)
+
+// aplicaciones
+const aplicacion = document.querySelectorAll('.aplicacion');
+const aplicaciones = document.querySelectorAll('.aplicaciones');
+console.log(aplicacion)
+console.log(aplicaciones)
+// ventaja.addEventListener('click', () => {
+//     const computedStyle = window.getComputedStyle(ventajas);
+//     const computedStyleAplicaciones = window.getComputedStyle(aplicaciones);
+
+//     // Mostrar ventajas
+//     if (computedStyle.display === 'none') {
+//         ventajas.style.display = '';
+//         aplicaciones.style.display = 'none';
+//     } else {
+//         // Ocultar ventajas
+//         ventajas.style.display = 'none';
+//     }
+// });
+
+// aplicacion.addEventListener('click', () => {
+//     const computedStyle = window.getComputedStyle(aplicaciones);
+//     const computedStyleVentajas = window.getComputedStyle(ventajas);
+
+//     // Mostrar ventajas
+//     if (computedStyle.display === 'none') {
+//         aplicaciones.style.display = '';
+//         ventajas.style.display = 'none';
+//     } else {
+//         // Ocultar ventajas
+//         aplicaciones.style.display = 'none';
+//     }
+// });
+
+// Función para mostrar/ocultar ventajas
+function toggleDisplay(elementToShow, elementToHide) {
+    const computedStyleToShow = window.getComputedStyle(elementToShow);
+    const computedStyleToHide = window.getComputedStyle(elementToHide);
+
+    console.log('Toggling display: ', elementToShow, elementToHide);
+
+    // Mostrar el elemento si está oculto y ocultar el otro elemento
+    if (computedStyleToShow.display === 'none') {
+        elementToShow.style.display = '';
+        elementToHide.style.display = 'none';
+    } else {
+        // Ocultar el elemento si está visible
+        elementToShow.style.display = 'none';
+    }
+}
+
+// Agrega event listeners a todos los elementos de ventajas
+ventaja.forEach((ventaja, index) => {
+    console.log('Adding event listener to ventaja:', index);
+    ventaja.addEventListener('click', () => {
+        console.log('Ventaja clicked: ', index);
+        toggleDisplay(ventajas[index], aplicaciones[index]);
+    });
+});
+
+// Agrega event listeners a todos los elementos de aplicaciones
+aplicacion.forEach((aplicacion, index) => {
+    console.log('Adding event listener to aplicacion:', index);
+    aplicacion.addEventListener('click', () => {
+        console.log('Aplicacion clicked: ', index);
+        toggleDisplay(aplicaciones[index], ventajas[index]);
+    });
+});
