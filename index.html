@@ -614,13 +614,13 @@
                                             </div>
                                             <div class="acciones">
                                                 <div class="ra-ventajas-aplicaciones">
-                                                    <p class="ventaja">Ventajas</p>
+                                                    <p class="ventaja" data-target="ventaja-0">Ventajas</p>
                                                 </div>
                                                 <div class="ra-ventajas-aplicaciones">
-                                                    <p class="aplicacion">Aplicaciones</p>
+                                                    <p class="aplicacion" data-target="aplicacion-0">Aplicaciones</p>
                                                 </div>
                                             </div>
-                                            <div class="ventajas" style="display: none;">
+                                            <div class="ventajas" id="ventaja-0" style="display: none;">
                                                 <div class="conceptos">
                                                     <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
                                                     <p>Inmersión total en ambientes virtuales.</p>
@@ -634,7 +634,7 @@
                                                     <p>Mejora de la colaboración remota.</p>
                                                 </div>
                                             </div>
-                                            <div class="aplicaciones" style="display: none;">
+                                            <div class="aplicaciones" id="aplicacion-0" style="display: none;">
                                                 <div class="conceptos">
                                                     <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
                                                     <p>Videojuegos y entretenimiento.</p>
@@ -668,13 +668,13 @@
                                             </div>
                                             <div class="acciones">
                                                 <div class="ra-ventajas-aplicaciones">
-                                                    <p class="ventaja">Ventajas</p>
+                                                    <p class="ventaja" data-target="ventaja-1">Ventajas</p>
                                                 </div>
                                                 <div class="ra-ventajas-aplicaciones">
-                                                    <p class="aplicacion">Aplicaciones</p>
+                                                    <p class="aplicacion" data-target="aplicacion-1">Aplicaciones</p>
                                                 </div>
                                             </div>
-                                            <div class="ventajas" style="display: none;">
+                                            <div class="ventajas" id="ventaja-1" style="display: none;">
                                                 <div class="conceptos">
                                                     <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
                                                     <p>Interacción con el mundo real y digital simultáneamente.</p>
@@ -688,7 +688,7 @@
                                                     <p>Mejora la información contextual.</p>
                                                 </div>
                                             </div>
-                                            <div class="aplicaciones" style="display: none;">
+                                            <div class="aplicaciones" id="aplicacion-1" style="display: none;">
                                                 <div class="conceptos">
                                                     <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
                                                     <p>Marketing y publicidad.</p>
@@ -717,18 +717,18 @@
                                                 <p>Similar a la Realidad Aumentada.</p>
                                             </div>
                                             <div class="conceptos">
-                                                <img id="dos_lineas" class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                <img class="rextendida-puntos dos_lineas" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
                                                 <p>Objetos digitales influidos por el mundo <br>real (posición, iluminación, colisiones).</p>
                                             </div>
                                             <div class="acciones">
                                                 <div class="ra-ventajas-aplicaciones">
-                                                    <p class="ventaja">Ventajas</p>
+                                                    <p class="ventaja" data-target="ventaja-2">Ventajas</p>
                                                 </div>
                                                 <div class="ra-ventajas-aplicaciones">
-                                                    <p class="aplicacion">Aplicaciones</p>
+                                                    <p class="aplicacion" data-target="aplicacion-2">Aplicaciones</p>
                                                 </div>
                                             </div>
-                                            <div class="ventajas" style="display: none;">
+                                            <div class="ventajas" id="ventaja-2" style="display: none;">
                                                 <div class="conceptos">
                                                     <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
                                                     <p>Integración profunda entre lo digital y lo físico.</p>
@@ -742,7 +742,7 @@
                                                     <p>Alta precisión en la interacción con el entorno.</p>
                                                 </div>
                                             </div>
-                                            <div class="aplicaciones" style="display: none;">
+                                            <div class="aplicaciones" id="aplicacion-2" style="display: none;">
                                                 <div class="conceptos">
                                                     <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
                                                     <p>Diseño y prototipado.</p>
@@ -770,6 +770,7 @@
 
         <div id="info12" style="display:none">
             <div class="global-info">
+                <p class="titulo-desplegable">03 Tecnologías</p>
                 <h2>Inteligencia Artificial</h2>
                 <div class="ia-contenedor">
                     <div class="ia-contenido">
@@ -783,29 +784,206 @@
 
         <div id="info13" style="display:none">
             <div class="global-info">
+                <p class="titulo-desplegable">03 Tecnologías</p>
                 <h2>Blockchain</h2>
-                <div class="block-contenedor">
-                    <div class="block-contenido">
-                        <div class="block-logo">
-                            <img src="./assets/img/Logos/Logo_Simple_Morado.svg" alt="">
+                <div class="rextendida-contenedor">
+                    <div class="rextendida-contenido">
+                        <div class="rextendida-video">
+                            <img src="./assets/img/RE_Ejemplo1.png" alt="">
                         </div>
-                        <div class="block-miniaturas" id="miniatura-1">
-                            <img src="./assets/img/Logos/Hexagono.svg" alt="">
+                        <div class="rextendida-titulos rextendida-titulos2" style="display: '';">
+                            <div>
+                                <p id="titulo-st" class="titulo-rextendida">Seguridad y Transparencia</p>
+                            </div>
+                            <div>
+                                <p id="titulo-ta" class="titulo-rextendida">Token "ALVY"</p>
+                            </div>
+                            <div>
+                                <p id="titulo-it" class="titulo-rextendida">Inmutabilidad y Trazabilidad</p>
+                            </div>
                         </div>
-                        <div class="block-miniaturas" id="miniatura-2">
-                            <img src="./assets/img/Logos/Hexagono.svg" alt="">
-                        </div>
-                        <div class="block-miniaturas" id="miniatura-3">
-                            <img src="./assets/img/Logos/Hexagono.svg" alt="">
-                        </div>
-                        <div class="block-miniaturas" id="miniatura-4">
-                            <img src="./assets/img/Logos/Hexagono.svg" alt="">
-                        </div>
-                        <div class="block-miniaturas" id="miniatura-5">
-                            <img src="./assets/img/Logos/Hexagono.svg" alt="">
-                        </div>
-                        <div class="block-miniaturas" id="miniatura-6">
-                            <img src="./assets/img/Logos/Hexagono.svg" alt="">
+                        <div class="rextendida-explicaciones">
+                            <div class="rextendida-explicacion rextendida-explicacion2" style="display: none;">
+                                <div class="rextendida-ex-titulos blockchain-titulos">
+                                    <div>
+                                        <p id="explicacion-st" class="explicacion-rextendida">Seguridad y Transparencia</p>
+                                    </div>
+                                    <div>
+                                        <p id="explicacion-ta" class="explicacion-rextendida">Token "ALVY"</p>
+                                    </div>
+                                    <div>
+                                        <p id="explicacion-it" class="explicacion-rextendida">Inmutabilidad y Trazabilidad</p>
+                                    </div>
+                                </div>
+
+                                <!-- seguridad y transparencia -->
+                                <div class="rextendida-tecnologia">
+                                    <div class="explicacion-st" id="explicacion-extendida-st">
+                                        <div class="realidad-virtual">
+                                            <img class="rextendida-puntos-titulo" src="./assets/img/tecnologias/03Tecnologías-1.svg" alt="">
+                                            <p class="st">Seguridad y Transparencia</p>
+                                        </div>
+                                        <div id="ex-st2" class="realidad-virtual-info" style="display: none;">
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                <p>Datos protegidos y transacciones transparentes.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos dos_lineas" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                <p>Descentralización asegura que los datos <br> pertenecen a los usuarios.</p>
+                                            </div>
+                                            <div class="acciones">
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="beneficio" data-target="beneficio-0">Beneficios</p>
+                                                </div>
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="aplicacion" data-target="aplicacion-3">Aplicaciones</p>
+                                                </div>
+                                            </div>
+                                            <div class="beneficios"  id="beneficio-0" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Reducción del fraude y la corrupción.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Aumento de la confianza entre los usuarios.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Trazabilidad completa de los procesos.</p>
+                                                </div>
+                                            </div>
+                                            <div class="aplicaciones" id="aplicacion-3" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Cadena de suministro.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Votaciones electrónicas.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Identidad digital.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- token ALVI -->
+                                    <div class="explicacion-ta" id="explicacion-extendida-ta">
+                                        <div class="realidad-virtual">
+                                            <img class="rextendida-puntos-titulo" src="./assets/img/tecnologias/03Tecnologías-2.svg" alt="">
+                                            <p class="ta">Token "ALVY"</p>
+                                        </div>
+                                        <div id="ex-ta2" class="realidad-virtual-info" style="display: none;">
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                <p>Moneda interna para transacciones dentro de Alvearium.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                <p>Usuarios ganan tokens al aceptar anuncios publicitarios.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                <p>Usos de tokens: compra de productos y servicios en la plataforma.</p>
+                                            </div>
+                                            <div class="acciones">
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="ventaja" data-target="ventaja-3">Ventajas</p>
+                                                </div>
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="aplicacion" data-target="aplicacion-4">Aplicaciones</p>
+                                                </div>
+                                            </div>
+                                            <div class="ventajas" id="ventaja-3" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Economía interna robusta.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Facilita microtransacciones.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Incentivos para la participación del usuario.</p>
+                                                </div>
+                                            </div>
+                                            <div class="aplicaciones" id="aplicacion-4" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Compra de bienes digitales.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Participación en eventos exclusivos.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Recompensas por actividades dentro de la plataforma.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- inmutabilidad y trazabilidad -->
+                                    <div class="explicacion-it" id="explicacion-extendida-it" style="display: none;">
+                                        <div class="realidad-virtual">
+                                            <img class="rextendida-puntos-titulo" src="./assets/img/tecnologias/03Tecnologías-3.svg" alt="">
+                                            <p class="it">Inmutabilidad y Trazabilidad</p>
+                                        </div>
+                                        <div id="ex-it2" class="realidad-virtual-info" style="display: none;">
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                <p>Registros de datos que no pueden ser alterados.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                <p>Seguimiento preciso de todas las transacciones.</p>
+                                            </div>
+                                            <div class="acciones">
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="beneficio" data-target="beneficio-1">Beneficios</p>
+                                                </div>
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="aplicacion" data-target="aplicacion-5">Aplicaciones</p>
+                                                </div>
+                                            </div>
+                                            <div class="beneficios" id="beneficio-1" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Mayor transparencia en las operaciones.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Historial confiable de transacciones.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Seguridad contra manipulaciones.</p>
+                                                </div>
+                                            </div>
+                                            <div class="aplicaciones" id="aplicacion-5" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Auditorías y cumplimiento normativo.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Historial de propiedad y activos.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Gestión de derechos digitales.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

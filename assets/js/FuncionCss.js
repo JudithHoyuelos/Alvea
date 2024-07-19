@@ -273,60 +273,86 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // TECNOLOGIAS
 
+// realidad extendida
 // primera parte de los titulos navegacion
 const contenedorTitulosGrandes = document.querySelector('.rextendida-titulos');
 const recuadroTitulosPequeños = document.querySelector('.rextendida-explicacion');
-const rextendidaConcepto = [
-    document.querySelector('#explicacion-extendida-rv'),
-    document.querySelector('#explicacion-extendida-ar'),
-    document.querySelector('#explicacion-extendida-mr')   
-]
-const titulosGrandes = [
-    document.querySelector('#titulo-rv'),
-    document.querySelector('#titulo-ar'),
-    document.querySelector('#titulo-mr')
-]
+// const rextendidaConcepto = [
+//     document.querySelector('#explicacion-extendida-rv'),
+//     document.querySelector('#explicacion-extendida-ar'),
+//     document.querySelector('#explicacion-extendida-mr')   
+// ]
+// const titulosGrandes = [
+//     document.querySelector('#titulo-rv'),
+//     document.querySelector('#titulo-ar'),
+//     document.querySelector('#titulo-mr')
+// ]
 
-// segunda parte de los titulos navegacion
-const rextendidaExplicaciones = [
-    document.querySelector('.explicacion-rv'),
-    document.querySelector('.explicacion-ar'),
-    document.querySelector('.explicacion-mr')   
-]
-const titulosPequeños = [
-    document.querySelector('#explicacion-rv'),
-    document.querySelector('#explicacion-ar'),
-    document.querySelector('#explicacion-mr')
-]
+// // segunda parte de los titulos navegacion
+// const rextendidaExplicaciones = [
+//     document.querySelector('.explicacion-rv'),
+//     document.querySelector('.explicacion-ar'),
+//     document.querySelector('.explicacion-mr')   
+// ]
+// const titulosPequeños = [
+//     document.querySelector('#explicacion-rv'),
+//     document.querySelector('#explicacion-ar'),
+//     document.querySelector('#explicacion-mr')
+// ]
+
+setupSection(
+    [
+        document.querySelector('#titulo-rv'),
+        document.querySelector('#titulo-ar'),
+        document.querySelector('#titulo-mr')
+    ],
+    [
+        document.querySelector('#explicacion-extendida-rv'),
+        document.querySelector('#explicacion-extendida-ar'),
+        document.querySelector('#explicacion-extendida-mr')
+    ],
+    [
+        document.querySelector('#explicacion-rv'),
+        document.querySelector('#explicacion-ar'),
+        document.querySelector('#explicacion-mr')
+    ],
+    [
+        document.querySelector('.explicacion-rv'),
+        document.querySelector('.explicacion-ar'),
+        document.querySelector('.explicacion-mr')
+    ],
+    contenedorTitulosGrandes,
+    recuadroTitulosPequeños
+);
 
 // Oculta todos los conceptos extendidos al principio
 // rextendidaConcepto.forEach(concepto => concepto.style.display = 'none');
 
-// Oculta todos los conceptos extendidos al principio si existen
-rextendidaConcepto.forEach(concepto => {
-    if (concepto) {
-        concepto.style.display = 'none';
-    }
-});
+// // Oculta todos los conceptos extendidos al principio si existen
+// rextendidaConcepto.forEach(concepto => {
+//     if (concepto) {
+//         concepto.style.display = 'none';
+//     }
+// });
 
-// Function to hide all rextendidaExplicaciones
-function hideAllExplicaciones() {
-    rextendidaExplicaciones.forEach(explicacion => {
-        if(explicacion){
-            explicacion.style.display = 'none';
-        }
-    });
-}
+// // Function to hide all rextendidaExplicaciones
+// function hideAllExplicaciones() {
+//     rextendidaExplicaciones.forEach(explicacion => {
+//         if(explicacion){
+//             explicacion.style.display = 'none';
+//         }
+//     });
+// }
 
-// Function to reset styles of all titulosPequeños
-function resetStyles() {
-    titulosPequeños.forEach(titulo => {
-        // Remove inline styles applied for hover effect
-        titulo.style.color = '';
-        // titulo.style.backgroundColor = '';
-        // Reset any other hover styles here
-    });
-}
+// // Function to reset styles of all titulosPequeños
+// function resetStyles() {
+//     titulosPequeños.forEach(titulo => {
+//         // Remove inline styles applied for hover effect
+//         titulo.style.color = '';
+//         // titulo.style.backgroundColor = '';
+//         // Reset any other hover styles here
+//     });
+// }
 
 // Function to apply hover styles to a specific tituloPequeño
 function applyHoverStyles(titulo, index) {
@@ -348,41 +374,106 @@ function applyHoverStyles(titulo, index) {
     }
 }
 
-// Add event listeners to each tituloGrande
-titulosGrandes.forEach((titulo, index) => {
-    titulo.addEventListener('click', () => {
-        // Ocultar el contenedor de títulos grandes
-        contenedorTitulosGrandes.style.display = 'none';
+// // Add event listeners to each tituloGrande
+// titulosGrandes.forEach((titulo, index) => {
+//     titulo.addEventListener('click', () => {
+//         // Ocultar el contenedor de títulos grandes
+//         contenedorTitulosGrandes.style.display = 'none';
 
-        // Mostrar recuadro con los titulos pequeños
-        recuadroTitulosPequeños.style.display = '';
+//         // Mostrar recuadro con los titulos pequeños
+//         recuadroTitulosPequeños.style.display = '';
 
-        // Mostrar el concepto extendido correspondiente
-        rextendidaConcepto[index].style.display = '';
+//         // Mostrar el concepto extendido correspondiente
+//         rextendidaConcepto[index].style.display = '';
 
-        // Mostrar el contenedor de explicaciones correspondiente
-        hideAllExplicaciones();
-        rextendidaExplicaciones[index].style.display = '';
+//         // Mostrar el contenedor de explicaciones correspondiente
+//         hideAllExplicaciones();
+//         rextendidaExplicaciones[index].style.display = '';
 
-        // Cambiar el color del título pequeño correspondiente
-        resetStyles();
-        applyHoverStyles(titulosPequeños[index], index);
+//         // Cambiar el color del título pequeño correspondiente
+//         resetStyles();
+//         applyHoverStyles(titulosPequeños[index], index);
+//     });
+// });
+
+// // Add event listeners to each tituloPequeño
+// titulosPequeños.forEach((titulo, index) => {
+//     titulo.addEventListener('click', () => {
+//         // Hide all explicaciones
+//         hideAllExplicaciones();
+//         // Show the corresponding explicacion
+//         rextendidaExplicaciones[index].style.display = '';
+
+//         // Cambiar el color del título pequeño correspondiente
+//         resetStyles();
+//         applyHoverStyles(titulo, index);
+//     });
+// });
+
+function setupSection(titulosGrandes, blockchainConcepto, titulosPequeños, blockchainExplicaciones, contenedorTitulosGrandes, recuadroTitulosPequeños) {
+    console.log(contenedorTitulosGrandes)
+    // Oculta todos los conceptos extendidos al principio si existen
+    blockchainConcepto.forEach(concepto => {
+        if (concepto) {
+            concepto.style.display = 'none';
+        }
     });
-});
 
-// Add event listeners to each tituloPequeño
-titulosPequeños.forEach((titulo, index) => {
-    titulo.addEventListener('click', () => {
-        // Hide all explicaciones
-        hideAllExplicaciones();
-        // Show the corresponding explicacion
-        rextendidaExplicaciones[index].style.display = '';
+    // Function to hide all explicaciones
+    function hideAllExplicaciones() {
+        blockchainExplicaciones.forEach(explicacion => {
+            if(explicacion){
+                explicacion.style.display = 'none';
+            }
+        });
+    }
 
-        // Cambiar el color del título pequeño correspondiente
-        resetStyles();
-        applyHoverStyles(titulo, index);
+    // Function to reset styles of all titulosPequeños
+    function resetStyles() {
+        titulosPequeños.forEach(titulo => {
+            // Remove inline styles applied for hover effect
+            titulo.style.color = '';
+            // titulo.style.backgroundColor = '';
+            // Reset any other hover styles here
+        });
+    }
+
+    // Add event listeners to each tituloGrande
+    titulosGrandes.forEach((titulo, index) => {
+        titulo.addEventListener('click', () => {
+            // Ocultar el contenedor de títulos grandes
+            contenedorTitulosGrandes.style.display = 'none';
+
+            // Mostrar recuadro con los titulos pequeños
+            recuadroTitulosPequeños.style.display = '';
+
+            // Mostrar el concepto extendido correspondiente
+            blockchainConcepto[index].style.display = '';
+
+            // Mostrar el contenedor de explicaciones correspondiente
+            hideAllExplicaciones();
+            blockchainExplicaciones[index].style.display = '';
+
+            // Cambiar el color del título pequeño correspondiente
+            resetStyles();
+            applyHoverStyles(titulosPequeños[index], index);
+        });
     });
-});
+
+    // Add event listeners to each tituloPequeño
+    titulosPequeños.forEach((titulo, index) => {
+        titulo.addEventListener('click', () => {
+            // Hide all explicaciones
+            hideAllExplicaciones();
+            // Show the corresponding explicacion
+            blockchainExplicaciones[index].style.display = '';
+
+            // Cambiar el color del título pequeño correspondiente
+            resetStyles();
+            applyHoverStyles(titulo, index);
+        });
+    });
+}
 
 
 // segunda parte de los titulos navegacion
@@ -438,6 +529,90 @@ rm.addEventListener('click', () => {
     }
 });
 
+// blockchain
+
+// Example usage for one section
+const contenedorTitulosGrandes2 = document.querySelector('.rextendida-titulos2');
+const recuadroTitulosPequeños2 = document.querySelector('.rextendida-explicacion2');
+console.log(contenedorTitulosGrandes2)
+setupSection(
+    [
+        document.querySelector('#titulo-st'),
+        document.querySelector('#titulo-ta'),
+        document.querySelector('#titulo-it')
+    ],
+    [
+        document.querySelector('#explicacion-extendida-st'),
+        document.querySelector('#explicacion-extendida-ta'),
+        document.querySelector('#explicacion-extendida-it')
+    ],
+    [
+        document.querySelector('#explicacion-st'),
+        document.querySelector('#explicacion-ta'),
+        document.querySelector('#explicacion-it')
+    ],
+    [
+        document.querySelector('.explicacion-st'),
+        document.querySelector('.explicacion-ta'),
+        document.querySelector('.explicacion-it')
+    ],
+    contenedorTitulosGrandes2,
+    recuadroTitulosPequeños2
+);
+
+// segunda parte de los titulos navegacion
+
+const st = document.querySelector('.st');
+const contenedorST = document.querySelector('#ex-st2');
+
+st.addEventListener('click', () => {
+    const computedStyle = window.getComputedStyle(contenedorST);
+    // const computedStyleAplicaciones = window.getComputedStyle(aplicaciones);
+
+    // Mostrar los punto
+    if (computedStyle.display === 'none') {
+        contenedorST.style.display = '';
+        // aplicaciones.style.display = 'none';
+    } else {
+        // Ocultar los puntos
+        contenedorST.style.display = 'none';
+    }
+});
+
+const ta = document.querySelector('.ta');
+const contenedorTA = document.querySelector('#ex-ta2');
+
+ta.addEventListener('click', () => {
+    const computedStyle = window.getComputedStyle(contenedorTA);
+    // const computedStyleAplicaciones = window.getComputedStyle(aplicaciones);
+
+    // Mostrar los punto
+    if (computedStyle.display === 'none') {
+        contenedorTA.style.display = '';
+        // aplicaciones.style.display = 'none';
+    } else {
+        // Ocultar los puntos
+        contenedorTA.style.display = 'none';
+    }
+});
+
+const it = document.querySelector('.it');
+const contenedorIT = document.querySelector('#ex-it2');
+
+it.addEventListener('click', () => {
+    const computedStyle = window.getComputedStyle(contenedorIT);
+    // const computedStyleAplicaciones = window.getComputedStyle(aplicaciones);
+
+    // Mostrar los punto
+    if (computedStyle.display === 'none') {
+        contenedorIT.style.display = '';
+        // aplicaciones.style.display = 'none';
+    } else {
+        // Ocultar los puntos
+        contenedorIT.style.display = 'none';
+    }
+});
+
 // ventajas 
 const ventaja = document.querySelectorAll('.ventaja');
 const ventajas = document.querySelectorAll('.ventajas');
@@ -449,6 +624,10 @@ const aplicacion = document.querySelectorAll('.aplicacion');
 const aplicaciones = document.querySelectorAll('.aplicaciones');
 console.log(aplicacion)
 console.log(aplicaciones)
+
+// beneficios 
+const beneficio = document.querySelectorAll('.beneficio');
+const beneficios = document.querySelectorAll('.beneficios');
 // ventaja.addEventListener('click', () => {
 //     const computedStyle = window.getComputedStyle(ventajas);
 //     const computedStyleAplicaciones = window.getComputedStyle(aplicaciones);
@@ -477,17 +656,23 @@ console.log(aplicaciones)
 //     }
 // });
 
-// Función para mostrar/ocultar ventajas
-function toggleDisplay(elementToShow, elementToHide) {
+// Función para mostrar/ocultar elementos
+function toggleDisplay(elementToShow, elementsToHide) {
+    if (!elementToShow) {
+        console.error('Element to show not found:', elementToShow);
+        return;
+    }
+
+    // Mostrar el elemento si está oculto y ocultar los otros elementos
     const computedStyleToShow = window.getComputedStyle(elementToShow);
-    const computedStyleToHide = window.getComputedStyle(elementToHide);
-
-    console.log('Toggling display: ', elementToShow, elementToHide);
-
-    // Mostrar el elemento si está oculto y ocultar el otro elemento
     if (computedStyleToShow.display === 'none') {
         elementToShow.style.display = '';
-        elementToHide.style.display = 'none';
+
+        elementsToHide.forEach(element => {
+            if (element && window.getComputedStyle(element).display !== 'none') {
+                element.style.display = 'none';
+            }
+        });
     } else {
         // Ocultar el elemento si está visible
         elementToShow.style.display = 'none';
@@ -495,19 +680,31 @@ function toggleDisplay(elementToShow, elementToHide) {
 }
 
 // Agrega event listeners a todos los elementos de ventajas
-ventaja.forEach((ventaja, index) => {
-    console.log('Adding event listener to ventaja:', index);
+ventaja.forEach((ventaja) => {
     ventaja.addEventListener('click', () => {
-        console.log('Ventaja clicked: ', index);
-        toggleDisplay(ventajas[index], aplicaciones[index]);
+        const targetId = ventaja.getAttribute('data-target');
+        const targetElement = document.getElementById(targetId);
+        console.log('Ventaja clicked: ', targetElement);
+        toggleDisplay(targetElement, [...aplicaciones, ...beneficios]);
     });
 });
 
 // Agrega event listeners a todos los elementos de aplicaciones
-aplicacion.forEach((aplicacion, index) => {
-    console.log('Adding event listener to aplicacion:', index);
+aplicacion.forEach((aplicacion) => {
     aplicacion.addEventListener('click', () => {
-        console.log('Aplicacion clicked: ', index);
-        toggleDisplay(aplicaciones[index], ventajas[index]);
+        const targetId = aplicacion.getAttribute('data-target');
+        const targetElement = document.getElementById(targetId);
+        console.log('Aplicacion clicked: ', targetElement);
+        toggleDisplay(targetElement, [...ventajas, ...beneficios]);
+    });
+});
+
+// Agrega event listeners a todos los elementos de beneficios
+beneficio.forEach((beneficio) => {
+    beneficio.addEventListener('click', () => {
+        const targetId = beneficio.getAttribute('data-target');
+        const targetElement = document.getElementById(targetId);
+        console.log('Beneficio clicked: ', targetElement);
+        toggleDisplay(targetElement, [...ventajas, ...aplicaciones]);
     });
 });

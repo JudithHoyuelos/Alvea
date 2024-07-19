@@ -644,30 +644,65 @@ img {
     color: var(--primary-color);
 }
 
-#dos_lineas {
+.dos_lineas {
     margin-bottom: 1rem;
 }
 
 /* ------------ INTELIGENCIA ARTIFICIAL ----------- */
 
-.ia-contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
+#titulo-st:hover {
+    color: var(--third-color);
 }
 
-.ia-contenido {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#titulo-ta:hover {
+    color: var(--second-color);
 }
 
-.ia-contenido img {
-    width: 30rem;
-    background-color: rgba(255, 255, 255, 0.27);
-    /* background: #fafafa10; */
-    backdrop-filter: blur(0.3rem);
+#titulo-it:hover {
+    color: var(--four-color);
+}
+
+#explicacion-st:hover {
+    color: var(--third-color);
+}
+
+#explicacion-ta:hover {
+    color: var(--second-color);
+}
+
+#explicacion-it:hover {
+    color: var(--four-color);
+}
+
+.st {
+    color: var(--third-color);
+    cursor: pointer;
+}
+
+.st:hover {
+    color: var(--second-color);
+}
+
+.ta {
+    color: var(--second-color);
+    cursor: pointer;
+}
+
+.ta:hover {
+    color: var(--four-color);
+}
+
+.it {
+    color: var(--four-color);
+    cursor: pointer;
+}
+
+.it:hover {
+    color: var(--primary-color);
+}
+
+.blockchain-titulos {
+    gap: 0.6rem;
 }
 
 /* ------------ BLOCKCHAIN ----------- */
