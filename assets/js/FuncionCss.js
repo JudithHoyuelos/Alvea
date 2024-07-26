@@ -613,6 +613,69 @@ it.addEventListener('click', () => {
     }
 });
 
+// ia
+
+// Example usage for one section
+const contenedorTitulosGrandes3 = document.querySelector('.rextendida-titulos3');
+const recuadroTitulosPequeños3 = document.querySelector('.rextendida-explicacion3');
+console.log(contenedorTitulosGrandes3)
+setupSection(
+    [
+        document.querySelector('#titulo-av'),
+        document.querySelector('#titulo-ff')
+    ],
+    [
+        document.querySelector('#explicacion-extendida-av'),
+        document.querySelector('#explicacion-extendida-ff')
+    ],
+    [
+        document.querySelector('#explicacion-av'),
+        document.querySelector('#explicacion-ff')
+    ],
+    [
+        document.querySelector('.explicacion-av'),
+        document.querySelector('.explicacion-ff')
+    ],
+    contenedorTitulosGrandes3,
+    recuadroTitulosPequeños3
+);
+
+// segunda parte de los titulos navegacion
+
+const av = document.querySelector('.av');
+const contenedorAV = document.querySelector('#ex-av2');
+
+av.addEventListener('click', () => {
+    const computedStyle = window.getComputedStyle(contenedorAV);
+    // const computedStyleAplicaciones = window.getComputedStyle(aplicaciones);
+
+    // Mostrar los punto
+    if (computedStyle.display === 'none') {
+        contenedorAV.style.display = '';
+        // aplicaciones.style.display = 'none';
+    } else {
+        // Ocultar los puntos
+        contenedorAV.style.display = 'none';
+    }
+});
+
+const ff = document.querySelector('.ff');
+const contenedorFF = document.querySelector('#ex-ff2');
+
+ff.addEventListener('click', () => {
+    const computedStyle = window.getComputedStyle(contenedorFF);
+    // const computedStyleAplicaciones = window.getComputedStyle(aplicaciones);
+
+    // Mostrar los punto
+    if (computedStyle.display === 'none') {
+        contenedorFF.style.display = '';
+        // aplicaciones.style.display = 'none';
+    } else {
+        // Ocultar los puntos
+        contenedorFF.style.display = 'none';
+    }
+});
+
 // ventajas 
 const ventaja = document.querySelectorAll('.ventaja');
 const ventajas = document.querySelectorAll('.ventajas');
@@ -628,6 +691,10 @@ console.log(aplicaciones)
 // beneficios 
 const beneficio = document.querySelectorAll('.beneficio');
 const beneficios = document.querySelectorAll('.beneficios');
+
+// potencial 
+const potencia = document.querySelectorAll('.potencia');
+const potencial = document.querySelectorAll('.potencial');
 // ventaja.addEventListener('click', () => {
 //     const computedStyle = window.getComputedStyle(ventajas);
 //     const computedStyleAplicaciones = window.getComputedStyle(aplicaciones);
@@ -685,7 +752,7 @@ ventaja.forEach((ventaja) => {
         const targetId = ventaja.getAttribute('data-target');
         const targetElement = document.getElementById(targetId);
         console.log('Ventaja clicked: ', targetElement);
-        toggleDisplay(targetElement, [...aplicaciones, ...beneficios]);
+        toggleDisplay(targetElement, [...aplicaciones, ...beneficios, ...potencial]);
     });
 });
 
@@ -695,7 +762,7 @@ aplicacion.forEach((aplicacion) => {
         const targetId = aplicacion.getAttribute('data-target');
         const targetElement = document.getElementById(targetId);
         console.log('Aplicacion clicked: ', targetElement);
-        toggleDisplay(targetElement, [...ventajas, ...beneficios]);
+        toggleDisplay(targetElement, [...ventajas, ...beneficios, ...potencial]);
     });
 });
 
@@ -705,6 +772,16 @@ beneficio.forEach((beneficio) => {
         const targetId = beneficio.getAttribute('data-target');
         const targetElement = document.getElementById(targetId);
         console.log('Beneficio clicked: ', targetElement);
-        toggleDisplay(targetElement, [...ventajas, ...aplicaciones]);
+        toggleDisplay(targetElement, [...ventajas, ...aplicaciones, ...potencial]);
+    });
+});
+
+// Agrega event listeners a todos los elementos de potencial
+potencia.forEach((potencia) => {
+    potencia.addEventListener('click', () => {
+        const targetId = potencia.getAttribute('data-target');
+        const targetElement = document.getElementById(targetId);
+        console.log('Potencial clicked: ', targetElement);
+        toggleDisplay(targetElement, [...ventajas, ...aplicaciones, ...beneficios]);
     });
 });

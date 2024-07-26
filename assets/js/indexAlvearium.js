@@ -379,6 +379,22 @@ function onClick(x, y, z, lookAtX, lookAtY, lookAtZ, newPoints) {
 function updateAnnotationPosition() {
     const modales = document.querySelector('#modales'); // Agrega esta línea para definir 'modales'
 
+    // puntos iniciales para la funcion del modal con los detalles
+    const points = {
+        punto1: document.querySelector("#punto1"),
+        punto2: document.querySelector("#punto2"),
+        punto3: document.querySelector("#punto3"),
+        punto4: document.querySelector("#punto4")
+    };
+
+    // modales para la funcion del modal con los detalles
+    const detalles = {
+        detalles1: document.querySelector("#detalles1"),
+        detalles2: document.querySelector("#detalles2"),
+        detalles3: document.querySelector("#detalles3"),
+        detalles4: document.querySelector("#detalles4")
+    };
+
     // Helper function to update position
     function updatePosition(vector, selector) {
         vector.project(camera);
@@ -402,6 +418,19 @@ function updateAnnotationPosition() {
                     modales.style.top = `${position.y + offsetY}px`;
                     modales.style.left = `${position.x + offsetX}px`;
                     console.log('aparece');
+
+                    // Oculta todos los modales de los detalles
+                    Object.values(detalles).forEach(d => d.style.display = 'none');
+
+                    // Muestra el modal del detalle correspondiente al punto
+                    Object.entries(points).forEach(([pointId, pointElement]) => {
+                        if (position.element === pointElement) {
+                            const detalleId = `detalles${pointId.replace('punto', '')}`;
+                            console.log(detalleId)
+                            detalles[detalleId].style.display = '';
+                            console.log(detalles[detalleId])
+                        }
+                    });
                 } else {
                     console.log('no existe el modal');
                 }

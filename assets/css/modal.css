@@ -69,8 +69,19 @@ img {
     height: 2rem;
     position: fixed;
     background-color: red; /* Cambiar color mas tarde */
+    background-color: rgba(246, 249, 249, 0.6);
     border-radius: 100%;
+    box-shadow: inset 0 0 1px 3px rgba(20, 20, 20, 0.885);
+    /* box-shadow: 0 0 0 3px rgba(246, 249, 249, 0.262); */
+                /* 0 0 0px 3px rgba(20, 20, 20, 0.885); */
+                /* 0 0 15px 5px rgba(20, 20, 20, 0.3); */
+    box-shadow: 0 0 1px 3px rgba(20, 20, 20, 0.885);
     cursor: pointer;
+}
+
+#punto1::after, #punto2::after, #punto3::after, #punto4::after, #punto5::after, #punto6::after, #punto7::after, #punto8::after, #punto9::after, #punto10::after, #punto11::after, #punto12::after, #punto13::after {
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 15px rgba(20, 20, 20, 0.885);
 }
 
 #inicio {
@@ -100,8 +111,24 @@ img {
 #modales {
     position: fixed;
     background-color: rgba(0, 255, 255, 0.8);
-    height: 5rem;
-    width: 5rem;
+    height: 8rem;
+    width: 10rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles {
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+}
+
+.detalles h3 {
+    font-size: 18px;
+}
+
+.detalles p {
+    font-size: 12px;
 }
 
 #exitModal {
@@ -650,6 +677,49 @@ img {
 
 /* ------------ INTELIGENCIA ARTIFICIAL ----------- */
 
+#titulo-av:hover {
+    color: var(--third-color);
+}
+
+#titulo-ff:hover {
+    color: var(--second-color);
+}
+
+#explicacion-av:hover {
+    color: var(--third-color);
+}
+
+#explicacion-ff:hover {
+    color: var(--second-color);
+}
+
+.av {
+    color: var(--third-color);
+    cursor: pointer;
+}
+
+.av:hover {
+    color: var(--second-color);
+}
+
+.ff {
+    color: var(--second-color);
+    cursor: pointer;
+}
+
+.ff:hover {
+    color: var(--four-color);
+}
+
+.ia-titulos {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+/* ------------ BLOCKCHAIN ----------- */
+
 #titulo-st:hover {
     color: var(--third-color);
 }
@@ -703,78 +773,6 @@ img {
 
 .blockchain-titulos {
     gap: 0.6rem;
-}
-
-/* ------------ BLOCKCHAIN ----------- */
-
-.block-contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    margin-top: 2rem;
-}
-
-.block-contenido {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 32rem;
-    height: 90%;
-    width: 100%;
-    position: absolute;
-}
-
-.block-contenido .block-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 40%;
-}
-
-.block-contenido .block-logo img {
-    width: 8rem;
-}
-
-.block-contenido .block-miniaturas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-}
-
-.block-contenido .block-miniaturas img {
-    width: 5rem;
-}
-
-#miniatura-1 {
-    top: 10%;
-}
-
-#miniatura-2 {
-    top: 10rem;
-    left: 6rem;
-}
-
-#miniatura-3 {
-    top: 10rem;
-    right: 6rem;
-}
-
-#miniatura-4 {
-    bottom: 10%;
-}
-
-#miniatura-5 {
-    bottom: 10rem;
-    left: 6rem;
-}
-
-#miniatura-6 {
-    bottom: 10rem;
-    right: 6rem;
 }
 
 /* -------------- MENU LATERAL ----------- */
