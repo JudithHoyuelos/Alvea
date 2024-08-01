@@ -926,14 +926,16 @@ a:hover {
     }
 
     .imagenlogo {
-        height: 100px;
+        height: 60px;
         margin-bottom: 30px;
+        width:210px;
+        margin-top:10px;
     }
 
     .contenido {
         grid-template-columns: repeat(3, 1fr);
         margin-left: 10%;
-        margin-top: 6%;
+        margin-top: 3%
     }
 
     .botonenvio {
@@ -954,7 +956,7 @@ a:hover {
     }
 
     .rsociales {
-        margin-left: 75%;
+        margin-left: 70%;
     }
 
     #menu-horizontal {

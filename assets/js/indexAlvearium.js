@@ -25,6 +25,7 @@ scene.add(lights);
 scene.add(gridHelper);
 
 
+
 // implementar los cambios a la hora del redimensionamiento de la pantalla 
 // Asegúrate de que el raycaster se actualice cuando se redimensiona la ventana
 window.addEventListener('resize', () => {
