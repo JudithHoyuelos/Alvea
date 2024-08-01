@@ -1,14 +1,21 @@
-import THREE from './three';
-import { gsap } from "gsap";
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { PointerLockControls } from 'three/addons/controls/PointerLockControls.js';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader';
-import camera from './Camera2';
-import renderer from './Render';
-import scene from './Screen';
-import lights from './Luzambiental';
-import gridHelper from './Plane';
+import THREE from './three.js';
+import { gsap } from '../vendor/gsap/gsap.min.js';
+import { OrbitControls } from '../vendor/three/examples/jsm/controls/OrbitControls.js';
+import { PointerLockControls } from '../vendor/three/examples/jsm/controls/PointerLockControls.js';
+import { GLTFLoader } from '../vendor/three/examples/jsm/loaders/GLTFLoader.js';
+// import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader';
+import camera from './Camera2.js';
+import renderer from './Render.js';
+import scene from './Screen.js';
+import lights from './Luzambiental.js';
+import gridHelper from './Plane.js';
+
+// Verificar si GSAP está cargado correctamente
+if (typeof gsap !== "undefined") {
+    console.log("GSAP está cargado");
+} else {
+    console.error("GSAP no está cargado");
+}
 
 // Fondo con imagen 
 var loader = new THREE.TextureLoader();
@@ -139,7 +146,7 @@ function onClickExitModal(e) {
         punto6: document.querySelector("#punto6"),
         punto7: document.querySelector("#punto7"),
         punto8: document.querySelector("#punto8"),
-        punto9: document.querySelector("#punto9"),
+        // punto9: document.querySelector("#punto9"),
         punto10: document.querySelector("#punto10"),
         punto11: document.querySelector("#punto11"),
         punto12: document.querySelector("#punto12"),
@@ -205,7 +212,7 @@ function onClickHotpoint(element) {
         punto6: document.querySelector("#punto6"),
         punto7: document.querySelector("#punto7"),
         punto8: document.querySelector("#punto8"),
-        punto9: document.querySelector("#punto9"),
+        // punto9: document.querySelector("#punto9"),
         punto10: document.querySelector("#punto10"),
         punto11: document.querySelector("#punto11"),
         punto12: document.querySelector("#punto12"),
@@ -217,7 +224,7 @@ function onClickHotpoint(element) {
         info6: document.querySelector("#info6"),
         info7: document.querySelector("#info7"),
         info8: document.querySelector("#info8"),
-        info9: document.querySelector("#info9"),
+        // info9: document.querySelector("#info9"),
         info10: document.querySelector("#info10"),
         info11: document.querySelector("#info11"),
         info12: document.querySelector("#info12"),
@@ -247,7 +254,7 @@ function onClickHotpoint(element) {
             const modalId = `info${pointId.replace('punto', '')}`;
             modals[modalId].style.display = '';
             if (logo) logo.style.left = '30%';
-            if (menuHorizontal) menuHorizontal.style.left = '30%';
+            if (menuHorizontal) menuHorizontal.style.left = '25%';
             
             // Mueve los puntos a la izquierda
             const distanciaMovimiento = 300; // Ajusta esta distancia según sea necesario
@@ -373,6 +380,22 @@ function onClick(x, y, z, lookAtX, lookAtY, lookAtZ, newPoints) {
 function updateAnnotationPosition() {
     const modales = document.querySelector('#modales'); // Agrega esta línea para definir 'modales'
 
+    // puntos iniciales para la funcion del modal con los detalles
+    const points = {
+        punto1: document.querySelector("#punto1"),
+        punto2: document.querySelector("#punto2"),
+        punto3: document.querySelector("#punto3"),
+        punto4: document.querySelector("#punto4")
+    };
+
+    // modales para la funcion del modal con los detalles
+    const detalles = {
+        detalles1: document.querySelector("#detalles1"),
+        detalles2: document.querySelector("#detalles2"),
+        detalles3: document.querySelector("#detalles3"),
+        detalles4: document.querySelector("#detalles4")
+    };
+
     // Helper function to update position
     function updatePosition(vector, selector) {
         vector.project(camera);
@@ -396,6 +419,19 @@ function updateAnnotationPosition() {
                     modales.style.top = `${position.y + offsetY}px`;
                     modales.style.left = `${position.x + offsetX}px`;
                     console.log('aparece');
+
+                    // Oculta todos los modales de los detalles
+                    Object.values(detalles).forEach(d => d.style.display = 'none');
+
+                    // Muestra el modal del detalle correspondiente al punto
+                    Object.entries(points).forEach(([pointId, pointElement]) => {
+                        if (position.element === pointElement) {
+                            const detalleId = `detalles${pointId.replace('punto', '')}`;
+                            console.log(detalleId)
+                            detalles[detalleId].style.display = '';
+                            console.log(detalles[detalleId])
+                        }
+                    });
                 } else {
                     console.log('no existe el modal');
                 }
@@ -423,7 +459,7 @@ function updateAnnotationPosition() {
     const position7 = updatePosition(new THREE.Vector3(2.5, 0.5, -11), '#punto7');
 
     const position8 = updatePosition(new THREE.Vector3(0, 3, -11), '#punto8');
-    const position9 = updatePosition(new THREE.Vector3(2, -3, -11), '#punto9');
+    // const position9 = updatePosition(new THREE.Vector3(2, -3, -11), '#punto9');
     const position10 = updatePosition(new THREE.Vector3(6.5, 4, -11), '#punto10');
 
     const position11 = updatePosition(new THREE.Vector3(3.5, -2, -11), '#punto11');
@@ -432,7 +468,7 @@ function updateAnnotationPosition() {
 
     // Array de posiciones para pasarlas a la función onClick
     initialPoints = [position1, position2, position3, position4]; // Guardar los puntos iniciales
-    const newPositionsDerecha = [position8, position9, position10];
+    const newPositionsDerecha = [position8, position10];
     const newPositionsIzquierda = [position5, position6, position7];
     const newPositionsAbajo = [position11, position12, position13];
     const arriba = document.querySelector("#useCase");

@@ -138,12 +138,12 @@ for (const [mostrarKey, mostrarEl] of Object.entries(mostrar)) {
         mostrarEl.style.display = 'none';
 
         const bloque = document.querySelector(`#bloque${id}`);
-        // if (bloque == document.querySelector(`#bloque3`)) {
-        //     console.log('bloque3')
-        //     const puntoCierre = document.querySelector("#cerrar3");
-        //     console.log(puntoCierre)
-        //     puntoCierre.style.margin.top = "3rem";
-        // }
+        if (bloque == document.querySelector(`#bloque3`)) {
+            console.log('bloque3')
+            const puntoCierre = document.querySelector("#cerrar3");
+            console.log(puntoCierre)
+            puntoCierre.style.marginTop = "1.6rem";
+        }
         if (bloque) {
             const entradas = bloque.querySelectorAll('.blog-entradas');
             const puntos = bloque.querySelectorAll('.blog-puntos-secundarios');
@@ -171,6 +171,12 @@ for (const [ocultarKey, ocultarEl] of Object.entries(ocultar)) {
         ocultarEl.style.display = 'none';
 
         const bloque = document.querySelector(`#bloque${id}`);
+        if (bloque == document.querySelector(`#bloque3`)) {
+            console.log('bloque3')
+            const puntoCierre = document.querySelector("#cerrar3");
+            console.log(puntoCierre)
+            puntoCierre.style.marginTop = "1rem";
+        }
         if (bloque) {
             const entradas = bloque.querySelectorAll('.blog-entradas');
             const puntos = bloque.querySelectorAll('.blog-puntos-secundarios');

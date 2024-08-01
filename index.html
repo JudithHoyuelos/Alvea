@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>Alvearium.js</title>
     <link rel="stylesheet" href="./assets/css/modal.css">
-    <script src="assets/js/indexAlvearium.js" type="module"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script> -->
+    <!-- <script src =" https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js " aplazar >https://cdnjs.com/libraries/three.js</script> -->
+    <!-- <script src="assets/js/indexAlvearium.js" type="module"></script> -->
+    <script src="dist/bundle.js" type="module"></script>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
     <div id="punto6" style="display:none"></div>
     <div id="punto7" style="display:none"></div>
     <div id="punto8" style="display:none"></div>
-    <div id="punto9" style="display:none"></div>
+    <!-- <div id="punto9" style="display:none"></div> -->
     <div id="punto10" style="display:none"></div>
     <div id="punto11" style="display:none"></div>
     <div id="punto12" style="display:none"></div>
@@ -236,21 +236,19 @@
         <div id="info8" style="display:none">
             <div class="carrusel">
                 <div class="global-info">
+                    <p class="titulo-desplegable">Sobre nosotros</p>
                     <h2>RoadMap</h2>
                     <div class="roadmap-contenedor-principal">
                         <div class="roadmap-contenedor-carrusel">
                             <div class="roadmap-carrusel">
                                 <div class="roadmap-img">
-                                    <img src="./assets/img/roadMap/PHASES.svg" alt="">
+                                    <img src="./assets/img/roadMap/phase-1.svg" alt="">
                                 </div>
                                 <div class="roadmap-img">
-                                    <img src="./assets/img/roadMap/PHASES2.svg" alt="">
+                                    <img src="./assets/img/roadMap/phase-2.svg" alt="">
                                 </div>
                                 <div class="roadmap-img">
-                                    <img src="./assets/img/roadMap/PHASES2.svg" alt="">
-                                </div>
-                                <div class="roadmap-img">
-                                    <img src="./assets/img/roadMap/PHASES2.svg" alt="">
+                                    <img src="./assets/img/roadMap/phase-3.svg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -259,17 +257,17 @@
                                 <div class="roadmap-titulo" id="roadmap-titulo-1" style="display: '';">
                                     <div class="roadmap-descripcion">
                                         <h4 class="roadmap-info-titulo"> Prototipado y Validación</h4>
-                                        <p>Alvearium hace sold-out de su pre-seed en una hora.</p>
+                                        <p>Validando Ideas, Creando Realidades.</p>
                                     </div>
                                     <div class="roadmap-years">
-                                        <img src="./assets/img/roadMap/2024.svg" alt="">
-                                        <img src="./assets/img/roadMap/2025.svg" alt="">
+                                        <img src="./assets/img/roadMap/2022.svg" alt="">
+                                        <img src="./assets/img/roadMap/2023.svg" alt="">
                                     </div>
                                 </div>
                                 <div class="roadmap-titulo" id="roadmap-titulo-2" style="display: none;">
                                     <div class="roadmap-descripcion">
-                                        <h4 class="roadmap-info-titulo"> Spatial Madrid</h4>
-                                        <p>Descubre una nueva manera de disfrutar Madrid</p>
+                                        <h4 class="roadmap-info-titulo"> Desarrollo de la Plataforma</h4>
+                                        <p>Integrando Tecnologías de Vanguardia</p>
                                     </div>
                                     <div class="roadmap-years">
                                         <img src="./assets/img/roadMap/2024.svg" alt="">
@@ -278,94 +276,200 @@
                                 </div>
                                 <div class="roadmap-titulo" id="roadmap-titulo-3" style="display: none;">
                                     <div class="roadmap-descripcion">
-                                        <h4 class="roadmap-info-titulo">Multiplataforma</h4>
-                                        <p>Fusiona el mundo real con el digital a través de tecnologías emergentes como XR, IA y Blockchain.</p>
+                                        <h4 class="roadmap-info-titulo">Lanzamiento al público</h4>
+                                        <p>Revolucionando la Experiencia Digital</p>
                                     </div>
                                     <div class="roadmap-years">
-                                        <img src="./assets/img/roadMap/2024.svg" alt="">
-                                        <img src="./assets/img/roadMap/2025.svg" alt="">
-                                    </div>
-                                </div>
-                                <div class="roadmap-titulo" id="roadmap-titulo-4" style="display: none;">
-                                    <div class="roadmap-descripcion">
-                                        <h4 class="roadmap-info-titulo"> Spatial Madrid</h4>
-                                        <p>Descubre una nueva manera de disfrutar Madrid</p>
-                                    </div>
-                                    <div class="roadmap-years">
-                                        <img src="./assets/img/roadMap/2024.svg" alt="">
-                                        <img src="./assets/img/roadMap/2025.svg" alt="">
+                                        <img src="./assets/img/roadMap/2026.svg" alt="">
+                                        <img src="./assets/img/roadMap/dates.svg" alt="">
                                     </div>
                                 </div>
                             </div>
                             <div class="roadmap-etiquetas">
                                 <div class="roadmap-etiqueta" id="roadmap-etiqueta-1" style="display: '';">
-                                    <div class="etiqueta-parrafo">
-                                        <p class="etiqueta-roadmap">Ejemplo 1</p>
-                                        <p class="etiqueta-roadmap">Ejemplo 1</p>
-                                        <p class="etiqueta-roadmap">Ejemplo 1</p>
+                                    <div class="etiqueta-parrafo etiqueta-encabezado">
+                                        <div class="etiquetas-puntos">
+                                            <img class="etiquetas-punto etiquetaPunto1" src="./assets/img/roadMap/Bullet_Point_1_2.svg" alt="">
+                                            <h5 class="etiqueta-apartado" id="titulo-fase1-1">Prototipo</h5>
+                                        </div>
+                                        <div class="etiqueta-info" id="fase1-1" style="display: none;">
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo.svg" alt="">
+                                                <p class="etiqueta-roadmap">Fundación de Alvearium y desarrollo de la prueba de concepto (versión web y PC-VR).</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo.svg" alt="">
+                                                <p class="etiqueta-roadmap">Creación y lanzamiento del primer video promocional.</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo.svg" alt="">
+                                                <p class="etiqueta-roadmap">Entrada en el Cluster de Industrias Creativas y del Videojuego de Madrid.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="etiqueta-parrafo">
-                                        <p class="etiqueta-roadmap">Ejemplo 1</p>
-                                        <p class="etiqueta-roadmap">Ejemplo 1</p>
-                                        <p class="etiqueta-roadmap">Ejemplo 1</p>
-                                        <p class="etiqueta-roadmap">Ejemplo 1</p>
+                                        <div class="etiquetas-puntos">
+                                            <img class="etiquetas-punto etiquetaPunto2" src="./assets/img/roadMap/Bullet_Point_2_2.svg" alt="">
+                                            <h5 class="etiqueta-apartado" id="titulo-fase1-2">Financiación y Reconocimientos</h5>
+                                        </div>
+                                        <div class="etiqueta-info" id="fase1-2" style="display: none;">
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo.svg" alt="">
+                                                <p class="etiqueta-roadmap">Completa con éxito dos rondas pre-seed asegurando 150,000 euros/dólares en total.</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo.svg" alt="">
+                                                <p class="etiqueta-roadmap">Ganadores de los Premios Blockchain y Tecnologías Avanzadas 2022. Ayto Madrid</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo.svg" alt="">
+                                                <p class="etiqueta-roadmap">Obtención de certificado ENISA de empresa emergente.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="etiqueta-parrafo">
+                                        <div class="etiquetas-puntos">
+                                            <img class="etiquetas-punto etiquetaPunto3" src="./assets/img/roadMap/Bullet_Point_3_2.svg" alt="">
+                                            <h5 class="etiqueta-apartado" id="titulo-fase1-3">Crecimiento y Participación en eventos</h5>
+                                        </div>
+                                        <div class="etiqueta-info" id="fase1-3" style="display: none;">
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo.svg" alt="">
+                                                <p class="etiqueta-roadmap">Entrada en Madrid in Game y acuerdos con escuelas de formación.</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo.svg" alt="">
+                                                <p class="etiqueta-roadmap">Participación en eventos destacados como 4YFN, C1b3rWall, Meta World Congress.</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo.svg" alt="">
+                                                <p class="etiqueta-roadmap">Colaboración con grandes marcas e instituciones como el Ayto de Madrid, Cámara de Comercio de Madrid, Policía Nacional, BBVA, Metaverso Pro, y La Martinuca.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="roadmap-etiqueta" id="roadmap-etiqueta-2" style="display: none;">
-                                    <div class="etiqueta-parrafo">
+                                    <div class="etiqueta-parrafo etiqueta-encabezado">
                                         <div class="etiquetas-puntos">
-                                            <img class="etiquetas-punto" src="./assets/img/roadMap/Bullet_Point_1_2.svg" alt="">
-                                            <h5 class="etiqueta-apartado">Área Desarrollo Spatial</h5>
+                                            <img class="etiquetas-punto etiquetaPunto1" src="./assets/img/roadMap/Bullet_Point_1_2.svg" alt="">
+                                            <h5 class="etiqueta-apartado" id="titulo-fase2-1">Optimización de la Infraestructura</h5>
                                         </div>
-                                        <p class="etiqueta-roadmap">Plaza de Callao</p>
-                                        <p class="etiqueta-roadmap">Gran Vía</p>
-                                        <p class="etiqueta-roadmap">Milla de Oro</p>
-                                        <p class="etiqueta-roadmap">Paisaje de la Luz</p>
-                                        <p class="etiqueta-roadmap">Bernabeu</p>
-                                        <p class="etiqueta-roadmap">Plaza del Sol</p>
+                                        <div class="etiqueta-info" id="fase2-1" style="display: none;">
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-2.svg" alt="">
+                                                <p class="etiqueta-roadmap">Mejoras en la infraestructura técnica.</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-2.svg" alt="">
+                                                <p class="etiqueta-roadmap">Implementación de servidores de alta capacidad.</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-2.svg" alt="">
+                                                <p class="etiqueta-roadmap">Optimización del rendimiento de la plataforma.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="etiqueta-parrafo">
                                         <div class="etiquetas-puntos">
-                                            <img class="etiquetas-punto" src="./assets/img/roadMap/Bullet_Point_2_2.svg" alt="">
-                                            <h5 class="etiqueta-apartado">Promoción</h5>
+                                            <img class="etiquetas-punto etiquetaPunto2" src="./assets/img/roadMap/Bullet_Point_2_2.svg" alt="">
+                                            <h5 class="etiqueta-apartado" id="titulo-fase2-2">Expansión de Funcionalidades</h5>
                                         </div>
-                                        <p class="etiqueta-apartado etiqueta-eventos">Eventos</p>
-                                        <p class="etiqueta-roadmap">4YFN (MWC)</p>
-                                        <p class="etiqueta-roadmap">Meta World Congress</p>
-                                        <p class="etiqueta-roadmap">Madrid Innovation Lab</p>
-                                        <p class="etiqueta-roadmap">Madrid In Game</p>
-                                        <p class="etiqueta-roadmap">Cámara de Comercio Madrid</p>
-                                    </div>
-                                    <div class="etiqueta-parrafo">
-                                        <p class="etiqueta-roadmap">Fundación Telefonica</p>
-                                        <p class="etiqueta-roadmap">Ayto de Madrid</p>
-                                        <p class="etiqueta-roadmap">Plaza de Callao</p>
-                                        <p class="etiqueta-apartado etiqueta-eventos">Expo Permanente</p>
-                                        <p class="etiqueta-roadmap">Palacio de Santoña</p>
-                                        <p class="etiqueta-roadmap">(Cámara de Comercio Madrid)</p>
+                                        <div class="etiqueta-info" id="fase2-2" style="display: none;">
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-2.svg" alt="">
+                                                <p class="etiqueta-roadmap">Nuevas funcionalidades en las Alveas.</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-2.svg" alt="">
+                                                <p class="etiqueta-roadmap">Ampliación del catálogo de experiencias inmersivas.</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-2.svg" alt="">
+                                                <p class="etiqueta-roadmap">Integración de funciones avanzadas de interacción social.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="etiqueta-parrafo">
                                         <div class="etiquetas-puntos">
-                                            <img class="etiquetas-punto" src="./assets/img/roadMap/Bullet_Point_3_2.svg" alt="">
-                                            <h5 class="etiqueta-apartado">Modelos de Negocios</h5>
+                                            <img class="etiquetas-punto etiquetaPunto3" src="./assets/img/roadMap/Bullet_Point_3_2.svg" alt="">
+                                            <h5 class="etiqueta-apartado" id="titulo-fase2-3">Integración de Nuevas Tecnologías</h5>
                                         </div>
-                                        <p class="etiqueta-roadmap">B2B Patrocinios</p>
-                                        <p class="etiqueta-roadmap">B2B ADS</p>
-                                        <p class="etiqueta-roadmap">Suscripción</p>
-                                        <p class="etiqueta-roadmap">Freemium</p>
-                                        <p class="etiqueta-roadmap">Comisiones</p>
+                                        <div class="etiqueta-info" id="fase2-3" style="display: none;">
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-2.svg" alt="">
+                                                <p class="etiqueta-roadmap">Adopción de realidad aumentada (AR) y realidad mixta (MR).</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-2.svg" alt="">
+                                                <p class="etiqueta-roadmap">Asistentes personales de IA.</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-2.svg" alt="">
+                                                <p class="etiqueta-roadmap">Blockchain para transacciones y activos digitales.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="roadmap-etiqueta" id="roadmap-etiqueta-3" style="display: none;">
-                                    <div class="etiqueta-parrafo">
-                                        <p class="etiqueta-roadmap">Ejemplo 3</p>
-                                        <p class="etiqueta-roadmap">Ejemplo 3</p>
-                                        <p class="etiqueta-roadmap">Ejemplo 3</p>
+                                    <div class="etiqueta-parrafo etiqueta-encabezado">
+                                        <div class="etiquetas-puntos">
+                                            <img class="etiquetas-punto etiquetaPunto1" src="./assets/img/roadMap/Bullet_Point_1_2.svg" alt="">
+                                            <h5 class="etiqueta-apartado" id="titulo-fase3-1">Accesibilidad y Expansión</h5>
+                                        </div>
+                                        <div class="etiqueta-info" id="fase3-1" style="display: none;">
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-3.svg" alt="">
+                                                <p class="etiqueta-roadmap">Apertura global de la plataforma.</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-3.svg" alt="">
+                                                <p class="etiqueta-roadmap">Interfaces amigables para todas las edades.</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-3.svg" alt="">
+                                                <p class="etiqueta-roadmap">Acceso a una audiencia más amplia.</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="roadmap-etiqueta" id="roadmap-etiqueta-4" style="display: none;">
                                     <div class="etiqueta-parrafo">
-                                        <p class="etiqueta-roadmap">Ejemplo 4</p>
+                                        <div class="etiquetas-puntos">
+                                            <img class="etiquetas-punto etiquetaPunto2" src="./assets/img/roadMap/Bullet_Point_2_2.svg" alt="">
+                                            <h5 class="etiqueta-apartado" id="titulo-fase3-2">Mejoras en la Experiencia</h5>
+                                        </div>
+                                        <div class="etiqueta-info" id="fase3-2" style="display: none;">
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-3.svg" alt="">
+                                                <p class="etiqueta-roadmap">Asistentes de IA para navegación y creación.</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-3.svg" alt="">
+                                                <p class="etiqueta-roadmap">Rendimiento optimizado.</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-3.svg" alt="">
+                                                <p class="etiqueta-roadmap">Estabilidad mejorada para más usuarios.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="etiqueta-parrafo">
+                                        <div class="etiquetas-puntos">
+                                            <img class="etiquetas-punto etiquetaPunto3" src="./assets/img/roadMap/Bullet_Point_3_2.svg" alt="">
+                                            <h5 class="etiqueta-apartado" id="titulo-fase3-3">Monetización y Economía Digita</h5>
+                                        </div>
+                                        <div class="etiqueta-info" id="fase3-3" style="display: none;">
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-3.svg" alt="">
+                                                <p class="etiqueta-roadmap">Lanzamiento de la economía de tokens "Alvy".</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-3.svg" alt="">
+                                                <p class="etiqueta-roadmap">Modelos de monetización para creadores.</p>
+                                            </div>
+                                            <div class="etiquetas-puntos-parrafo">
+                                                <img class="etiquetas-punto-parrafo" src="./assets/img/roadMap/Bullet_Point_Parrafo-3.svg" alt="">
+                                                <p class="etiqueta-roadmap">Nuevas oportunidades de ingresos para empresas.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -374,8 +478,8 @@
                     <div class="roadmap-flechas">
                         <div class="roadmap-rayas"></div>
                         <div class="roadmap-flechitas">
-                            <img class="flechas-izquierdas" src="./assets/img/arrows_RoadMap/arrows RoadMap/left.svg" alt="">
-                            <img class="flechas-derechas" src="./assets/img/arrows_RoadMap/arrows RoadMap/right@2x.svg" alt="">
+                            <img class="flechas-izquierdas" src="./assets/img/arrows_RoadMap/arrows RoadMap/left2.svg" alt="">
+                            <img class="flechas-derechas" src="./assets/img/arrows_RoadMap/arrows RoadMap/right2.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -384,16 +488,17 @@
 
         <!---------------- HISTORIA ---------------->
 
-        <div id="info9" style="display:none">
+        <!-- <div id="info9" style="display:none">
             <div class="global-info">
                 <h2>Historia</h2>
             </div>
-        </div>
+        </div> -->
 
         <!---------------- EQUIPO ---------------->
 
         <div id="info10" style="display:none">
             <div class="global-info">
+                <p class="titulo-desplegable">Sobre nosotros</p>
                 <h2>Equipo</h2>
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
@@ -444,8 +549,8 @@
                     <div class="icons">
                         <!-- <i class="fa-regular fa-circle-left flecha-izquierda"></i>
                         <i class="fa-regular fa-circle-right flecha-derecha"></i> -->
-                        <img class="flecha-izquierda" src="./assets/img/arrows_RoadMap/arrows RoadMap/left.svg" alt="">
-                        <img class="flecha-derecha" src="./assets/img/arrows_RoadMap/arrows RoadMap/right@2x.svg" alt="">
+                        <img class="flecha-izquierda" src="./assets/img/arrows_RoadMap/arrows RoadMap/left2.svg" alt="">
+                        <img class="flecha-derecha" src="./assets/img/arrows_RoadMap/arrows RoadMap/right2.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -455,14 +560,206 @@
 
         <div id="info11" style="display:none">
             <div class="global-info">
+                <p class="titulo-desplegable">03 Tecnologías</p>
                 <h2>Realidad Extendida</h2>
                 <div class="rextendida-contenedor">
                     <div class="rextendida-contenido">
-                        <div class="rextendida-img">
+                        <div class="rextendida-video">
                             <img src="./assets/img/RE_Ejemplo1.png" alt="">
                         </div>
-                        <div class="rextendida-img">
-                            <img src="./assets/img/RE_Ejemplo2.png" alt="">
+                        <div class="rextendida-titulos" style="display: '';">
+                            <div>
+                                <p id="titulo-rv" class="titulo-rextendida">Realidad Virtual (VR)</p>
+                            </div>
+                            <div>
+                                <p id="titulo-ar" class="titulo-rextendida">Realidad Aumentada (AR)</p>
+                            </div>
+                            <div>
+                                <p id="titulo-mr" class="titulo-rextendida">Realidad Mixta (MR)</p>
+                            </div>
+                        </div>
+                        <div class="rextendida-explicaciones">
+                            <div class="rextendida-explicacion" style="display: none;">
+                                <div class="rextendida-ex-titulos">
+                                    <div>
+                                        <p id="explicacion-rv" class="explicacion-rextendida">Realidad Virtual (VR)</p>
+                                    </div>
+                                    <div>
+                                        <p id="explicacion-ar" class="explicacion-rextendida">Realidad Aumentada (AR)</p>
+                                    </div>
+                                    <div>
+                                        <p id="explicacion-mr" class="explicacion-rextendida">Realidad Mixta (MR)</p>
+                                    </div>
+                                </div>
+
+                                <!-- realidad virtual -->
+                                <div class="rextendida-tecnologia">
+                                    <div class="explicacion-rv" id="explicacion-extendida-rv">
+                                        <div class="realidad-virtual">
+                                            <img class="rextendida-puntos-titulo" src="./assets/img/tecnologias/03Tecnologías-1.svg" alt="">
+                                            <p class="rv">Realidad Virtual (VR)</p>
+                                        </div>
+                                        <div id="ex-rv2" class="realidad-virtual-info" style="display: none;">
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                <p>Requiere gafas que aíslan del mundo real.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                <p>Permite tele presencialidad en entornos remotos.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                <p>Escenarios en 3D hiperrealistas.</p>
+                                            </div>
+                                            <div class="acciones">
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="ventaja" data-target="ventaja-0">Ventajas</p>
+                                                </div>
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="aplicacion" data-target="aplicacion-0">Aplicaciones</p>
+                                                </div>
+                                            </div>
+                                            <div class="ventajas" id="ventaja-0" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Inmersión total en ambientes virtuales.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Ideal para simulaciones y formación profesional.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Mejora de la colaboración remota.</p>
+                                                </div>
+                                            </div>
+                                            <div class="aplicaciones" id="aplicacion-0" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Videojuegos y entretenimiento.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Educación y formación.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Turismo virtual.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- realidad aumentada -->
+                                    <div class="explicacion-ar" id="explicacion-extendida-ar">
+                                        <div class="realidad-virtual">
+                                            <img class="rextendida-puntos-titulo" src="./assets/img/tecnologias/03Tecnologías-2.svg" alt="">
+                                            <p class="ar">Realidad Aumentada (AR)</p>
+                                        </div>
+                                        <div id="ex-ar2" class="realidad-virtual-info" style="display: none;">
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                <p>Utilizable con teléfonos móviles o gafas especiales.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                <p>Expande el entorno real con elementos digitales.</p>
+                                            </div>
+                                            <div class="acciones">
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="ventaja" data-target="ventaja-1">Ventajas</p>
+                                                </div>
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="aplicacion" data-target="aplicacion-1">Aplicaciones</p>
+                                                </div>
+                                            </div>
+                                            <div class="ventajas" id="ventaja-1" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Interacción con el mundo real y digital simultáneamente.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Accesibilidad desde dispositivos móviles.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Mejora la información contextual.</p>
+                                                </div>
+                                            </div>
+                                            <div class="aplicaciones" id="aplicacion-1" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Marketing y publicidad.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Mantenimiento y reparación.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Turismo y museos.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- realidad mixta -->
+                                    <div class="explicacion-mr" id="explicacion-extendida-mr" style="display: none;">
+                                        <div class="realidad-virtual">
+                                            <img class="rextendida-puntos-titulo" src="./assets/img/tecnologias/03Tecnologías-3.svg" alt="">
+                                            <p class="rm">Realidad Mixta (MR)</p>
+                                        </div>
+                                        <div id="ex-rm2" class="realidad-virtual-info" style="display: none;">
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                <p>Similar a la Realidad Aumentada.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos dos_lineas" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                <p>Objetos digitales influidos por el mundo <br>real (posición, iluminación, colisiones).</p>
+                                            </div>
+                                            <div class="acciones">
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="ventaja" data-target="ventaja-2">Ventajas</p>
+                                                </div>
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="aplicacion" data-target="aplicacion-2">Aplicaciones</p>
+                                                </div>
+                                            </div>
+                                            <div class="ventajas" id="ventaja-2" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Integración profunda entre lo digital y lo físico.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Interacciones más naturales y realistas.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Alta precisión en la interacción con el entorno.</p>
+                                                </div>
+                                            </div>
+                                            <div class="aplicaciones" id="aplicacion-2" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Diseño y prototipado.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Medicina y cirugía.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Arquitectura y construcción.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -473,10 +770,168 @@
 
         <div id="info12" style="display:none">
             <div class="global-info">
+                <p class="titulo-desplegable">03 Tecnologías</p>
                 <h2>Inteligencia Artificial</h2>
-                <div class="ia-contenedor">
-                    <div class="ia-contenido">
-                        <img src="./assets/img/IA_Imagen_Ejemplo.svg" alt="">
+                <div class="rextendida-contenedor">
+                    <div class="rextendida-contenido">
+                        <div class="rextendida-video">
+                            <img src="./assets/img/RE_Ejemplo1.png" alt="">
+                        </div>
+                        <div class="rextendida-titulos rextendida-titulos3" style="display: '';">
+                            <div>
+                                <p id="titulo-av" class="titulo-rextendida">Asistente Virtual "Alvy AI"</p>
+                            </div>
+                            <div>
+                                <p id="titulo-ff" class="titulo-rextendida">Funciones Futuras</p>
+                            </div>
+                        </div>
+                        <div class="rextendida-explicaciones">
+                            <div class="rextendida-explicacion rextendida-explicacion3" style="display: none;">
+                                <div class="rextendida-ex-titulos ia-titulos">
+                                    <div>
+                                        <p id="explicacion-av" class="explicacion-rextendida">Asistente Virtual "Alvy AI"</p>
+                                    </div>
+                                    <div>
+                                        <p id="explicacion-ff" class="explicacion-rextendida">Funciones Futuras</p>
+                                    </div>
+                                </div>
+
+                                <!-- asistente virtual "Alvy AI" -->
+                                <div class="rextendida-tecnologia">
+                                    <div class="explicacion-av" id="explicacion-extendida-av">
+                                        <div class="realidad-virtual">
+                                            <img class="rextendida-puntos-titulo" src="./assets/img/tecnologias/03Tecnologías-1.svg" alt="">
+                                            <p class="av">Asistente Virtual "Alvy AI"</p>
+                                        </div>
+                                        <div id="ex-av2" class="realidad-virtual-info" style="display: none;">
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                <p>Integrado con GPT-4 para reconocimiento y respuesta por voz.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                <p>Guía a los usuarios en la plataforma.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                <p>Proporciona información sobre experiencias y eventos.</p>
+                                            </div>
+                                            <div class="acciones">
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="ventaja" data-target="ventaja-4">Ventajas</p>
+                                                </div>
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="aplicacion" data-target="aplicacion-6">Aplicaciones</p>
+                                                </div>
+                                            </div>
+                                            <div class="ventajas"  id="ventaja-4" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Interacción natural y fluida.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Asistencia personalizada en tiempo real.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Mejora de la accesibilidad.</p>
+                                                </div>
+                                            </div>
+                                            <div class="aplicaciones" id="aplicacion-6" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Atención al cliente.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Asistencia en tareas complejas.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Navegación dentro de la plataforma.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- funciones futuras -->
+                                    <div class="explicacion-ff" id="explicacion-extendida-ff">
+                                        <div class="realidad-virtual">
+                                            <img class="rextendida-puntos-titulo" src="./assets/img/tecnologias/03Tecnologías-2.svg" alt="">
+                                            <p class="ff">Funciones Futuras</p>
+                                        </div>
+                                        <div id="ex-ff2" class="realidad-virtual-info" style="display: none;">
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                <p>Experiencias adaptadas a cada usuario.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                <p>Diseño y modelado 3D.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                <p>Navegación dentro de la plataforma.</p>
+                                            </div>
+                                            <div class="acciones">
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="potencia" data-target="potencia-0">Potencial</p>
+                                                </div>
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="beneficio" data-target="beneficio-2">Beneficios</p>
+                                                </div>
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="aplicacion" data-target="aplicacion-7">Aplicaciones</p>
+                                                </div>
+                                            </div>
+                                            <div class="potencial" id="potencia-0" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Expansión de capacidades creativas.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Facilita la comunicación global.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Innovación continua en servicios.</p>
+                                                </div>
+                                            </div>
+                                            <div class="beneficios" id="beneficio-2" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Aumenta la satisfacción del usuario.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Ofrece recomendaciones personalizadas.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Mejora la retención y el engagement.</p>
+                                                </div>
+                                            </div>
+                                            <div class="aplicaciones" id="aplicacion-7" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Comunicación multilingüe.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Desarrollo de nuevas herramientas y servicios.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Publicidad dirigida y experiencias personalizadas.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -486,29 +941,206 @@
 
         <div id="info13" style="display:none">
             <div class="global-info">
+                <p class="titulo-desplegable">03 Tecnologías</p>
                 <h2>Blockchain</h2>
-                <div class="block-contenedor">
-                    <div class="block-contenido">
-                        <div class="block-logo">
-                            <img src="./assets/img/Logos/Logo_Simple_Morado.svg" alt="">
+                <div class="rextendida-contenedor">
+                    <div class="rextendida-contenido">
+                        <div class="rextendida-video">
+                            <img src="./assets/img/RE_Ejemplo1.png" alt="">
                         </div>
-                        <div class="block-miniaturas" id="miniatura-1">
-                            <img src="./assets/img/Logos/Hexagono.svg" alt="">
+                        <div class="rextendida-titulos rextendida-titulos2" style="display: '';">
+                            <div>
+                                <p id="titulo-st" class="titulo-rextendida">Seguridad y Transparencia</p>
+                            </div>
+                            <div>
+                                <p id="titulo-ta" class="titulo-rextendida">Token "ALVY"</p>
+                            </div>
+                            <div>
+                                <p id="titulo-it" class="titulo-rextendida">Inmutabilidad y Trazabilidad</p>
+                            </div>
                         </div>
-                        <div class="block-miniaturas" id="miniatura-2">
-                            <img src="./assets/img/Logos/Hexagono.svg" alt="">
-                        </div>
-                        <div class="block-miniaturas" id="miniatura-3">
-                            <img src="./assets/img/Logos/Hexagono.svg" alt="">
-                        </div>
-                        <div class="block-miniaturas" id="miniatura-4">
-                            <img src="./assets/img/Logos/Hexagono.svg" alt="">
-                        </div>
-                        <div class="block-miniaturas" id="miniatura-5">
-                            <img src="./assets/img/Logos/Hexagono.svg" alt="">
-                        </div>
-                        <div class="block-miniaturas" id="miniatura-6">
-                            <img src="./assets/img/Logos/Hexagono.svg" alt="">
+                        <div class="rextendida-explicaciones">
+                            <div class="rextendida-explicacion rextendida-explicacion2" style="display: none;">
+                                <div class="rextendida-ex-titulos blockchain-titulos">
+                                    <div>
+                                        <p id="explicacion-st" class="explicacion-rextendida">Seguridad y Transparencia</p>
+                                    </div>
+                                    <div>
+                                        <p id="explicacion-ta" class="explicacion-rextendida">Token "ALVY"</p>
+                                    </div>
+                                    <div>
+                                        <p id="explicacion-it" class="explicacion-rextendida">Inmutabilidad y Trazabilidad</p>
+                                    </div>
+                                </div>
+
+                                <!-- seguridad y transparencia -->
+                                <div class="rextendida-tecnologia">
+                                    <div class="explicacion-st" id="explicacion-extendida-st">
+                                        <div class="realidad-virtual">
+                                            <img class="rextendida-puntos-titulo" src="./assets/img/tecnologias/03Tecnologías-1.svg" alt="">
+                                            <p class="st">Seguridad y Transparencia</p>
+                                        </div>
+                                        <div id="ex-st2" class="realidad-virtual-info" style="display: none;">
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                <p>Datos protegidos y transacciones transparentes.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos dos_lineas" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                <p>Descentralización asegura que los datos <br> pertenecen a los usuarios.</p>
+                                            </div>
+                                            <div class="acciones">
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="beneficio" data-target="beneficio-0">Beneficios</p>
+                                                </div>
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="aplicacion" data-target="aplicacion-3">Aplicaciones</p>
+                                                </div>
+                                            </div>
+                                            <div class="beneficios"  id="beneficio-0" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Reducción del fraude y la corrupción.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Aumento de la confianza entre los usuarios.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Trazabilidad completa de los procesos.</p>
+                                                </div>
+                                            </div>
+                                            <div class="aplicaciones" id="aplicacion-3" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Cadena de suministro.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Votaciones electrónicas.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P1VR.svg" alt="">
+                                                    <p>Identidad digital.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- token ALVI -->
+                                    <div class="explicacion-ta" id="explicacion-extendida-ta">
+                                        <div class="realidad-virtual">
+                                            <img class="rextendida-puntos-titulo" src="./assets/img/tecnologias/03Tecnologías-2.svg" alt="">
+                                            <p class="ta">Token "ALVY"</p>
+                                        </div>
+                                        <div id="ex-ta2" class="realidad-virtual-info" style="display: none;">
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                <p>Moneda interna para transacciones dentro de Alvearium.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                <p>Usuarios ganan tokens al aceptar anuncios publicitarios.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                <p>Usos de tokens: compra de productos y servicios en la plataforma.</p>
+                                            </div>
+                                            <div class="acciones">
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="ventaja" data-target="ventaja-3">Ventajas</p>
+                                                </div>
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="aplicacion" data-target="aplicacion-4">Aplicaciones</p>
+                                                </div>
+                                            </div>
+                                            <div class="ventajas" id="ventaja-3" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Economía interna robusta.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Facilita microtransacciones.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Incentivos para la participación del usuario.</p>
+                                                </div>
+                                            </div>
+                                            <div class="aplicaciones" id="aplicacion-4" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Compra de bienes digitales.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Participación en eventos exclusivos.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P2AR.svg" alt="">
+                                                    <p>Recompensas por actividades dentro de la plataforma.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- inmutabilidad y trazabilidad -->
+                                    <div class="explicacion-it" id="explicacion-extendida-it" style="display: none;">
+                                        <div class="realidad-virtual">
+                                            <img class="rextendida-puntos-titulo" src="./assets/img/tecnologias/03Tecnologías-3.svg" alt="">
+                                            <p class="it">Inmutabilidad y Trazabilidad</p>
+                                        </div>
+                                        <div id="ex-it2" class="realidad-virtual-info" style="display: none;">
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                <p>Registros de datos que no pueden ser alterados.</p>
+                                            </div>
+                                            <div class="conceptos">
+                                                <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                <p>Seguimiento preciso de todas las transacciones.</p>
+                                            </div>
+                                            <div class="acciones">
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="beneficio" data-target="beneficio-1">Beneficios</p>
+                                                </div>
+                                                <div class="ra-ventajas-aplicaciones">
+                                                    <p class="aplicacion" data-target="aplicacion-5">Aplicaciones</p>
+                                                </div>
+                                            </div>
+                                            <div class="beneficios" id="beneficio-1" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Mayor transparencia en las operaciones.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Historial confiable de transacciones.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Seguridad contra manipulaciones.</p>
+                                                </div>
+                                            </div>
+                                            <div class="aplicaciones" id="aplicacion-5" style="display: none;">
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Auditorías y cumplimiento normativo.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Historial de propiedad y activos.</p>
+                                                </div>
+                                                <div class="conceptos">
+                                                    <img class="rextendida-puntos" src="./assets/img/tecnologias/BP_03Tecno_P3MR.svg" alt="">
+                                                    <p>Gestión de derechos digitales.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -550,11 +1182,39 @@
     <!---------------- MENU HORIZONTAL INFERIOR ---------------->
 
     <div class="glass-effect" id="menu-horizontal" style="display: '';">
-        <a id="blog" href="blog.html">Blog</a>
+        <a id="blog" href="blog.html">BLOG</a>
         <a href=""><img id="logo-redondo" src="assets/img/logoimpro.svg" alt="logo"></a>
-        <a href="contacto.html">Contacto</a>
+        <a href="contacto.html">CONTACTO</a>
     </div>
-    <div id="modales" style="display:none"></div>
+    <div id="modales" style="display:none">
+        <div class="detalles" id="detalles1" style="display:none">
+            <h3>Tecnologías</h3>
+            <p>Realidad Extendida</p>
+            <p>Blockchain</p>
+            <p>Inteligencia Artificial</p>
+        </div>
+        <div class="detalles" id="detalles2" style="display:none">
+            <h3>Soluciones</h3>
+            <p>Casos de Uso:</p>
+            <p>Turismo</p>
+            <p>Patrimonio</p>
+            <p>Comercio</p>
+            <p>Delivery</p>
+            <p>Entretenimiento</p>
+            <p>Socialización</p>
+        </div>
+        <div class="detalles" id="detalles3" style="display:none">
+            <h3>Portafolio</h3>
+            <p>Realidad Virtual</p>
+            <p>Realidad Aumentada</p>
+            <p>Realidad Mixta</p>
+        </div>
+        <div class="detalles" id="detalles4" style="display:none">
+            <h3>Sobre Nosotros</h3>
+            <p>Road Map</p>
+            <p>Equipo</p>
+        </div>
+    </div>
     <div id="inicio" style="display:none">
         <a href="#">
             <img id="logo-blanco" src="assets/img/Logos/Alv_PositivoPNG.png" alt="logo">

@@ -1,4 +1,4 @@
-import THREE from './three';
+import THREE from './three.js';
 
 const lights = new THREE.AmbientLight( 0x404040 ); // soft white light
 
